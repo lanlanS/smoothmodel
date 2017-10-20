@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<body>
+    <testsuit testclass="zhihu">
+        <testcase caseid="0" caseName="知乎首页向下滑动" caseClass ="zhihutest/test_1_swipedown_Mainpage" > </testcase>
+
+    </testsuit>
+        <!--<testcase caseid="2" caseName="知乎首页来回滑动" caseClass ="zhihutest/test_3_swipealone_first_page"> </testcase>
+    </testsuit>
+    <testsuit testclass="wechat">
+        <testcase caseid="1" caseName="知乎首页向上滑动" caseClass ="zhihutest/test_2_swipe_Mainpage"> </testcase>
+        <testcase caseid="0" caseName="对话列表向下滑动" caseClass ="wechattest/test_swip_recordlist" > </testcase>
+        <testcase caseid="1" caseName="对话列表向上滑动" caseClass ="wechattest/222" > </testcase>
+        <testcase caseid="2" caseName="点击跳转朋友圈" caseClass ="wechattest/333" > </testcase>
+        <testcase caseid="3" caseName="向下滑动朋友圈" caseClass ="wechattest/444" > </testcase>
+    </testsuit>-->
+</body>

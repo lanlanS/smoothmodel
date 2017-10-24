@@ -38,7 +38,7 @@ class zhihutest(unittest.TestCase):
 
     def test_1_swipedown_Mainpage(self):
 
-        caseid = '0'
+        caseid = '35'
         try:
             fps = []
             jank_count = []
@@ -60,6 +60,7 @@ class zhihutest(unittest.TestCase):
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
+                print "case id " + caseid
                 print 'fps: ' + str(fps)
                 print fps
                 print 'jank count: ' + str(max(jank_count))
@@ -98,6 +99,7 @@ class zhihutest(unittest.TestCase):
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
+                print "case id " + caseid
                 print 'fps: ' + str(fps)
                 print fps
                 print 'jank count: ' + str(max(jank_count))

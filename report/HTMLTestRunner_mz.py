@@ -495,6 +495,7 @@ class Template_mixin(object):
             <td> FPS </td>
             <td> 掉帧数 </td>
             <td> Max Drop Frame </td>
+            <td> Detail Frame </td>
             <td> 查看 </td>
         </tr>
         %(test_list)s
@@ -504,6 +505,7 @@ class Template_mixin(object):
             <td>Pass: %(Pass)s</td>
             <td>Failed: %(fail)s</td>
             <td>Error: %(error)s</td>
+            <td>&nbsp;</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -517,18 +519,21 @@ class Template_mixin(object):
         <td>%(avgFps)s</td>
         <td>%(avgJank)s</td>
         <td>%(max_drop)s</td>
-        <td><a href="javascript:showClassDetail('%(cid)s',%(count)s)">详情</a></td>
+        <td> Detail Frame Data </td>
+        <td align="center"><a href="javascript:showClassDetail('%(cid)s',%(count)s)">详情</a></td>
     </tr>
 """  # variables: (style, desc, avgFps, avgJank, fail, error, cid)    删除一行 <td>%(error)s</td>
 
     REPORT_TEST_WITH_OUTPUT_TMPL = r"""
 <tr id='%(tid)s' class='%(Class)s'>
-    <td align='center'>%(caseid)s</td>
+    <td align='center'>%(case_id)s</td>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
     <td align="left"></td>
     <td align="left"> %(fps)s </td>
     <td align="left"> %(jank)s </td>
     <td align="left"> %(max_drop)s </td>
+    <td align="left">
+     <a href="./output/%(frameinfo_add)s"> %(frameinfo_add)s </a></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -558,6 +563,7 @@ class Template_mixin(object):
     REPORT_TEST_OUTPUT_FPS = r"""%(fps)s"""  # variables: (fps)
     REPORT_TEST_OUTPUT_JANK = r"""%(jank)s"""  # variables: (jank)
     REPORT_TEST_OUTPUT_MAX_DROP = r"""%(max_drop)s"""  # variables: (max drop)
+    REPORT_TEST_OUTPUT_FRAME = r"""%(frameinfo_add)s"""  # variables: (frameinfo file address)
 
     # ------------------------------------------------------------------------
     # ENDING
@@ -872,19 +878,23 @@ class HTMLTestRunner(Template_mixin):
                 output=saxutils.escape(o + e),
         )
 
-        case_id = self.REPORT_TEST_OUTPUT_CASEID % dict(     # new added
+        case_id = self.REPORT_TEST_OUTPUT_CASEID % dict(  # new added
                 case_id=saxutils.escape(o + e)
         )
 
-        fps = self.REPORT_TEST_OUTPUT_FPS % dict(            # new added
+        fps = self.REPORT_TEST_OUTPUT_FPS % dict(  # new added
                 fps=saxutils.escape(o + e)
         )
 
-        jank = self.REPORT_TEST_OUTPUT_JANK % dict(           # new added
+        jank = self.REPORT_TEST_OUTPUT_JANK % dict(  # new added
                 jank=saxutils.escape(o + e)
         )
         max_drop = self.REPORT_TEST_OUTPUT_MAX_DROP % dict(  # new added
                 max_drop=saxutils.escape(o + e)
+        )
+
+        frameinfo_add = self.REPORT_TEST_OUTPUT_FRAME % dict(  # new added
+                frameinfo_add=saxutils.escape(o + e)
         )
 
         row = tmpl % dict(
@@ -893,13 +903,14 @@ class HTMLTestRunner(Template_mixin):
                 style=(n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none')),
                 desc=desc,
                 script=script,
-                caseid=case_id.split('\n')[10].split(' ')[-1],
+                case_id=case_id.split('\n')[11].split(' ')[-1],
                 status=self.STATUS[n],
-                fps=fps.split('\n')[11].split(':')[1],
-                jank=jank.split('\n')[13].split(':')[1],
+                fps=fps.split('\n')[12].split(':')[1],
+                jank=jank.split('\n')[14].split(':')[1],
                 # max_drop=max_drop[
                 #          int((max_drop.find("max frame delay:")) + 17):(int(max_drop.find("max frame delay:")) + 25)],
-                max_drop=max_drop.split('\n')[15].split(':')[1]
+                max_drop=max_drop.split('\n')[16].split(':')[1],
+                frameinfo_add=frameinfo_add.split('\n')[10].split("output\\")[1]
         )
         rows.append(row)
         if not has_output:

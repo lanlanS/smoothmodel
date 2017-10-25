@@ -83,6 +83,7 @@ class GetFramestats:
                         ws.write(recordRow, 1, frameinfo[1])
                         recordRow = recordRow + 1
                     wb.save(self.fileaddr + '\\' + caseID + '_FrameInfo.xls')
+                    print "frameinfo address: " + self.fileaddr + '\\' + caseID + '_FrameInfo.xls'
 
             if "Total DisplayList" in nextline.decode():
                 break
@@ -112,7 +113,8 @@ class GetFramestats:
             # fpsReadListLen = len(fpsReadList)
             profileDataReadListLen = len(profileDataReadList)
 
-            print("NineFrameLength=" + str(profileDataReadListLen))  # del FourFrameLength= + str(fpsReadListLen)
+            # print("NineFrameLength=" + str(profileDataReadListLen))  # del FourFrameLength= + str(fpsReadListLen)
+
 
             # fpsAllFrameRead = open(self.fileaddr + '//FourFrame'+caseID+'.txt', "w")
             # for fpsallframe in fpsReadList:

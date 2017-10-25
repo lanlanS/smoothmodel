@@ -38,7 +38,7 @@ class zhihutest(unittest.TestCase):
 
     def test_1_swipedown_Mainpage(self):
 
-        caseid = '35'
+        caseid = '0'
         try:
             fps = []
             jank_count = []

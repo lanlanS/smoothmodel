@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9c143b6-38ec-480d-960b-3778d08b4006" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171024181113.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171024181304.html" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/com.zhihu.android/0_FrameInfo.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/com.zhihu.android/0_FrameStats.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/com.zhihu.android/0_AllFrame.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output/com.zhihu.android/0_NineFrame.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result_20171025100127.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result_20171025110828.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result_20171025154324.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/result_20171025154612.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/35_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/35_FrameInfo.xls" />
@@ -16,6 +22,8 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/35_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/35_NineFrame.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/HTMLTestRunner_mz.py" afterPath="$PROJECT_DIR$/report/HTMLTestRunner_mz.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/zhihu_testcase.py" afterPath="$PROJECT_DIR$/testcase/zhihu_testcase.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/result_20171024181113.html" afterPath="$PROJECT_DIR$/result_20171025183704.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/result_20171024181304.html" afterPath="$PROJECT_DIR$/result_20171025184010.html" />
     </list>
     <ignored path="SmoothModel.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +45,7 @@
     <SUITE FILE_PATH="coverage/SmoothModel$Unittest_wechattest_test_swip_recordlist.coverage" NAME="Unittest wechattest.test_swip_recordlist Coverage Results" MODIFIED="1505466484412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/SmoothModel$getDeviceinfo.coverage" NAME="getDeviceinfo Coverage Results" MODIFIED="1506062576374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
     <SUITE FILE_PATH="coverage/SmoothModel$xmlreader.coverage" NAME="xmlreader Coverage Results" MODIFIED="1507711963727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
-    <SUITE FILE_PATH="coverage/SmoothModel$run.coverage" NAME="run Coverage Results" MODIFIED="1508928009822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SmoothModel$run.coverage" NAME="run Coverage Results" MODIFIED="1508928358082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/SmoothModel$wechat_testcase.coverage" NAME="wechat_testcase Coverage Results" MODIFIED="1504598398620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -71,8 +79,8 @@
       <file leaf-file-name="HTMLTestRunner_mz.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6050269">
-              <caret line="907" column="19" selection-start-line="907" selection-start-column="16" selection-end-line="907" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.33269963">
+              <caret line="907" column="38" selection-start-line="907" selection-start-column="37" selection-end-line="907" selection-end-column="38" />
               <folding>
                 <element signature="e#3364#3379#0" expanded="true" />
                 <marker date="1508927771527" expanded="true" signature="219:260" placeholder="import ..." />
@@ -719,19 +727,19 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30957684" sideWeight="0.51492536" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18283166" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24526198" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38127092" sideWeight="0.48507464" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38127092" sideWeight="0.48507464" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15991472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21404682" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34671125" sideWeight="0.48507464" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34671125" sideWeight="0.48507464" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18283166" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1159,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6050269">
-          <caret line="907" column="19" selection-start-line="907" selection-start-column="16" selection-end-line="907" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.33269963">
+          <caret line="907" column="38" selection-start-line="907" selection-start-column="37" selection-end-line="907" selection-end-column="38" />
           <folding>
             <element signature="e#3364#3379#0" expanded="true" />
             <marker date="1508927771527" expanded="true" signature="219:260" placeholder="import ..." />

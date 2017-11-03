@@ -358,6 +358,71 @@ class Template_mixin(object):
         </script>
         """  # variables: (Pass, fail, error)
 
+    Frame_Chart = """
+        <div id="%(chart_id)s" style="width:600px;height:500px;float:left;">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('%(chart_id)s'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['次数']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: %(frametime)s,
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '次数',
+                            min: 0,
+                            max: 400,
+                            interval: 20,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'次数',
+                            type:'bar',
+                            data:%(framecount)s
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        """  # variables: (frametime, framecount)
+
     # ------------------------------------------------------------------------
     # Stylesheet
     #
@@ -464,6 +529,7 @@ class Template_mixin(object):
     </div>
     <div style="float: left;width:50%%;"><p class='description'>%(description)s</p></div>
     <div id="chart" style="width:50%%;height:400px;float:left;"></div>
+
     """  # variables: (title, parameters, description)
 
     HEADING_ATTRIBUTE_TMPL = """<p class='attribute'><strong>%(name)s:</strong> %(value)s</p>
@@ -513,7 +579,7 @@ class Template_mixin(object):
 
     REPORT_CLASS_TMPL = u"""
     <tr class='%(style)s'>
-        <td>case id</td>
+        <td>Case ID</td>
         <td>%(desc)s</td>
         <td>总数 </td>
         <td>%(avgFps)s</td>
@@ -528,12 +594,15 @@ class Template_mixin(object):
 <tr id='%(tid)s' class='%(Class)s'>
     <td align='center'>%(case_id)s</td>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
-    <td align="left"></td>
+    <td align="left">
+
+            %(FrameChart)s
+    </td>
     <td align="left"> %(fps)s </td>
     <td align="left"> %(jank)s </td>
     <td align="left"> %(max_drop)s </td>
     <td align="left">
-     <a href="./output/%(frameinfo_add)s"> %(frameinfo_add)s </a></td>
+     <a href=".\output\%(frameinfo_add)s"> %(frameinfo_add)s </a></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -549,7 +618,8 @@ class Template_mixin(object):
 
     </td>
 </tr>
-"""  # variables: (tid, caseid, Class, style, desc, fps, jank, max_drop status)  # 新增 caseid fps jank max_drop
+"""  # variables: (tid, caseid, Class, style, desc, FrameChart, fps, jank, max_drop status)
+    # 新增 FrameChart caseid fps jank max_drop
 
     REPORT_TEST_NO_OUTPUT_TMPL = r"""
 <tr id='%(tid)s' class='%(Class)s'>
@@ -864,6 +934,14 @@ class HTMLTestRunner(Template_mixin):
         )
         return chart
 
+    def _generate_framechart(self, chart_id, time, count):
+        frame_chart = self.Frame_Chart % dict(  # Frame_Chart : javascript
+            chart_id=str(chart_id),
+            frametime=str(time),
+            framecount=str(count),
+        )
+        return frame_chart
+
     def _generate_report_test(self, rows, cid, tid, n, t, o, e):  # 单条用例的测试结果报告
         # e.g. 'pt1.1', 'ft1.1', etc
         has_output = bool(o or e)
@@ -897,20 +975,27 @@ class HTMLTestRunner(Template_mixin):
                 frameinfo_add=saxutils.escape(o + e)
         )
 
+        time = script.split('\n')[10].split(":")[-1]
+        count = script.split('\n')[11].split(":")[-1]
+        chart_id = 'framechart_' + tid
+
+        frame_chart = self._generate_framechart(chart_id, time, count)
+
         row = tmpl % dict(
                 tid=tid,
                 Class=(n == 0 and 'hiddenRow' or 'none'),
                 style=(n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none')),
                 desc=desc,
+                FrameChart=frame_chart.decode("utf-8"),
                 script=script,
-                case_id=case_id.split('\n')[11].split(' ')[-1],
+                case_id=case_id.split('\n')[13].split(' ')[-1],
                 status=self.STATUS[n],
-                fps=fps.split('\n')[12].split(':')[1],
-                jank=jank.split('\n')[14].split(':')[1],
+                fps=fps.split('\n')[14].split(':')[1],
+                jank=jank.split('\n')[16].split(':')[1],
                 # max_drop=max_drop[
                 #          int((max_drop.find("max frame delay:")) + 17):(int(max_drop.find("max frame delay:")) + 25)],
-                max_drop=max_drop.split('\n')[16].split(':')[1],
-                frameinfo_add=frameinfo_add.split('\n')[10].split("output\\")[1]
+                max_drop=max_drop.split('\n')[18].split(':')[1],
+                frameinfo_add=frameinfo_add.split('\n')[12].split("output\\")[1]
         )
         rows.append(row)
         if not has_output:

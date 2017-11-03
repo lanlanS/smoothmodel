@@ -71,7 +71,27 @@ class GetFramestats:
                 histogram = nextline.split(":")[1].split()
                 for temp in histogram:
                     histogramlist.append((int(temp.split("ms=")[0]), int(temp.split("ms=")[1])))
+
                 if histogramlist:
+                    time1 = []
+                    count1 = []
+                    fcount = []
+                    ftime = []
+                    for h in histogramlist:
+                        time1.append(h[0])
+                        count1.append(h[1])
+                    if time1 or count1:
+                        for i in range(len(count1)):
+                            if count1[::-1][i] != 0:
+                                fcount = count1[:len(count1)-i]
+                                ftime = time1[:len(count1)-i]
+                                break
+                        if not fcount or not ftime:
+                            fcount = count1
+                            ftime = time1
+                        print "Frame Latency:" + str(ftime)
+                        print "Frame Count:" + str(fcount)
+
                     # write HISTOGRAM into EXCEL
                     wb = xlwt.Workbook(encoding='utf-8')
                     ws = wb.add_sheet('帧分布信息')
@@ -305,7 +325,7 @@ class GetFramestats:
             print("FrameStats Parse End")
 
 
-gettask = GetFramestats('com.meizu.media.reader')
-if gettask.clear_FrameStats():
-    gettask.dumpsysFramestats("0")
-    gettask.beginProcessResult("0")
+# gettask = GetFramestats('com.meizu.media.reader')
+# if gettask.clear_FrameStats():
+#     gettask.dumpsysFramestats("0")
+#     gettask.beginProcessResult("0")

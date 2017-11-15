@@ -35,10 +35,10 @@ class GetFramestats:
         if process.stdout.readline().startswith('Applications'):  # Applications Graphics Acceleration Info:
             self.__mkdir()
             print 'Test Going..'
-            time.sleep(2)
+            time.sleep(3)
             return True
         else:
-            print ' reset gfxinfo error !'
+            print 'Reset gfxinfo error !'
 
     def dumpsysFramestats(self, caseID):
         print("begin dumpsysFramestats:" + str(datetime.datetime.now()))
@@ -66,7 +66,51 @@ class GetFramestats:
                 if matchProfileData:
                     profileText.write(nextline.decode())
 
-            if nextline.startswith("HISTOGRAM"):
+            if nextline.startswith("Total frames"):
+                totalframe = float(nextline.split(":")[-1].strip())
+                continue
+
+            if nextline.startswith("Janky frames"):
+                jankyframe = nextline.split(":")[-1].strip().split('(')[0]
+                # jankrate1 = float(jankyframe) / totalframe
+                # print "jank rate1: " + "%.2f%%" % (jankrate1 * 100)
+                jankrate = nextline.split("(")[-1].split(")")[0]
+                print "jank rate: " + jankrate + " (" + jankyframe + "/" + str(int(totalframe)) + ")"
+
+                continue
+            if nextline.startswith("Number Missed Vsync:"):
+                realjank = nextline.split(":")[-1].strip()
+                realjankrate = float(realjank) / totalframe
+                print "real jank rate: " + "%.2f%%" % (realjankrate * 100) + " (" + realjank + "/" + str(
+                        int(totalframe)) + ")"
+                continue
+            if nextline.startswith("Number High input latency"):
+                input_latency = nextline.split(":")[-1].strip()
+                high_input_rate = float(input_latency) / totalframe
+                print "High input latency: " + "%.2f%%" % (high_input_rate * 100) + " (" + input_latency + "/" + str(
+                        int(totalframe)) + ")"
+
+                continue
+            if nextline.startswith("Number Slow UI thread"):
+                slow_UI = nextline.split(":")[-1].strip()
+                slow_ui_rate = float(slow_UI) / totalframe
+                print "Slow UI thread: " + "%.2f%%" % (slow_ui_rate * 100) + " (" + slow_UI + "/" + str(
+                        int(totalframe)) + ")"
+                continue
+            if nextline.startswith("Number Slow bitmap uploads"):
+                slow_bitmapupload = nextline.split(":")[-1].strip()
+                slow_bitmap_rate = float(slow_bitmapupload) / totalframe
+                print "Slow bitmap uploads: " + "%.2f%%" % (
+                    slow_bitmap_rate * 100) + " (" + slow_bitmapupload + " /" + str(int(totalframe)) + ")"
+                continue
+            if nextline.startswith("Number Slow issue draw commands"):
+                slow_draw = nextline.split(":")[-1].strip()
+                slow_draw_rate = float(slow_draw) / totalframe
+                print "Slow issue draw commands rate: " + "%.2f%%" % (
+                    slow_draw_rate * 100) + " (" + slow_draw + " /" + str(int(totalframe)) + ")"
+                continue
+
+            if nextline.startswith("HISTOGRAM"):  # 获取帧耗时分布list
                 histogramlist = []
                 histogram = nextline.split(":")[1].split()
                 for temp in histogram:
@@ -83,8 +127,8 @@ class GetFramestats:
                     if time1 or count1:
                         for i in range(len(count1)):
                             if count1[::-1][i] != 0:
-                                fcount = count1[:len(count1)-i]
-                                ftime = time1[:len(count1)-i]
+                                fcount = count1[:len(count1) - i]
+                                ftime = time1[:len(count1) - i]
                                 break
                         if not fcount or not ftime:
                             fcount = count1
@@ -104,9 +148,11 @@ class GetFramestats:
                         recordRow = recordRow + 1
                     wb.save(self.fileaddr + '\\' + caseID + '_FrameInfo.xls')
                     print "frameinfo address: " + self.fileaddr + '\\' + caseID + '_FrameInfo.xls'
+                continue
 
             if "Total DisplayList" in nextline.decode():
                 break
+
         profileText.close()
 
     def countSplitByComma(self, splitByComma, i, j):
@@ -323,7 +369,6 @@ class GetFramestats:
                 recordRow += 1
             wb.save(self.fileaddr + '\\' + caseID + '_FrameStats.xls')
             print("FrameStats Parse End")
-
 
 # gettask = GetFramestats('com.meizu.media.reader')
 # if gettask.clear_FrameStats():

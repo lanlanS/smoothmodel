@@ -196,13 +196,14 @@
         
     <div class='page-header'>
         <h1>性能流畅度模型 测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2017-10-24 17:26:14</p>
-    <p class='attribute'><strong>运行时长:</strong> 0:00:48.534000</p>
+    <p class='attribute'><strong>开始时间:</strong> 2017-11-02 17:40:36</p>
+    <p class='attribute'><strong>运行时长:</strong> 0:00:54.805000</p>
     <p class='attribute'><strong>状态:</strong> 通过 1</p>
     
     </div>
     <div style="float: left;width:50%;"><p class='description'>执行人：ShengXia</p></div>
     <div id="chart" style="width:50%;height:400px;float:left;"></div>
+
     
         
     <div class="btn-group btn-group-sm">
@@ -222,33 +223,116 @@
         </colgroup>
         <tr id='header_row'>
             <td colspan='2'>测试套件/测试用例</td>
-            <td> 总数 </td>
             <td> FPS </td>
             <td> 掉帧数 </td>
             <td> Max Drop Frame </td>
+            <td> 掉帧率（Miss Vsync） </td>
+            <td> 劣帧率 （Janky Frame）</td>
+            <td> High input latency </td>
+            <td> Slow UI thread </td>
+            <td> Slow bitmap uploads </td>
+            <td> Slow issue draw commands </td>
+            <td> 帧耗时分布图 </td>
             <td> 查看 </td>
         </tr>
         
     <tr class='passClass'>
-        <td>case id</td>
+        <td>Case ID</td>
         <td>testcase.zhihu_testcase.zhihutest</td>
-        <td>总数 </td>
+        <td>  </td>
         <td>1</td>
         <td>0</td>
         <td>0</td>
-        <td><a href="javascript:showClassDetail('c1',1)">详情</a></td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td align="center"><a href="javascript:showClassDetail('c1',1)">详情</a></td>
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td align='center'>35
-</td>
-    <td class='none'><div class='testcase'>test_1_swipedown_Mainpage</div></td>
-    <td align="left"></td>
-    <td align="left"> [59, 60, 62, 60, 61] </td>
-    <td align="left"> 3
-[ </td>
-    <td align="left"> 2.0
-[2.0 </td>
+    <td align='center'>0</td>
+    <td class='none'><div class='testcase'>知乎首页向下滑动</div></td>
+
+    <td align="center"> 60 </td>
+    <td align="center">  0 </td>
+    <td align="center">  1.0 </td>
+    <td align="center">  0.17% (3/1722) </td>
+    <td align="center">  8.30% (143 /1722) </td>
+    <td align="center">  0.00% (0/1722) </td>
+    <td align="center">  3.83% (66/1722) </td>
+    <td align="center">  0.06% (1 /1722) </td>
+    <td align="center">  3.31% (57 /1722) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.1')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.1" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.1'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['次数']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '次数',
+                            min: 0,
+                            max: 400,
+                            interval: 20,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'次数',
+                            type:'bar',
+                            data:[55, 167, 172, 192, 202, 196, 180, 143, 115, 66, 52, 51, 32, 32, 22, 10, 12, 5, 4, 5, 1, 0, 0, 0, 2, 0, 1, 2, 1, 0, 1, 0, 0, 1]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -260,27 +344,28 @@
         pt1.1: wait 3s...
 Setup end 
 
+case id:0
+case Name:知乎首页向下滑动
 Test Going..
-知乎首页向下滑动
-WARNING:root:Skipping frame lengths that are too short.
-WARNING:root:Skipping frame lengths that are too short.
-WARNING:root:Skipping frame lengths that are too short.
-知乎首页向下滑动
-知乎首页向下滑动
-知乎首页向下滑动
-知乎首页向下滑动
-begin dumpsysFramestats:2017-10-24 17:26:58.332000
-case id 35
-fps: [59, 60, 62, 60, 61]
-[59, 60, 62, 60, 61]
-jank count: 3
-[3, 0, 0, 0, 0]
-max frame delay: 2.0
-[2.0, 1.0, 1.0, 1.0, 1.0]
-begin processResult:2017-10-24 17:26:58.423000
-NineFrameLength=120
-FrameStats Parse End
-teardown, test end.
+begin dumpsysFramestats:2017-11-02 17:41:26.456000
+jank rate: 8.30% (143 /1722)
+real jank rate: 0.17% (3/1722)
+High input latency: 0.00% (0/1722)
+Slow UI thread: 3.83% (66/1722)
+Slow bitmap uploads: 0.06% (1 /1722)
+Slow issue draw commands rate: 3.31% (57 /1722)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44]
+Frame Count:[55, 167, 172, 192, 202, 196, 180, 143, 115, 66, 52, 51, 32, 32, 22, 10, 12, 5, 4, 5, 1, 0, 0, 0, 2, 0, 1, 2, 1, 0, 1, 0, 0, 1]
+frameinfo address: D:\pyCode\SmoothModel\output\com.zhihu.android\0_FrameInfo.xls
+fps: [60, 60, 60, 60, 60]
+[60, 60, 60, 60, 60]
+jank count: 0
+[0, 0, 0, 0, 0]
+max frame delay: 1.0
+[1.0, 1.0, 1.0, 1.0, 1.0]
+begin processResult:2017-11-02 17:41:26.598000
+数据收集有误
+ Test end.
 
         </pre>
     </div>
@@ -291,11 +376,10 @@ teardown, test end.
 
         <tr id='total_row'>
             <td colspan='2'>总计</td>
-            <td>Total: 1</td>
-            <td>Pass: 1</td>
-            <td>Failed: 0</td>
-            <td>Error: 0</td>
-            <td>&nbsp;</td>
+            <td colspan='3'>Total: 1</td>
+            <td colspan='3'>Pass: 1</td>
+            <td colspan='3'>Failed: 0</td>
+            <td colspan='2'>Error: 0</td>
         </tr>
     </table>
 

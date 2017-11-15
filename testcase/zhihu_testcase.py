@@ -20,7 +20,7 @@ class zhihutest(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         cls.zhihu_po.teardown()
-        print "continue to next case"
+        # print "continue to next case"
 
     def setUp(self):
         # self.zhihu_po = ZhihuPage()
@@ -33,12 +33,14 @@ class zhihutest(unittest.TestCase):
         print 'Setup end \n'
 
     def tearDown(self):
-        print 'teardown, test end.'
+        print ' Test end.'
         # self.zhihu_po.teardown()
 
     def test_1_swipedown_Mainpage(self):
-
         caseid = '0'
+        caseName = u'知乎首页向下滑动'
+        print "case id:" + caseid
+        print "case Name:" + caseName
         try:
             fps = []
             jank_count = []
@@ -60,7 +62,6 @@ class zhihutest(unittest.TestCase):
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
-                print "case id " + caseid
                 print 'fps: ' + str(fps)
                 print fps
                 print 'jank count: ' + str(max(jank_count))
@@ -78,6 +79,9 @@ class zhihutest(unittest.TestCase):
     def test_2_swipe_Mainpage(self):
 
         caseid = '1'
+        caseName = u'知乎首页来回滑动'
+        print "case id:" + caseid
+        print "case Name:" + caseName
         try:
             fps = []
             jank_count = []
@@ -87,7 +91,7 @@ class zhihutest(unittest.TestCase):
                 for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
-                    self.zhihu_po.swipealone_first_page()
+                    self.zhihu_po.swipe_alone_first_page()
 
                     results = self.getfps.SampleResults()
                     fps.append(results[1].value)
@@ -99,7 +103,6 @@ class zhihutest(unittest.TestCase):
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
-                print "case id " + caseid
                 print 'fps: ' + str(fps)
                 print fps
                 print 'jank count: ' + str(max(jank_count))
@@ -113,3 +116,11 @@ class zhihutest(unittest.TestCase):
 
         except Exception:
             print 'swipe action error..'
+
+    def _output(self, fps, jank_count, max_frame_delay):
+        print 'fps: ' + str(fps)
+        print fps
+        print 'jank count: ' + str(max(jank_count))
+        print jank_count
+        print 'max frame delay: ' + str(max(max_frame_delay))
+        print max_frame_delay

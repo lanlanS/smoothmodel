@@ -70,17 +70,6 @@ __author__ = "Wai Yip Tung"
 __version__ = "0.9.1"
 
 """
-Change History
-Version 0.9.1
-* 用Echarts添加执行情况统计图 (灰蓝)
-
-Version 0.9.0
-* 改成Python 3.x (灰蓝)
-
-Version 0.8.3
-* 使用 Bootstrap稍加美化 (灰蓝)
-* 改为中文 (灰蓝)
-
 Version 0.8.2
 * Show output inline instead of popup window (Viorel Lupu).
 
@@ -97,15 +86,14 @@ Version in 0.7.1
 * Fix missing scroll bars in detail log (Podi).
 """
 
-# TODO: color stderr
-# TODO: simplify javascript using ,ore than 1 class in the class attribute?
-
 import StringIO
 import datetime
 import sys
 import unittest
 from xml.sax import saxutils
 
+reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
+sys.setdefaultencoding('utf-8')
 
 # ------------------------------------------------------------------------
 # The redirectors below are used to capture output during testing. Output
@@ -359,7 +347,7 @@ class Template_mixin(object):
         """  # variables: (Pass, fail, error)
 
     Frame_Chart = """
-        <div id="%(chart_id)s" style="width:600px;height:500px;float:left;">
+        <div id="%(chart_id)s" style="width:600px;height:500px;float:left;" class="popup_window">
             <script type="text/javascript">
                 // 基于准备好的dom，初始化echarts实例
                 var myFrameChart = echarts.init(document.getElementById('%(chart_id)s'));
@@ -557,22 +545,25 @@ class Template_mixin(object):
         </colgroup>
         <tr id='header_row'>
             <td colspan='2'>测试套件/测试用例</td>
-            <td> 总数 </td>
             <td> FPS </td>
             <td> 掉帧数 </td>
             <td> Max Drop Frame </td>
-            <td> Detail Frame </td>
+            <td> 掉帧率（Miss Vsync） </td>
+            <td> 劣帧率 （Janky Frame）</td>
+            <td> High input latency </td>
+            <td> Slow UI thread </td>
+            <td> Slow bitmap uploads </td>
+            <td> Slow issue draw commands </td>
+            <td> 帧耗时分布图 </td>
             <td> 查看 </td>
         </tr>
         %(test_list)s
         <tr id='total_row'>
             <td colspan='2'>总计</td>
-            <td>Total: %(count)s</td>
-            <td>Pass: %(Pass)s</td>
-            <td>Failed: %(fail)s</td>
-            <td>Error: %(error)s</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
+            <td colspan='3'>Total: %(count)s</td>
+            <td colspan='3'>Pass: %(Pass)s</td>
+            <td colspan='3'>Failed: %(fail)s</td>
+            <td colspan='2'>Error: %(error)s</td>
         </tr>
     </table>
 """  # variables: (test_list, count, Pass, fail, error)
@@ -581,11 +572,16 @@ class Template_mixin(object):
     <tr class='%(style)s'>
         <td>Case ID</td>
         <td>%(desc)s</td>
-        <td>总数 </td>
+        <td>  </td>
         <td>%(avgFps)s</td>
         <td>%(avgJank)s</td>
         <td>%(max_drop)s</td>
-        <td> Detail Frame Data </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
         <td align="center"><a href="javascript:showClassDetail('%(cid)s',%(count)s)">详情</a></td>
     </tr>
 """  # variables: (style, desc, avgFps, avgJank, fail, error, cid)    删除一行 <td>%(error)s</td>
@@ -594,15 +590,21 @@ class Template_mixin(object):
 <tr id='%(tid)s' class='%(Class)s'>
     <td align='center'>%(case_id)s</td>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
-    <td align="left">
 
+    <td align="center"> %(fps)s </td>
+    <td align="center"> %(jank)s </td>
+    <td align="center"> %(max_drop)s </td>
+    <td align="center"> %(missvsync)s </td>
+    <td align="center"> %(janky)s </td>
+    <td align="center"> %(inputlatency)s </td>
+    <td align="center"> %(slow_ui)s </td>
+    <td align="center"> %(slow_bitmap)s </td>
+    <td align="center"> %(slow_draw)s </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('%(chart_id)s')" >
+        帧分布直方图</a>
             %(FrameChart)s
     </td>
-    <td align="left"> %(fps)s </td>
-    <td align="left"> %(jank)s </td>
-    <td align="left"> %(max_drop)s </td>
-    <td align="left">
-     <a href=".\output\%(frameinfo_add)s"> %(frameinfo_add)s </a></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
@@ -633,7 +635,14 @@ class Template_mixin(object):
     REPORT_TEST_OUTPUT_FPS = r"""%(fps)s"""  # variables: (fps)
     REPORT_TEST_OUTPUT_JANK = r"""%(jank)s"""  # variables: (jank)
     REPORT_TEST_OUTPUT_MAX_DROP = r"""%(max_drop)s"""  # variables: (max drop)
-    REPORT_TEST_OUTPUT_FRAME = r"""%(frameinfo_add)s"""  # variables: (frameinfo file address)
+    # REPORT_TEST_OUTPUT_FRAME = r"""%(frameinfo_add)s"""  # variables: (frameinfo file address)
+
+    REPORT_TEST_OUTPUT_MissVsync = r"""%(missvsync)s"""  # variables: (Number Missed Vsync)
+    REPORT_TEST_OUTPUT_JankyFrame = r"""%(janky)s"""  # variables: (Janky frames)
+    REPORT_TEST_OUTPUT_INPUT = r"""%(inputlatency)s"""  # variables: (Number High input latency)
+    REPORT_TEST_OUTPUT_UI = r"""%(slow_ui)s"""  # variables: (Number Slow UI thread)
+    REPORT_TEST_OUTPUT_BITMAP = r"""%(slow_bitmap)s"""  # variables: (Number Slow bitmap uploads)
+    REPORT_TEST_OUTPUT_DRAW = r"""%(slow_draw)s"""  # variables: (Number Slow issue draw commands)
 
     # ------------------------------------------------------------------------
     # ENDING
@@ -907,9 +916,9 @@ class HTMLTestRunner(Template_mixin):
                     style=ne > 0 and 'errorClass' or nf > 0 and 'failClass' or 'passClass',
                     desc=desc,
                     count=np + nf + ne,
-                    avgFps=np,
-                    avgJank=nf,
-                    max_drop=ne,
+                    avgFps=np,  # TODO:   总case的平均fps
+                    avgJank=nf,  # TODO：  总case的累计jank次数
+                    max_drop=ne,  # TODO：  总case的累计掉帧时长
                     cid='c%s' % (cid + 1),
             )
             rows.append(row)
@@ -936,9 +945,9 @@ class HTMLTestRunner(Template_mixin):
 
     def _generate_framechart(self, chart_id, time, count):
         frame_chart = self.Frame_Chart % dict(  # Frame_Chart : javascript
-            chart_id=str(chart_id),
-            frametime=str(time),
-            framecount=str(count),
+                chart_id=str(chart_id),
+                frametime=str(time),
+                framecount=str(count),
         )
         return frame_chart
 
@@ -946,7 +955,8 @@ class HTMLTestRunner(Template_mixin):
         # e.g. 'pt1.1', 'ft1.1', etc
         has_output = bool(o or e)
         tid = (n == 0 and 'p' or 'f') + 't%s.%s' % (cid + 1, tid + 1)
-        name = t.id().split('.')[-1]
+        # name = t.id().split('.')[-1]
+        name = o.split('\n')[4].split(':')[-1]  # 修改测试用例名字
         doc = t.shortDescription() or ""
         desc = doc and ('%s: %s' % (name, doc)) or name
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
@@ -971,15 +981,40 @@ class HTMLTestRunner(Template_mixin):
                 max_drop=saxutils.escape(o + e)
         )
 
-        frameinfo_add = self.REPORT_TEST_OUTPUT_FRAME % dict(  # new added
-                frameinfo_add=saxutils.escape(o + e)
+        # frameinfo_add = self.REPORT_TEST_OUTPUT_FRAME % dict(  # new added # DELETE THIS CROW
+        #         frameinfo_add=saxutils.escape(o + e)
+        # )
+
+        missvsyncdata = self.REPORT_TEST_OUTPUT_MissVsync % dict(
+                missvsync=script
         )
 
-        time = script.split('\n')[10].split(":")[-1]
-        count = script.split('\n')[11].split(":")[-1]
-        chart_id = 'framechart_' + tid
+        jankydata = self.REPORT_TEST_OUTPUT_JankyFrame % dict(
+                janky=script
+        )
+        inputlatencydata = self.REPORT_TEST_OUTPUT_INPUT % dict(
+                inputlatency=script
+        )
+        slow_ui = self.REPORT_TEST_OUTPUT_UI % dict(
+                slow_ui=script
+        )
+        slow_bitmap = self.REPORT_TEST_OUTPUT_BITMAP % dict(
+                slow_bitmap=script
+        )
+        slow_drawdata = self.REPORT_TEST_OUTPUT_DRAW % dict(
+                slow_draw=script
+        )
 
-        frame_chart = self._generate_framechart(chart_id, time, count)
+        time = script.split('\n')[13].split(":")[-1]
+        count = script.split('\n')[14].split(":")[-1]
+        chart_id_data = 'framechart_' + tid
+        fpslist = fps.split('\n')[16].split(':')[1].split(',')
+        totalfps = 0
+        for i in fpslist:
+            totalfps += int(i.strip(' [').strip(']'))
+        avgfps = int(totalfps / len(fpslist))
+
+        frame_chart = self._generate_framechart(chart_id_data, time, count)
 
         row = tmpl % dict(
                 tid=tid,
@@ -988,14 +1023,19 @@ class HTMLTestRunner(Template_mixin):
                 desc=desc,
                 FrameChart=frame_chart.decode("utf-8"),
                 script=script,
-                case_id=case_id.split('\n')[13].split(' ')[-1],
+                case_id=case_id.split('\n')[3].split(':')[-1],
                 status=self.STATUS[n],
-                fps=fps.split('\n')[14].split(':')[1],
-                jank=jank.split('\n')[16].split(':')[1],
-                # max_drop=max_drop[
-                #          int((max_drop.find("max frame delay:")) + 17):(int(max_drop.find("max frame delay:")) + 25)],
-                max_drop=max_drop.split('\n')[18].split(':')[1],
-                frameinfo_add=frameinfo_add.split('\n')[12].split("output\\")[1]
+                fps=str(avgfps).decode("utf-8"),
+                jank=jank.split('\n')[18].split(':')[1],
+                max_drop=max_drop.split('\n')[20].split(':')[1],
+                # frameinfo_add=frameinfo_add.split('\n')[12].split("output\\")[1],
+                missvsync=missvsyncdata.split('\n')[8].split(':')[1],
+                janky=jankydata.split('\n')[7].split(':')[1],
+                inputlatency=inputlatencydata.split('\n')[9].split(':')[1],
+                slow_ui=slow_ui.split('\n')[10].split(':')[1],
+                slow_bitmap=slow_bitmap.split('\n')[11].split(':')[1],
+                slow_draw=slow_drawdata.split('\n')[12].split(':')[1],
+                chart_id=chart_id_data.decode("utf-8"),
         )
         rows.append(row)
         if not has_output:

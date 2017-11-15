@@ -3,6 +3,8 @@ import threading
 from urllib2 import URLError
 
 import time
+
+import sys
 from appium import webdriver
 from selenium.common.exceptions import WebDriverException
 
@@ -49,7 +51,7 @@ class appsetUp:
             return self.driver
         except WebDriverException:
             print "Driver not connected "
-            raise
+            sys.exit(1)
 
     def teardown(self):
         # quit driver

@@ -7,6 +7,8 @@ import time
 from utill.xmlreader import XmlReader
 from testcase.wechat_testcase import wechattest
 from testcase.zhihu_testcase import zhihutest
+from testcase.taobao_testcase import tbtest
+from testcase.weibo_testcase import weibotest
 from report.HTMLTestRunner_mz import HTMLTestRunner
 
 
@@ -49,6 +51,5 @@ def suit_run():
             print fail
     else:
         print u"未获取到正确的测试用例，请检查testcase.xml文件。"
-
 
 suit_run()

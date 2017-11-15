@@ -33,9 +33,7 @@ class ZhihuPage():
                 # retrun True
 
     def swipDown_first_page(self):
-        caseName = u'知乎首页向下滑动'
         try:
-            print caseName
             if self.check_mainActivity():
                 for i in range(0, 10):
                     self.cm.my_swipe_to_up(during=400)
@@ -44,12 +42,11 @@ class ZhihuPage():
             else:
                 print 'Connot open zhihu APP\'s MainPage'
         except:
-            print caseName + ' Failed!'
+            raise Exception
 
     def swipUp_first_page(self):
-        caseName = u'知乎首页向上滑动'
+
         try:
-            print caseName
             if self.check_mainActivity():
                 for i in range(0, 10):
                     self.cm.my_swipe_to_down(during=400)
@@ -58,12 +55,10 @@ class ZhihuPage():
             else:
                 print 'Connot open zhihu APP\'s MainPage'
         except:
-            print caseName + ' Failed!'
+            raise Exception
 
-    def swipealone_first_page(self):
-        caseName = u'知乎首页来回滑动'
+    def swipe_alone_first_page(self):
         try:
-            print caseName
             if self.check_mainActivity():
                 for i in range(0, 10):
                     self.cm.my_swipe_to_up(during=400)
@@ -73,7 +68,7 @@ class ZhihuPage():
             else:
                 print 'Connot open zhihu APP\'s MainPage'
         except:
-            print caseName + ' Failed!'
+            raise Exception
 
     def teardown(self):
         self.zhihu_setup.teardown()

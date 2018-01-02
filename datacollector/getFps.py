@@ -96,7 +96,7 @@ class SurfaceStatsCollector(object):
                     timestamps, refresh_period, _MIN_NORMALIZED_FRAME_LENGTH)
 
         if len(frame_lengths) < frame_count - 1:
-            logging.warning('Skipping frame lengths that are too short.')
+            # logging.warning('Skipping frame lengths that are too short.')
             frame_count = len(frame_lengths) + 1
         if len(frame_lengths) == 0:
             raise Exception('No valid frames lengths found.')
@@ -163,7 +163,7 @@ class SurfaceStatsCollector(object):
         while not self._stop_event.is_set():
             self._get_data_event.wait(1)
             try:
-                refresh_period, new_timestamps = self._GetSurfaceFlingerFrameData()
+                refresh_period, new_timestamps = self._GetSurfaceFlingerFrameData
                 if refresh_period is None or timestamps is None:
                     retries += 1
                     if retries < 3:
@@ -212,6 +212,7 @@ class SurfaceStatsCollector(object):
                 'adb shell dumpsys SurfaceFlinger --latency-clear ' + self.windowname).readlines()
         return not len(results)
 
+    @property
     def _GetSurfaceFlingerFrameData(self):
         """Returns collected SurfaceFlinger frame timing data.
 
@@ -254,7 +255,7 @@ class SurfaceStatsCollector(object):
         results = os.popen(
                 'adb shell dumpsys SurfaceFlinger --latency ' + self.windowname).readlines()
         if not len(results):
-            return (None, None)
+            return None, None
 
         timestamps = []
         nanoseconds_per_second = 1e9

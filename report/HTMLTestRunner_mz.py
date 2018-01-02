@@ -92,8 +92,9 @@ import sys
 import unittest
 from xml.sax import saxutils
 
-reload(sys) # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
+reload(sys)  # Python2.5 初始化后会删除 sys.setdefaultencoding 这个方法，我们需要重新载入
 sys.setdefaultencoding('utf-8')
+
 
 # ------------------------------------------------------------------------
 # The redirectors below are used to capture output during testing. Output
@@ -151,6 +152,11 @@ class Template_mixin(object):
     |  <body>                |
     |                        |
     |   HEADING              |
+    |   +----------------+   |
+    |   |                |   |
+    |   +----------------+   |
+    |                        |
+    |   ComparePart          |
     |   +----------------+   |
     |   |                |   |
     |   +----------------+   |
@@ -372,7 +378,7 @@ class Template_mixin(object):
                         }
                     },
                     legend: {
-                        data:['次数']
+                        data:['%%']
                     },
                     xAxis: [
                         {
@@ -387,10 +393,8 @@ class Template_mixin(object):
                     yAxis: [
                         {
                             type: 'value',
-                            name: '次数',
-                            min: 0,
-                            max: 400,
-                            interval: 20,
+                            name: '百分比',
+                            interval: 10,
                             axisLabel: {
                             formatter: '{value} '
                             }
@@ -410,6 +414,49 @@ class Template_mixin(object):
             </script>
         </div>
         """  # variables: (frametime, framecount)
+    Filereader = '''
+    <script type="text/javascript">
+        window.onload = function() {
+            /**
+             * 上传函数
+             * @param fileInput DOM对象
+             * @param callback 回调函数
+             */
+            var getFileContent = function (fileInput, callback) {
+                if (fileInput.files && fileInput.files.length > 0 && fileInput.files[0].size > 0) {
+                    //下面这一句相当于JQuery的：var file =$("#upload").prop('files')[0];
+                    var file = fileInput.files[0];
+                    if (window.FileReader) {
+                        var reader = new FileReader();
+                        reader.onloadend = function (evt) {
+                            if (evt.target.readyState == FileReader.DONE) {
+                                callback(evt.target.result);
+                            }
+                        };
+                        // 包含中文内容用gbk编码
+                        reader.readAsText(file, 'utf-8');
+                    }
+                }
+            };
+
+        /**
+         * upload内容变化时载入内容
+         */
+
+    };
+    </script>
+    '''
+
+    GetComparedata = '''
+    <script>
+        document.getElementById('xFile').onchange = function () {
+            getFileContent(this, function (str) {
+                var data =  = str;
+
+            });
+        };
+    </script>
+    '''
 
     # ------------------------------------------------------------------------
     # Stylesheet
@@ -516,8 +563,7 @@ class Template_mixin(object):
     %(parameters)s
     </div>
     <div style="float: left;width:50%%;"><p class='description'>%(description)s</p></div>
-    <div id="chart" style="width:50%%;height:400px;float:left;"></div>
-
+    <div id="chart" style="width:50%%;height:250px;float:left;"></div>
     """  # variables: (title, parameters, description)
 
     HEADING_ATTRIBUTE_TMPL = """<p class='attribute'><strong>%(name)s:</strong> %(value)s</p>
@@ -526,13 +572,16 @@ class Template_mixin(object):
     # ------------------------------------------------------------------------
     # Report
     #
-
     REPORT_TMPL = u"""
-    <div class="btn-group btn-group-sm">
+    <div class="btn-group btn-group-sm" style="float:left;width:50%%;">
         <button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button>
         <button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
         <button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+        <!-- 新增对比功能： 增加对比功能按钮 -->
+        <label class="btn btn-default" for="xFile">对比历史数据</label>
+        <form><input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"></form>
     </div>
+
     <p></p>
     <table id='result_table' class="table table-bordered">
         <colgroup>
@@ -572,10 +621,10 @@ class Template_mixin(object):
     <tr class='%(style)s'>
         <td>Case ID</td>
         <td>%(desc)s</td>
-        <td>  </td>
-        <td>%(avgFps)s</td>
-        <td>%(avgJank)s</td>
-        <td>%(max_drop)s</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
         <td> </td>
         <td> </td>
         <td> </td>
@@ -1010,9 +1059,12 @@ class HTMLTestRunner(Template_mixin):
         chart_id_data = 'framechart_' + tid
         fpslist = fps.split('\n')[16].split(':')[1].split(',')
         totalfps = 0
+        fpslist_len = 0
         for i in fpslist:
-            totalfps += int(i.strip(' [').strip(']'))
-        avgfps = int(totalfps / len(fpslist))
+            if i is not 'None':
+                totalfps += int(i.strip(' [').strip(']'))
+                fpslist_len += 1
+        avgfps = int(totalfps / fpslist_len)
 
         frame_chart = self._generate_framechart(chart_id_data, time, count)
 

@@ -1,17 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <body>
+    <!--
+    <testsuit testclass="Wechat">
+        <testcase caseid="1" caseName="进入朋友圈" caseClass ="wechattest/test_1_enterMonents"> </testcase>
+        <testcase caseid="2" caseName="输入聊天记录" caseClass ="wechattest/test_2_chatpage"> </testcase>
+        <testcase caseid="3" caseName="切换聊天窗口" caseClass ="wechattest/test_3_switchwindow"> </testcase>
+        <testcase caseid="4" caseName="快速上下滑动聊天记录" caseClass ="wechattest/test_4_switchchatpage"> </testcase>
+        <testcase caseid="5" caseName="滑动公众号信息" caseClass ="wechattest/test_5_swipesubscription"> </testcase>
+        <testcase caseid="6" caseName="滑动自己的朋友圈相册" caseClass ="wechattest/test_6_swipeMyPosts"> </testcase>
+        <testcase caseid="7" caseName="滑动好友列表" caseClass ="wechattest/test_7_swipeMyFriendList"> </testcase>
+        <testcase caseid="8" caseName="查看好友朋友圈" caseClass ="wechattest/test_8_swipe_friendalbum"> </testcase>
+        <testcase caseid="9" caseName="查看聊天图片" caseClass ="wechattest/test_9_view_pic"> </testcase>
+    </testsuit>
+
+
+    <testsuit testclass="weibo">
+        <testcase caseid="0" caseName="微博首页向下滑动" caseClass ="weibotest/test_1_swipedown_Mainpage"> </testcase>
+        <testcase caseid="1" caseName="微博首页向上滑动" caseClass ="weibotest/test_2_swipe_Mainpage" > </testcase>
+        <testcase caseid="1" caseName="查看微博图片" caseClass ="weibotest/test_3_clickpic" > </testcase>
+    </testsuit>
+
+     <testsuit testclass="taobao">
+        <testcase caseid="0" caseName="淘宝首页向下滑动" caseClass ="tbtest/test_1_swipedown_tbMainpage"> </testcase>
+        <testcase caseid="1" caseName="淘宝首页向上滑动" caseClass ="tbtest/test_2_swipeup_tbMainpage" > </testcase>
+        <testcase caseid="2" caseName="查看淘宝宝贝详情" caseClass ="tbtest/test_3_switch_goodspage" > </testcase>
+    </testsuit>
+
     <testsuit testclass="zhihu">
+        <testcase caseid="2" caseName="知乎文章界面滑动" caseClass ="zhihutest/test_3_swipe_Contentpage"> </testcase>
+        <testcase caseid="3" caseName="文章界面窗口切换" caseClass ="zhihutest/test_4_switch_Contentpage"> </testcase>
         <testcase caseid="0" caseName="知乎首页向下滑动" caseClass ="zhihutest/test_1_swipedown_Mainpage" > </testcase>
         <testcase caseid="1" caseName="知乎首页来回滑动" caseClass ="zhihutest/test_2_swipe_Mainpage"> </testcase>
     </testsuit>
-    <testsuit testclass="taobao">
 
-        <testcase caseid="0" caseName="淘宝首页向下滑动" caseClass ="tbtest/test_1_swipedown_tbMainpage"> </testcase>
-        <testcase caseid="1" caseName="淘宝首页向上滑动" caseClass ="tbtest/test_2_swipeup_tbMainpage" > </testcase>
+     <testsuit testclass="NeteaseNews">
+        <testcase caseid="0" caseName="网易新闻首页快速向下滑动" caseClass ="Neteasenewstest/test_1_netease_swipedown_Mainpage"> </testcase>
+        <testcase caseid="1" caseName="网易新闻首页快速向上滑动" caseClass ="Neteasenewstest/test_2_netease_swipeup_Mainpage" > </testcase>
+        <testcase caseid="1" caseName="网易新闻快速切换新闻窗口" caseClass ="Neteasenewstest/test_3_netease_switch_Newspage" > </testcase>
     </testsuit>
-    <testsuit testclass="weibo">
 
-        <testcase caseid="0" caseName="微博首页向下滑动" caseClass ="weibotest/test_1_swipedown_Mainpage"> </testcase>
-        <testcase caseid="1" caseName="微博首页向上滑动" caseClass ="weibotest/test_2_swipe_Mainpage" > </testcase>
+    <testsuit testclass="toutiaoNews">
+        <testcase caseid="0" caseName="今日头条首页快速向下滑动" caseClass ="SSnewstest/test_1_toutiao_swipedown_Mainpage"> </testcase>
+        <testcase caseid="1" caseName="今日头条首页快速向上滑动" caseClass ="SSnewstest/test_2_toutiao_swipeup_Mainpage" > </testcase>
     </testsuit>
+
+
+    <testsuit testclass="settings">
+        <testcase caseid="0" caseName="设置首页向下滑动" caseClass ="Settingtest/test_1_setting_swipedown_Mainpage"> </testcase>
+        <testcase caseid="1" caseName="切换无线网络界面" caseClass ="Settingtest/test_2_setting_switchWifi"> </testcase>
+        <testcase caseid="2" caseName="滑动无线网络界面" caseClass ="Settingtest/test_3_setting_swipeWifi"> </testcase>
+    </testsuit>
+
+    <testsuit testclass="Gallery">
+        <testcase caseid="1" caseName="图库滑动" caseClass ="Gallerytest/test_1_gallery_swipedown_Mainpage"> </testcase>
+    </testsuit> -->
+
+    <testsuit testclass="system">
+        <testcase caseid="0" caseName="下拉通知栏" caseClass ="Systemtest/test_1_dropDownNotification"> </testcase>
+        <testcase caseid="1" caseName="呼出任务管理器" caseClass ="Systemtest/test_2_swipe_recents"> </testcase>
+        <testcase caseid="2" caseName="桌面来回滑动" caseClass ="Systemtest/test_3_swipe_launcher"> </testcase>
+    </testsuit>
+
 </body>

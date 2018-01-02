@@ -1,6 +1,9 @@
 # coding=utf-8
 import os
 import time
+
+from selenium.common.exceptions import NoSuchElementException
+
 from utill.Setup import appsetUp
 from utill.commonMethod import commonmethod
 
@@ -69,6 +72,32 @@ class ZhihuPage():
                 print 'Connot open zhihu APP\'s MainPage'
         except:
             raise Exception
+
+    def find_context(self):
+        try:
+            content = self.cm.driver.find_element_by_id("com.zhihu.android:id/body")
+            if content:
+                return content
+        except NoSuchElementException:
+            raise Exception
+
+    def swipe_down_contentpage(self):
+        content = self.find_context()
+        content.click()
+        time.sleep(0.5)
+        if self.cm.driver.find_element_by_id('com.zhihu.android:id/comment_btn'):  # 判断是否进入文章界面，存在 评论id
+            for i in range(0, 5):
+                self.cm.my_swipe_to_up(during=400)
+            for i in range(0, 5):
+                self.cm.my_swipe_to_down(during=400)
+            self.cm.back()
+
+    def swich_contentpage(self):
+        for i in range(0, 5):
+            content = self.find_context()
+            content.click()
+            time.sleep(0.5)
+            self.cm.back()
 
     def teardown(self):
         self.zhihu_setup.teardown()

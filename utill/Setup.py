@@ -1,3 +1,4 @@
+# coding=utf-8
 import os
 import threading
 from urllib2 import URLError
@@ -37,6 +38,8 @@ class appsetUp:
                         "appPackage": packageName,
                         "appActivity": activityName,
                         "deviceName": deviceName,
+                        "resetKeyboard": True,
+                        "unicodeKeyboard": True,   # enable输入法
                         "noReset": True,
                         'newCommandTimeout': 600}
         try:

@@ -37,7 +37,7 @@ class zhihutest(unittest.TestCase):
         # self.zhihu_po.teardown()
 
     def test_1_swipedown_Mainpage(self):
-        caseid = '0'
+        caseid = '1'
         caseName = u'知乎首页向下滑动'
         print "case id:" + caseid
         print "case Name:" + caseName
@@ -74,11 +74,12 @@ class zhihutest(unittest.TestCase):
                 print u'数据收集有误'
 
         except Exception:
-            print 'swipe action error..'
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
 
     def test_2_swipe_Mainpage(self):
 
-        caseid = '1'
+        caseid = '2'
         caseName = u'知乎首页来回滑动'
         print "case id:" + caseid
         print "case Name:" + caseName
@@ -115,12 +116,96 @@ class zhihutest(unittest.TestCase):
                 print u'数据收集有误'
 
         except Exception:
-            print 'swipe action error..'
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
 
-    def _output(self, fps, jank_count, max_frame_delay):
-        print 'fps: ' + str(fps)
-        print fps
-        print 'jank count: ' + str(max(jank_count))
-        print jank_count
-        print 'max frame delay: ' + str(max(max_frame_delay))
-        print max_frame_delay
+    def test_3_swipe_Contentpage(self):
+
+        caseid = '3'
+        caseName = u'文章界面来回滑动'
+        print "case id:" + caseid
+        print "case Name:" + caseName
+        try:
+            fps = []
+            jank_count = []
+            max_frame_delay = []
+
+            if self.getframe.clear_FrameStats():
+                for loop in range(5):
+                    self.getfps.Start()  # start collect fps
+
+                    self.zhihu_po.swipe_down_contentpage()
+
+                    results = self.getfps.SampleResults()
+                    fps.append(results[1].value)
+                    jank_count.append(results[2].value)
+                    max_frame_delay.append(results[3].value)
+
+                    self.getfps.Stop()
+                    loop += 1
+            self.getframe.dumpsysFramestats(caseid)  # start collect framestats
+
+            try:
+                print 'fps: ' + str(fps)
+                print fps
+                print 'jank count: ' + str(max(jank_count))
+                print jank_count
+                print 'max frame delay: ' + str(max(max_frame_delay))
+                print max_frame_delay
+
+                self.getframe.beginProcessResult(caseid)
+            except:
+                print u'数据收集有误'
+        except Exception:
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
+
+    def test_4_switch_Contentpage(self):
+
+        caseid = '4'
+        caseName = u'文章界面窗口切换'
+        print "case id:" + caseid
+        print "case Name:" + caseName
+        try:
+            fps = []
+            jank_count = []
+            max_frame_delay = []
+
+            if self.getframe.clear_FrameStats():
+                for loop in range(5):
+                    self.getfps.Start()  # start collect fps
+
+                    self.zhihu_po.swich_contentpage()
+
+                    results = self.getfps.SampleResults()
+                    fps.append(results[1].value)
+                    jank_count.append(results[2].value)
+                    max_frame_delay.append(results[3].value)
+
+                    self.getfps.Stop()
+                    loop += 1
+            self.getframe.dumpsysFramestats(caseid)  # start collect framestats
+
+            try:
+                print 'fps: ' + str(fps)
+                print fps
+                print 'jank count: ' + str(max(jank_count))
+                print jank_count
+                print 'max frame delay: ' + str(max(max_frame_delay))
+                print max_frame_delay
+
+                self.getframe.beginProcessResult(caseid)
+            except:
+                print u'数据收集有误'
+        except Exception:
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
+
+    def error_info(self):
+        self.getfps.Stop()
+        print 'fps: 0'
+        print '0'
+        print 'jank count: 0'
+        print '0'
+        print 'max frame delay: 0'
+        print '0'

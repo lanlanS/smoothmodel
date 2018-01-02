@@ -9,6 +9,12 @@ from testcase.wechat_testcase import wechattest
 from testcase.zhihu_testcase import zhihutest
 from testcase.taobao_testcase import tbtest
 from testcase.weibo_testcase import weibotest
+from testcase.toutiao_testcase import SSnewstest
+from testcase.neteasenews_testcase import Neteasenewstest
+from testcase.wechat_testcase import wechattest
+from testcase.system_testcase import Systemtest
+from testcase.setting_testcase import Settingtest
+from testcase.gallery_testcase import Gallerytest
 from report.HTMLTestRunner_mz import HTMLTestRunner
 
 
@@ -45,11 +51,14 @@ def suit_run():
         # suit.run(unittest.TestResult())
         runner.run(suit)
         fp.close()
+
+        failures = unittest.TestResult().failures
         for err in unittest.TestResult().errors:
             print err
-        for fail in unittest.TestResult().failures:
-            print fail
+        for f in failures:
+            print f
     else:
         print u"未获取到正确的测试用例，请检查testcase.xml文件。"
+
 
 suit_run()

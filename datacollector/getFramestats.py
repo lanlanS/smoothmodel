@@ -121,6 +121,7 @@ class GetFramestats:
                     count1 = []
                     fcount = []
                     ftime = []
+                    ffreq = []
                     for h in histogramlist:
                         time1.append(h[0])
                         count1.append(h[1])
@@ -133,8 +134,12 @@ class GetFramestats:
                         if not fcount or not ftime:
                             fcount = count1
                             ftime = time1
+                        for tem in fcount:
+                            freq = "%.2f" % (float(tem)/float(sum(fcount))*100)
+                            ffreq.append(float(freq))
+
                         print "Frame Latency:" + str(ftime)
-                        print "Frame Count:" + str(fcount)
+                        print "Frame Count:" + str(ffreq)
 
                     # write HISTOGRAM into EXCEL
                     wb = xlwt.Workbook(encoding='utf-8')

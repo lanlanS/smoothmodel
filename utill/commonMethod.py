@@ -81,10 +81,14 @@ class commonmethod:
 
     # 3s short wait element
     def shortwaitElementById(self, elementid):
-        self.wait_short.until(lambda x: x.find_element_by_id(elementid))
+        ele = self.wait_short.until(lambda x: x.find_element_by_id(elementid))
+        return ele
 
     def shortwaitElementByName(self, elementname):
         self.wait_short.until(lambda x: x.find_element_by_name(elementname))
 
     def shortwaitElementByClassNmae(self, elementclass):
         self.wait_short.until(lambda x: x.find_element_by_class_name(elementclass))
+
+    def clickbutton(self, element):
+        self.driver.find_element_by_class_name(element)

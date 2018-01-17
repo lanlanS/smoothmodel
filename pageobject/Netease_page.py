@@ -72,9 +72,11 @@ class NeteasePage():
 
     def switch_newspage(self):
         for i in range(0, 5):
-            content = self.cm.driver.find_element_by_id("com.netease.newsreader.activity:id/ea")
+            time.sleep(0.5)
+            content = self.cm.driver.find_element_by_id("com.netease.newsreader.activity:id/e8")
+            time.sleep(0.3)
             content.click()
-            time.sleep(1)
+            time.sleep(0.5)
             self.cm.back()
 
     def teardown(self):

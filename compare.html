@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Read Text</title>
+  <style>
+    div {
+     margin-top: 30px;
+     border: solid 1px black;
+     padding: 5px;
+    }
+  </style>
+  <script>
+    function processFiles(files) {
+      var file = document.getElementById("file").files[0];
+ 
+      var message = document.getElementById("message");
+      message.innerHTML = "文件名：" + file.name + "<br>";
+      message.innerHTML += "文件大小：" + file.size + "字节<br>";
+      message.innerHTML += "文件类型：" + file.status+ "<br>";
+
+       
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        // 这个事件发生，意为着数据准备好了
+        // 把它复制到页面的<div>元素中
+        var output = document.getElementById("fileOutput");  
+        output.textContent = this.result.getElementsByName("result_table");;
+      };
+      reader.readAsText(file);
+    }
+  </script>
+
+    
+</head>
+<body>
+  <input id="fileInput" type="file" size="50" onchange="processFiles(this.files)">
+  <div id="message"></div>
+  <div id="fileOutput"></div>
+</body>
+</html>

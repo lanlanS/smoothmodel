@@ -25,6 +25,14 @@ def getcaselist():
     return caselist
 
 
+def getdevicesName():
+    devicesName = os.popen(' adb shell getprop |grep ro.build.product').readline().split(':')[1].strip()
+    if devicesName is None:
+        devicesName = ''
+
+    return devicesName
+
+
 def suit_run():
     caselist = getcaselist()
     suit = unittest.TestSuite()
@@ -33,7 +41,8 @@ def suit_run():
     # test_suit2 = unittest.TestLoader().loadTestsFromTestCase(zhihutest)
     # suit.addTests(test_suit1)
     timestr = time.strftime('%Y%m%d%H%M%S', time.localtime(time.time()))
-    filename = os.getcwd() + "\\result_" + timestr + ".html"
+    device = getdevicesName()
+    filename = os.getcwd() + "\\"+device+"_" + timestr + ".html"
     print (filename)
     fp = open(filename, 'wb')
     runner = HTMLTestRunner(

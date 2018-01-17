@@ -34,8 +34,8 @@ class ToutiaoPage():
         try:
             if self.check_toutiaomainActivity():
                 for i in range(0, 10):
-                    self.cm.my_swipe_to_up(during=400)
                     time.sleep(0.1)
+                    self.cm.my_swipe_to_up(during=400)
                     i += 1
             else:
                 print 'Connot start toutiao news '
@@ -47,9 +47,8 @@ class ToutiaoPage():
         try:
             if self.check_toutiaomainActivity():
                 for i in range(0, 10):
-                    self.cm.my_swipe_to_down(during=400)
                     time.sleep(0.1)
-                    i += 1
+                    self.cm.my_swipe_to_down(during=400)
             else:
                 print 'Connot start toutiao news '
         except:

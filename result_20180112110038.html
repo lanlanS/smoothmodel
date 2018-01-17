@@ -1,0 +1,1392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>性能流畅度模型 测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.9.1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+    body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+    table       { font-size: 100%; }
+    pre         { white-space: pre-wrap;word-wrap: break-word; }
+
+    /* -- heading ---------------------------------------------------------------------- */
+    h1 {
+        font-size: 16pt;
+        color: gray;
+    }
+    .heading {
+        margin-top: 0ex;
+        margin-bottom: 1ex;
+    }
+
+    .heading .attribute {
+        margin-top: 1ex;
+        margin-bottom: 0;
+    }
+
+    .heading .description {
+        margin-top: 2ex;
+        margin-bottom: 3ex;
+    }
+
+    /* -- css div popup ------------------------------------------------------------------------ */
+    a.popup_link {
+    }
+
+    a.popup_link:hover {
+        color: red;
+    }
+
+    .popup_window {
+        display: none;
+        position: relative;
+        left: 0px;
+        top: 0px;
+        /*border: solid #627173 1px; */
+        padding: 10px;
+        /*background-color: #E6E6D6; */
+        font-family: "Lucida Console", "Courier New", Courier, monospace;
+        text-align: left;
+        font-size: 8pt;
+        /* width: 500px;*/
+    }
+
+    }
+    /* -- report ------------------------------------------------------------------------ */
+    #show_detail_line {
+        margin-top: 3ex;
+        margin-bottom: 1ex;
+    }
+    #result_table {
+        width: 99%;
+    }
+    #header_row {
+        font-weight: bold;
+        color: #303641;
+        background-color: #ebebeb;
+    }
+    #total_row  { font-weight: bold; }
+    .passClass  { background-color: #bdedbc; }
+    .failClass  { background-color: #ffefa4; }
+    .errorClass { background-color: #ffc9c9; }
+    .passCase   { color: #6c6; }
+    .failCase   { color: #FF6600; font-weight: bold; }
+    .errorCase  { color: #c00; font-weight: bold; }
+    .hiddenRow  { display: none; }
+    .testcase   { margin-left: 2em; }
+
+
+    /* -- ending ---------------------------------------------------------------------- */
+    #ending {
+    }
+
+    #div_base {
+                position:absolute;
+                top:0%;
+                left:5%;
+                right:5%;
+                width: auto;
+                height: auto;
+                margin: -15px 0 0 0;
+    }
+</style>
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="report/js/echarts.common.min.js"></script>
+</head>
+<body>
+    <script language="javascript" type="text/javascript"><!--
+    output_list = Array();
+
+    /* level - 0:Summary; 1:Failed; 2:All */
+    function showCase(level) {
+        trs = document.getElementsByTagName("tr");
+        for (var i = 0; i < trs.length; i++) {
+            tr = trs[i];
+            id = tr.id;
+            if (id.substr(0,2) == 'ft') {
+                if (level < 1) {
+                    tr.className = 'hiddenRow';
+                }
+                else {
+                    tr.className = '';
+                }
+            }
+            if (id.substr(0,2) == 'pt') {
+                if (level > 1) {
+                    tr.className = '';
+                }
+                else {
+                    tr.className = 'hiddenRow';
+                }
+            }
+        }
+    }
+
+
+    function showClassDetail(cid, count) {
+        var id_list = Array(count);
+        var toHide = 1;
+        for (var i = 0; i < count; i++) {
+            tid0 = 't' + cid.substr(1) + '.' + (i+1);
+            tid = 'f' + tid0;
+            tr = document.getElementById(tid);
+            if (!tr) {
+                tid = 'p' + tid0;
+                tr = document.getElementById(tid);
+            }
+            id_list[i] = tid;
+            if (tr.className) {
+                toHide = 0;
+            }
+        }
+        for (var i = 0; i < count; i++) {
+            tid = id_list[i];
+            if (toHide) {
+                document.getElementById('div_'+tid).style.display = 'none'
+                document.getElementById(tid).className = 'hiddenRow';
+            }
+            else {
+                document.getElementById(tid).className = '';
+            }
+        }
+    }
+
+
+    function showTestDetail(div_id){
+        var details_div = document.getElementById(div_id)
+        var displayState = details_div.style.display
+        // alert(displayState)
+        if (displayState != 'block' ) {
+            displayState = 'block'
+            details_div.style.display = 'block'
+        }
+        else {
+            details_div.style.display = 'none'
+        }
+    }
+
+
+    function html_escape(s) {
+        s = s.replace(/&/g,'&amp;');
+        s = s.replace(/</g,'&lt;');
+        s = s.replace(/>/g,'&gt;');
+        return s;
+    }
+
+    /* obsoleted by detail in <div>
+    function showOutput(id, name) {
+        var w = window.open("", //url
+                        name,
+                        "resizable,scrollbars,status,width=800,height=450");
+        d = w.document;
+        d.write("<pre>");
+        d.write(html_escape(output_list[id]));
+        d.write("\n");
+        d.write("<a href='javascript:window.close()'>close</a>\n");
+        d.write("</pre>\n");
+        d.close();
+    }
+    */
+    --></script>
+
+    <div id="div_base">
+        
+    <div class='page-header'>
+        <h1>性能流畅度模型 测试报告</h1>
+    <p class='attribute'><strong>开始时间:</strong> 2018-01-12 11:00:38</p>
+    <p class='attribute'><strong>运行时长:</strong> 0:08:29.007000</p>
+    <p class='attribute'><strong>状态:</strong> 通过 9</p>
+    
+    </div>
+    <div style="float: left;width:50%;"><p class='description'>执行人：ShengXia</p></div>
+    <div id="chart" style="width:50%;height:250px;float:left;"></div>
+    
+        
+    <div class="btn-group btn-group-sm" style="float:left;width:50%;">
+        <button class="btn btn-default" onclick='javascript:showCase(0)'>总结</button>
+        <button class="btn btn-default" onclick='javascript:showCase(1)'>失败</button>
+        <button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
+        <!-- 新增对比功能： 增加对比功能按钮 -->
+        <label class="btn btn-default" for="xFile">对比历史数据</label>
+        <form><input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"></form>
+    </div>
+
+    <p></p>
+    <table id='result_table' class="table table-bordered">
+        <colgroup>
+            <col align='left' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+            <col align='right' />
+        </colgroup>
+        <tr id='header_row'>
+            <td colspan='2'>测试套件/测试用例</td>
+            <td> 整体平均每帧耗时 </td>
+            <td> 修正平均每帧耗时 </td>
+            <td> 优秀率（5-8ms帧数占比）</td>
+            <td> 掉帧率（Miss Vsync） </td>
+            <td> 劣帧率 （Janky Frame）</td>
+            <td> High input latency </td>
+            <td> Slow UI thread </td>
+            <td> Slow bitmap uploads </td>
+            <td> Slow issue draw commands </td>
+            <td> 帧耗时分布图 </td>
+            <td> 查看 </td>
+        </tr>
+        
+    <tr class='passClass'>
+        <td>Case ID</td>
+        <td>testcase.wechat_testcase.wechattest</td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td> </td>
+        <td align="center"><a href="javascript:showClassDetail('c1',9)">详情</a></td>
+    </tr>
+
+<tr id='pt1.1' class='hiddenRow'>
+    <td align='center'>1</td>
+    <td class='none'><div class='testcase'>滑动朋友圈</div></td>
+
+    <td align="center"><b> 13.09 </b></td>
+    <td align="center"> 12.73 </td>
+    <td align="center"> 38.3 </td>
+    <td align="center">  1.67% (12/718) </td>
+    <td align="center">  18.80% (135 /718) </td>
+    <td align="center">  0.14% (1/718) </td>
+    <td align="center">  12.26% (88/718) </td>
+    <td align="center">  5.85% (42 /718) </td>
+    <td align="center">  0.70% (5 /718) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.1')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.1" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.1'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[4.04, 10.72, 13.09, 10.45, 8.08, 5.99, 7.1, 5.15, 5.15, 5.01, 3.62, 3.2, 2.51, 3.06, 1.67, 1.53, 0.97, 0.14, 0.42, 0.56, 0.7, 0.84, 0.28, 0.42, 0.42, 0.28, 0.28, 0.42, 0.97, 0.28, 0.14, 0.14, 0.28, 0.0, 0.14, 0.28, 0.14, 0.0, 0.14, 0.14, 0.28, 0.28, 0.14, 0.0, 0.0, 0.14, 0.14, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.14]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
+        通过</a>
+
+    <div id='div_pt1.1' class="popup_window">
+        <pre>
+        pt1.1: wait 3s...
+Setup end 
+
+case id:1
+case Name:滑动朋友圈
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:01:22.659000
+jank rate: 18.80% (135 /718)
+real jank rate: 1.67% (12/718)
+High input latency: 0.14% (1/718)
+Slow UI thread: 12.26% (88/718)
+Slow bitmap uploads: 5.85% (42 /718)
+Slow issue draw commands rate: 0.70% (5 /718)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150]
+Frame Count:[4.04, 10.72, 13.09, 10.45, 8.08, 5.99, 7.1, 5.15, 5.15, 5.01, 3.62, 3.2, 2.51, 3.06, 1.67, 1.53, 0.97, 0.14, 0.42, 0.56, 0.7, 0.84, 0.28, 0.42, 0.42, 0.28, 0.28, 0.42, 0.97, 0.28, 0.14, 0.14, 0.28, 0.0, 0.14, 0.28, 0.14, 0.0, 0.14, 0.14, 0.28, 0.28, 0.14, 0.0, 0.0, 0.14, 0.14, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.14, 0.14]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\1_FrameInfo.xls
+fps: [7]
+[7]
+jank count: 4
+[4]
+max frame delay: 43.0
+[43.0]
+begin processResult:2018-01-12 11:01:22.797000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.2' class='hiddenRow'>
+    <td align='center'>2</td>
+    <td class='none'><div class='testcase'>快速输入聊天信息</div></td>
+
+    <td align="center"><b> 28.81 </b></td>
+    <td align="center"> 22.56 </td>
+    <td align="center"> 11.5 </td>
+    <td align="center">  15.08% (38/252) </td>
+    <td align="center">  45.24% (114 /252) </td>
+    <td align="center">  0.00% (0/252) </td>
+    <td align="center">  23.81% (60/252) </td>
+    <td align="center">  10.32% (26 /252) </td>
+    <td align="center">  21.83% (55 /252) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.2')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.2" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.2'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[1.98, 1.98, 3.97, 3.57, 8.33, 6.35, 6.35, 5.56, 5.16, 3.57, 5.16, 3.97, 4.37, 3.17, 2.78, 1.98, 1.59, 2.38, 0.79, 1.59, 0.79, 1.19, 0.79, 1.19, 0.4, 0.4, 0.0, 0.0, 0.4, 1.19, 1.98, 0.0, 0.4, 0.4, 0.0, 0.79, 0.4, 0.0, 1.19, 0.79, 1.98, 1.59, 1.19, 1.19, 0.79, 0.4, 1.19, 0.4, 0.0, 0.0, 0.4, 0.0, 0.79, 0.4, 0.0, 0.4, 0.0, 1.19, 0.79, 0.0, 0.0, 0.0, 0.4]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
+        通过</a>
+
+    <div id='div_pt1.2' class="popup_window">
+        <pre>
+        pt1.2: wait 3s...
+Setup end 
+
+case id:2
+case Name:快速输入聊天信息
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:02:22.748000
+jank rate: 45.24% (114 /252)
+real jank rate: 15.08% (38/252)
+High input latency: 0.00% (0/252)
+Slow UI thread: 23.81% (60/252)
+Slow bitmap uploads: 10.32% (26 /252)
+Slow issue draw commands rate: 21.83% (55 /252)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400]
+Frame Count:[1.98, 1.98, 3.97, 3.57, 8.33, 6.35, 6.35, 5.56, 5.16, 3.57, 5.16, 3.97, 4.37, 3.17, 2.78, 1.98, 1.59, 2.38, 0.79, 1.59, 0.79, 1.19, 0.79, 1.19, 0.4, 0.4, 0.0, 0.0, 0.4, 1.19, 1.98, 0.0, 0.4, 0.4, 0.0, 0.79, 0.4, 0.0, 1.19, 0.79, 1.98, 1.59, 1.19, 1.19, 0.79, 0.4, 1.19, 0.4, 0.0, 0.0, 0.4, 0.0, 0.79, 0.4, 0.0, 0.4, 0.0, 1.19, 0.79, 0.0, 0.0, 0.0, 0.4]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\2_FrameInfo.xls
+fps: [4]
+[4]
+jank count: 51
+[51]
+max frame delay: 95.0
+[95.0]
+begin processResult:2018-01-12 11:02:22.921000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.3' class='hiddenRow'>
+    <td align='center'>3</td>
+    <td class='none'><div class='testcase'>连续窗口切换</div></td>
+
+    <td align="center"><b> 19.69 </b></td>
+    <td align="center"> 12.89 </td>
+    <td align="center"> 52.54 </td>
+    <td align="center">  10.59% (25/236) </td>
+    <td align="center">  18.22% (43 /236) </td>
+    <td align="center">  0.00% (0/236) </td>
+    <td align="center">  14.83% (35/236) </td>
+    <td align="center">  12.71% (30 /236) </td>
+    <td align="center">  1.69% (4 /236) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.3')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.3" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.3'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[9.32, 15.25, 16.53, 11.44, 11.02, 6.78, 6.36, 0.85, 1.27, 2.12, 0.85, 0.0, 0.0, 0.85, 0.85, 0.42, 0.42, 0.42, 0.42, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.85, 0.85, 0.0, 0.42, 0.42, 0.42, 0.85, 0.0, 0.85, 0.42, 0.85, 0.0, 0.42, 0.85, 0.0, 0.85, 0.42, 0.0, 0.42, 0.0, 0.0, 0.42, 0.0, 1.27, 0.0, 0.42, 0.0, 0.0, 0.85, 0.85, 0.0, 1.27, 0.85]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.3')" >
+        通过</a>
+
+    <div id='div_pt1.3' class="popup_window">
+        <pre>
+        pt1.3: wait 3s...
+Setup end 
+
+case id:3
+case Name:连续窗口切换
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:03:12.017000
+jank rate: 18.22% (43 /236)
+real jank rate: 10.59% (25/236)
+High input latency: 0.00% (0/236)
+Slow UI thread: 14.83% (35/236)
+Slow bitmap uploads: 12.71% (30 /236)
+Slow issue draw commands rate: 1.69% (4 /236)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200]
+Frame Count:[9.32, 15.25, 16.53, 11.44, 11.02, 6.78, 6.36, 0.85, 1.27, 2.12, 0.85, 0.0, 0.0, 0.85, 0.85, 0.42, 0.42, 0.42, 0.42, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.85, 0.85, 0.0, 0.42, 0.42, 0.42, 0.85, 0.0, 0.85, 0.42, 0.85, 0.0, 0.42, 0.85, 0.0, 0.85, 0.42, 0.0, 0.42, 0.0, 0.0, 0.42, 0.0, 1.27, 0.0, 0.42, 0.0, 0.0, 0.85, 0.85, 0.0, 1.27, 0.85]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\3_FrameInfo.xls
+fps: [60, 60, 60, 60, 60]
+[60, 60, 60, 60, 60]
+jank count: 0
+[0, 0, 0, 0, 0]
+max frame delay: 1.0
+[1.0, 1.0, 1.0, 1.0, 1.0]
+begin processResult:2018-01-12 11:03:12.184000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.4' class='hiddenRow'>
+    <td align='center'>4</td>
+    <td class='none'><div class='testcase'>连续滑动聊天记录界面</div></td>
+
+    <td align="center"><b> 19.30 </b></td>
+    <td align="center"> 17.70 </td>
+    <td align="center"> 12.91 </td>
+    <td align="center">  4.27% (93/2177) </td>
+    <td align="center">  40.06% (872 /2177) </td>
+    <td align="center">  1.38% (30/2177) </td>
+    <td align="center">  24.62% (536/2177) </td>
+    <td align="center">  5.60% (122 /2177) </td>
+    <td align="center">  22.46% (489 /2177) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.4')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.4" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.4'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[1.75, 2.39, 3.67, 5.1, 8.91, 8.64, 6.71, 5.47, 5.28, 4.27, 4.64, 4.04, 3.86, 3.08, 2.89, 2.66, 1.84, 1.42, 1.52, 1.29, 1.19, 1.15, 1.1, 1.1, 1.15, 0.73, 1.01, 1.93, 1.61, 1.38, 1.52, 1.1, 0.6, 0.69, 0.37, 0.64, 0.32, 0.46, 0.37, 0.14, 0.05, 0.05, 0.32, 0.05, 0.09, 0.18, 0.09, 0.05, 0.0, 0.0, 0.0, 0.0, 0.14, 0.0, 0.05, 0.09, 0.09, 0.51, 0.23, 0.05]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.4')" >
+        通过</a>
+
+    <div id='div_pt1.4' class="popup_window">
+        <pre>
+        pt1.4: wait 3s...
+Setup end 
+
+case id:4
+case Name:连续滑动聊天记录界面
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:04:49.392000
+jank rate: 40.06% (872 /2177)
+real jank rate: 4.27% (93/2177)
+High input latency: 1.38% (30/2177)
+Slow UI thread: 24.62% (536/2177)
+Slow bitmap uploads: 5.60% (122 /2177)
+Slow issue draw commands rate: 22.46% (489 /2177)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250]
+Frame Count:[1.75, 2.39, 3.67, 5.1, 8.91, 8.64, 6.71, 5.47, 5.28, 4.27, 4.64, 4.04, 3.86, 3.08, 2.89, 2.66, 1.84, 1.42, 1.52, 1.29, 1.19, 1.15, 1.1, 1.1, 1.15, 0.73, 1.01, 1.93, 1.61, 1.38, 1.52, 1.1, 0.6, 0.69, 0.37, 0.64, 0.32, 0.46, 0.37, 0.14, 0.05, 0.05, 0.32, 0.05, 0.09, 0.18, 0.09, 0.05, 0.0, 0.0, 0.0, 0.0, 0.14, 0.0, 0.05, 0.09, 0.09, 0.51, 0.23, 0.05]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\4_FrameInfo.xls
+fps: [60, 60, 60, 60, 62]
+[60, 60, 60, 60, 62]
+jank count: 0
+[0, 0, 0, 0, 0]
+max frame delay: 1.0
+[1.0, 1.0, 1.0, 1.0, 1.0]
+begin processResult:2018-01-12 11:04:49.551000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.5' class='hiddenRow'>
+    <td align='center'>5</td>
+    <td class='none'><div class='testcase'>连续滑动订阅号</div></td>
+
+    <td align="center"><b> 14.13 </b></td>
+    <td align="center"> 13.11 </td>
+    <td align="center"> 20.15 </td>
+    <td align="center">  2.81% (19/675) </td>
+    <td align="center">  18.07% (122 /675) </td>
+    <td align="center">  0.30% (2/675) </td>
+    <td align="center">  7.56% (51/675) </td>
+    <td align="center">  7.70% (52 /675) </td>
+    <td align="center">  4.30% (29 /675) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.5')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.5" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.5'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[3.11, 3.11, 8.0, 5.93, 10.52, 7.7, 8.59, 10.52, 8.15, 6.22, 6.67, 4.3, 2.81, 3.26, 1.33, 1.78, 0.59, 0.44, 0.89, 0.59, 0.3, 0.3, 0.74, 0.3, 0.0, 0.0, 0.15, 0.15, 0.15, 0.15, 0.44, 0.0, 0.44, 0.0, 0.44, 0.15, 0.59, 0.0, 0.3, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.74]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.5')" >
+        通过</a>
+
+    <div id='div_pt1.5' class="popup_window">
+        <pre>
+        pt1.5: wait 3s...
+Setup end 
+
+case id:5
+case Name:连续滑动订阅号
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:05:56.230000
+jank rate: 18.07% (122 /675)
+real jank rate: 2.81% (19/675)
+High input latency: 0.30% (2/675)
+Slow UI thread: 7.56% (51/675)
+Slow bitmap uploads: 7.70% (52 /675)
+Slow issue draw commands rate: 4.30% (29 /675)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150]
+Frame Count:[3.11, 3.11, 8.0, 5.93, 10.52, 7.7, 8.59, 10.52, 8.15, 6.22, 6.67, 4.3, 2.81, 3.26, 1.33, 1.78, 0.59, 0.44, 0.89, 0.59, 0.3, 0.3, 0.74, 0.3, 0.0, 0.0, 0.15, 0.15, 0.15, 0.15, 0.44, 0.0, 0.44, 0.0, 0.44, 0.15, 0.59, 0.0, 0.3, 0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.74]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\5_FrameInfo.xls
+fps: [60, None, None, None, None]
+[60, None, None, None, None]
+jank count: 0
+[0, None, None, None, None]
+max frame delay: 1.0
+[1.0, None, None, None, None]
+begin processResult:2018-01-12 11:05:56.443000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.6' class='hiddenRow'>
+    <td align='center'>6</td>
+    <td class='none'><div class='testcase'>连续滑动我-相册</div></td>
+
+    <td align="center"><b> 17.11 </b></td>
+    <td align="center"> 14.43 </td>
+    <td align="center"> 20.56 </td>
+    <td align="center">  5.07% (35/691) </td>
+    <td align="center">  19.39% (134 /691) </td>
+    <td align="center">  2.60% (18/691) </td>
+    <td align="center">  14.04% (97/691) </td>
+    <td align="center">  6.66% (46 /691) </td>
+    <td align="center">  2.89% (20 /691) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.6')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.6" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.6'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400, 450, 500],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[3.04, 3.33, 7.53, 6.66, 13.89, 12.45, 8.97, 7.96, 6.8, 4.34, 3.76, 2.46, 1.45, 1.16, 1.88, 0.72, 1.01, 0.58, 0.58, 0.58, 0.58, 0.29, 0.43, 0.43, 0.29, 0.43, 0.29, 0.58, 0.72, 0.0, 0.29, 0.43, 0.43, 0.14, 0.43, 0.14, 0.43, 0.29, 0.14, 0.14, 0.43, 0.29, 0.29, 0.58, 0.0, 0.0, 0.43, 0.14, 0.29, 0.0, 0.14, 0.0, 0.0, 0.29, 0.0, 0.0, 0.14, 0.43, 0.14, 0.14, 0.0, 0.0, 0.0, 0.0, 0.14]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.6')" >
+        通过</a>
+
+    <div id='div_pt1.6' class="popup_window">
+        <pre>
+        pt1.6: wait 3s...
+Setup end 
+
+case id:6
+case Name:连续滑动我-相册
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:06:40.674000
+jank rate: 19.39% (134 /691)
+real jank rate: 5.07% (35/691)
+High input latency: 2.60% (18/691)
+Slow UI thread: 14.04% (97/691)
+Slow bitmap uploads: 6.66% (46 /691)
+Slow issue draw commands rate: 2.89% (20 /691)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400, 450, 500]
+Frame Count:[3.04, 3.33, 7.53, 6.66, 13.89, 12.45, 8.97, 7.96, 6.8, 4.34, 3.76, 2.46, 1.45, 1.16, 1.88, 0.72, 1.01, 0.58, 0.58, 0.58, 0.58, 0.29, 0.43, 0.43, 0.29, 0.43, 0.29, 0.58, 0.72, 0.0, 0.29, 0.43, 0.43, 0.14, 0.43, 0.14, 0.43, 0.29, 0.14, 0.14, 0.43, 0.29, 0.29, 0.58, 0.0, 0.0, 0.43, 0.14, 0.29, 0.0, 0.14, 0.0, 0.0, 0.29, 0.0, 0.0, 0.14, 0.43, 0.14, 0.14, 0.0, 0.0, 0.0, 0.0, 0.14]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\6_FrameInfo.xls
+fps: 0
+0
+jank count: 0
+0
+max frame delay: 0
+0
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.7' class='hiddenRow'>
+    <td align='center'>7</td>
+    <td class='none'><div class='testcase'>连续滑动联系人列表</div></td>
+
+    <td align="center"><b> 12.53 </b></td>
+    <td align="center"> 12.37 </td>
+    <td align="center"> 23.6 </td>
+    <td align="center">  5.11% (34/665) </td>
+    <td align="center">  9.62% (64 /665) </td>
+    <td align="center">  0.45% (3/665) </td>
+    <td align="center">  6.17% (41/665) </td>
+    <td align="center">  1.20% (8 /665) </td>
+    <td align="center">  1.80% (12 /665) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.7')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.7" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.7'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[1.65, 3.61, 9.92, 8.42, 14.14, 15.34, 13.38, 9.17, 7.07, 3.31, 2.56, 2.11, 0.9, 0.0, 0.6, 0.6, 0.3, 0.45, 0.0, 0.15, 0.0, 0.0, 0.15, 0.15, 0.0, 0.15, 0.45, 0.45, 0.6, 0.15, 0.3, 0.15, 0.75, 0.3, 0.15, 1.05, 0.75, 0.3, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.7')" >
+        通过</a>
+
+    <div id='div_pt1.7' class="popup_window">
+        <pre>
+        pt1.7: wait 3s...
+Setup end 
+
+case id:7
+case Name:连续滑动联系人列表
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:07:16.513000
+jank rate: 9.62% (64 /665)
+real jank rate: 5.11% (34/665)
+High input latency: 0.45% (3/665)
+Slow UI thread: 6.17% (41/665)
+Slow bitmap uploads: 1.20% (8 /665)
+Slow issue draw commands rate: 1.80% (12 /665)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117]
+Frame Count:[1.65, 3.61, 9.92, 8.42, 14.14, 15.34, 13.38, 9.17, 7.07, 3.31, 2.56, 2.11, 0.9, 0.0, 0.6, 0.6, 0.3, 0.45, 0.0, 0.15, 0.0, 0.0, 0.15, 0.15, 0.0, 0.15, 0.45, 0.45, 0.6, 0.15, 0.3, 0.15, 0.75, 0.3, 0.15, 1.05, 0.75, 0.3, 0.3, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.15]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\7_FrameInfo.xls
+fps: [1, 26, 56, 25, 26]
+[1, 26, 56, 25, 26]
+jank count: 10
+[1, 8, 4, 10, 3]
+max frame delay: 1415.0
+[1415.0, 150.0, 4.0, 164.0, 161.0]
+begin processResult:2018-01-12 11:07:16.662000
+FrameStats Parse End
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.8' class='hiddenRow'>
+    <td align='center'>8</td>
+    <td class='none'><div class='testcase'>查看好友朋友圈</div></td>
+
+    <td align="center"><b> 21.33 </b></td>
+    <td align="center"> 15.50 </td>
+    <td align="center"> 16.81 </td>
+    <td align="center">  5.98% (48/803) </td>
+    <td align="center">  28.39% (228 /803) </td>
+    <td align="center">  2.62% (21/803) </td>
+    <td align="center">  22.17% (178/803) </td>
+    <td align="center">  11.71% (94 /803) </td>
+    <td align="center">  2.49% (20 /803) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.8')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.8" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.8'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[0.75, 3.36, 6.72, 5.98, 7.47, 9.71, 10.59, 9.59, 5.98, 3.86, 5.11, 2.99, 2.37, 2.12, 0.87, 1.37, 1.87, 1.0, 1.12, 1.25, 1.37, 1.12, 1.0, 0.87, 0.75, 0.75, 0.75, 1.12, 0.62, 0.37, 0.37, 0.37, 0.62, 0.0, 0.25, 0.5, 0.25, 0.37, 0.37, 0.12, 0.5, 0.0, 0.12, 0.25, 0.12, 0.0, 0.0, 0.12, 0.0, 0.0, 0.12, 0.0, 0.12, 0.12, 0.0, 0.0, 0.75, 1.0, 0.25, 0.0, 0.0, 0.0, 0.12, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0, 0.12, 0.12]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.8')" >
+        通过</a>
+
+    <div id='div_pt1.8' class="popup_window">
+        <pre>
+        pt1.8: wait 3s...
+Setup end 
+
+case id:8
+case Name:查看好友朋友圈
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:08:05.240000
+jank rate: 28.39% (228 /803)
+real jank rate: 5.98% (48/803)
+High input latency: 2.62% (21/803)
+Slow UI thread: 22.17% (178/803)
+Slow bitmap uploads: 11.71% (94 /803)
+Slow issue draw commands rate: 2.49% (20 /803)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650, 700, 750, 800]
+Frame Count:[0.75, 3.36, 6.72, 5.98, 7.47, 9.71, 10.59, 9.59, 5.98, 3.86, 5.11, 2.99, 2.37, 2.12, 0.87, 1.37, 1.87, 1.0, 1.12, 1.25, 1.37, 1.12, 1.0, 0.87, 0.75, 0.75, 0.75, 1.12, 0.62, 0.37, 0.37, 0.37, 0.62, 0.0, 0.25, 0.5, 0.25, 0.37, 0.37, 0.12, 0.5, 0.0, 0.12, 0.25, 0.12, 0.0, 0.0, 0.12, 0.0, 0.0, 0.12, 0.0, 0.12, 0.12, 0.0, 0.0, 0.75, 1.0, 0.25, 0.0, 0.0, 0.0, 0.12, 0.12, 0.0, 0.0, 0.0, 0.0, 0.0, 0.12, 0.12]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\8_FrameInfo.xls
+fps: 0
+0
+jank count: 0
+0
+max frame delay: 0
+0
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+<tr id='pt1.9' class='hiddenRow'>
+    <td align='center'>9</td>
+    <td class='none'><div class='testcase'>放大查看聊天中图片</div></td>
+
+    <td align="center"><b> 27.29 </b></td>
+    <td align="center"> 18.54 </td>
+    <td align="center"> 38.48 </td>
+    <td align="center">  15.12% (44/291) </td>
+    <td align="center">  28.18% (82 /291) </td>
+    <td align="center">  0.00% (0/291) </td>
+    <td align="center">  19.59% (57/291) </td>
+    <td align="center">  15.46% (45 /291) </td>
+    <td align="center">  11.68% (34 /291) </td>
+    <td align="center">
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('framechart_pt1.9')" >
+        帧分布直方图</a>
+            
+        <div id="framechart_pt1.9" style="width:600px;height:500px;float:left;" class="popup_window">
+            <script type="text/javascript">
+                // 基于准备好的dom，初始化echarts实例
+                var myFrameChart = echarts.init(document.getElementById('framechart_pt1.9'));
+
+                // 指定图表的配置项和数据
+                var option = {
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'cross',
+                            crossStyle: {
+                                color: '#999'
+                            }
+                        }
+                    },
+                    toolbox: {
+                        feature: {
+                            dataView: {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore: {show: true},
+                            saveAsImage: {show: true}
+                        }
+                    },
+                    legend: {
+                        data:['%']
+                    },
+                    xAxis: [
+                        {
+                            name: 'ms',
+                            type: 'category',
+                            data: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250],
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            name: '百分比',
+                            interval: 10,
+                            axisLabel: {
+                            formatter: '{value} '
+                            }
+                        },
+
+                    ],
+                    series: [
+                        {
+                            name:'百分比',
+                            type:'bar',
+                            data:[4.12, 6.87, 14.43, 13.06, 8.25, 7.56, 5.15, 4.12, 3.09, 2.75, 1.37, 1.03, 1.03, 0.34, 0.69, 0.34, 0.69, 0.0, 0.69, 0.34, 0.34, 0.0, 0.34, 0.0, 0.69, 0.69, 0.34, 0.0, 0.0, 0.69, 0.69, 0.69, 0.34, 0.69, 1.03, 1.03, 2.41, 1.03, 1.03, 1.03, 0.0, 0.34, 0.34, 0.34, 0.69, 0.69, 1.37, 0.69, 0.34, 0.0, 0.34, 0.34, 0.34, 0.0, 0.0, 0.34, 0.34, 2.75, 1.37, 0.34]
+                        },
+
+                    ]
+                };
+                myFrameChart.setOption(option);
+            </script>
+        </div>
+        
+    </td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.9')" >
+        通过</a>
+
+    <div id='div_pt1.9' class="popup_window">
+        <pre>
+        pt1.9: wait 3s...
+Setup end 
+
+case id:9
+case Name:放大查看聊天中图片
+Test Going..
+begin dumpsysFramestats:2018-01-12 11:08:59.845000
+jank rate: 28.18% (82 /291)
+real jank rate: 15.12% (44/291)
+High input latency: 0.00% (0/291)
+Slow UI thread: 19.59% (57/291)
+Slow bitmap uploads: 15.46% (45 /291)
+Slow issue draw commands rate: 11.68% (34 /291)
+Frame Latency:[5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 34, 36, 38, 40, 42, 44, 46, 48, 53, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97, 101, 105, 109, 113, 117, 121, 125, 129, 133, 150, 200, 250]
+Frame Count:[4.12, 6.87, 14.43, 13.06, 8.25, 7.56, 5.15, 4.12, 3.09, 2.75, 1.37, 1.03, 1.03, 0.34, 0.69, 0.34, 0.69, 0.0, 0.69, 0.34, 0.34, 0.0, 0.34, 0.0, 0.69, 0.69, 0.34, 0.0, 0.0, 0.69, 0.69, 0.69, 0.34, 0.69, 1.03, 1.03, 2.41, 1.03, 1.03, 1.03, 0.0, 0.34, 0.34, 0.34, 0.69, 0.69, 1.37, 0.69, 0.34, 0.0, 0.34, 0.34, 0.34, 0.0, 0.0, 0.34, 0.34, 2.75, 1.37, 0.34]
+frameinfo address: D:\pyCode\SmoothModel\output\com.tencent.mm\9_FrameInfo.xls
+fps: 0
+0
+jank count: 0
+0
+max frame delay: 0
+0
+ Test end.
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
+        <tr id='total_row'>
+            <td colspan='2'>总分</td>
+            <td align="center"> 19.25</td>
+            <td align="center"> 15.54</td>
+            <td align="center"> 26.09</td>
+            <td colspan='3'>Pass: 9</td>
+            <td colspan='3'>Failed: 0</td>
+            <td colspan='2'>Error: 0</td>
+        </tr>
+    </table>
+
+        <div id='ending'>&nbsp;</div>
+        
+        <script type="text/javascript">
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('chart'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                title : {
+                    text: '测试执行情况',
+                    x:'center'
+                },
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    orient: 'vertical',
+                    left: 'left',
+                    data: ['通过','失败','错误']
+                },
+                series : [
+                    {
+                        name: '测试执行情况',
+                        type: 'pie',
+                        radius : '60%',
+                        center: ['50%', '60%'],
+                        data:[
+                            {value:9, name:'通过'},
+                            {value:0, name:'失败'},
+                            {value:0, name:'错误'}
+                        ],
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />  
+<title>无标题文档</title>  
+<script type="text/javascript">  
+function readAsText()  
+{  
+    var file=document.getElementById("file").files[0];  
+    var reader=new FileReader();  
+    reader.readAsText(file.getElementsByName("result_table"));  
+    reader.onload=function(e)  
+    {  
+        var result=document.getElementById("result");  
+        result.innerHTML=this.result;  
+    }  
+}  
+</script>  
+</head>  
+  
+<body>  
+请选择文本文件:<input type="file" id="file" /><input type="button" value="显示文本文件" onclick="readAsText();"/>  
+  
+<div name="result" id="result">  
+<!--这里显示文件内容-->  
+</div>  
+</body>  
+</html>  

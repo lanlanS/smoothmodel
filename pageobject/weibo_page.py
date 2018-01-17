@@ -84,7 +84,7 @@ class WeiboPage():
             pass
 
     def _isPic(self):
-        pic = 'com.sina.weibo:id/blog_picture_view'
+        pic = 'com.sina.weibo:id/blog_picture_view'  # 8.0.1 com.sina.weibo:id/blog_picture_view
         try:
             self.cm.driver.find_element_by_id(pic)
             return True
@@ -95,10 +95,13 @@ class WeiboPage():
 
     def clickpic(self):
         while self._isMov():  # 判断是否有图片
+            time.sleep(0.3)
             self.cm.driver.find_element_by_xpath(self.firstpage_xpath).click()
             if self._isPic():
-                for i in range(0, 3):
+                for i in range(0, 8):
+                    time.sleep(0.8)
                     self.cm.driver.find_element_by_id('com.sina.weibo:id/blog_picture_view').click()
+                    time.sleep(0.8)
                     self.cm.back()
                 break
             else:
@@ -106,9 +109,11 @@ class WeiboPage():
                 pass
         else:
             if self._isPic():
-                for i in range(0, 10):
+                for i in range(0, 8):
                     self.cm.shortwaitElementById('com.sina.weibo:id/blog_picture_view').click()
+                    time.sleep(0.8)
                     self.cm.back()
+                    time.sleep(0.8)
 
     def teardown(self):
         self.weibo_setup.teardown()

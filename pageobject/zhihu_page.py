@@ -84,7 +84,7 @@ class ZhihuPage():
     def swipe_down_contentpage(self):
         content = self.find_context()
         content.click()
-        time.sleep(0.5)
+        time.sleep(1)
         if self.cm.driver.find_element_by_id('com.zhihu.android:id/comment_btn'):  # 判断是否进入文章界面，存在 评论id
             for i in range(0, 5):
                 self.cm.my_swipe_to_up(during=400)
@@ -93,10 +93,10 @@ class ZhihuPage():
             self.cm.back()
 
     def swich_contentpage(self):
-        for i in range(0, 5):
+        for i in range(0, 3):
             content = self.find_context()
             content.click()
-            time.sleep(0.5)
+            time.sleep(1)
             self.cm.back()
 
     def teardown(self):

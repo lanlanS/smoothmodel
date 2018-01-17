@@ -16,25 +16,25 @@ class WechatPage():
         self.wechat_moments_layer = 'com.tencent.mm/com.tencent.mm.plugin.sns.ui.En_424b8e16'
 
         # Element Info
-        self.monentsbtn = 'com.tencent.mm:id/ay0'  # 底栏 朋友圈按钮  com.tencent.mm:id/awt
-        self.monents_btn = 'com.tencent.mm:id/a92'  # 朋友界面 万花筒图标  com.tencent.mm:id/a95
+        self.monentsbtn = 'com.tencent.mm:id/ayf'  # 底栏 朋友圈按钮  com.tencent.mm:id/awt
+        self.monents_btn = 'com.tencent.mm:id/a9i'  # 朋友界面 万花筒图标  com.tencent.mm:id/a95
         self.monent_photo_icon = '(//android.widget.ImageButton[@content-desc="头像"])[1]'  # 朋友圈 朋友头像 com.tencent.mm:id/aoj
         self.me_photo_icon = '//android.widget.ImageView[@content-desc="老化小霸王,我的头像,再点一次可以进入我的相册"]'  # 我的相册界面 个人头像
         self.chatinfo = '//android.widget.ImageButton[@content-desc="聊天信息"]'  # 好友聊天信息（右上角） 按钮
         self.chatinfo_item = 'android:id/title'  # chat info 界面 item信息
         self.nikname = "com.tencent.mm:id/ha"  # 对话详情界面 朋友昵称
-        self.friend_name = "com.tencent.mm:id/apd"  # 对话列表界面 昵称
-        self.edit = "com.tencent.mm:id/a_z"  # 对话界面 输入框
-        self.sendbtn = 'com.tencent.mm:id/aa5'  # 对话界面 发送按钮
+        self.friend_name = "com.tencent.mm:id/apt"  # 对话列表界面 昵称
+        self.edit = "com.tencent.mm:id/aaf"  # 对话界面 输入框
+        self.sendbtn = 'com.tencent.mm:id/aal'  # 对话界面 发送按钮
         self.contactitem = 'com.tencent.mm:id/j1'  # 联系人界面 好友item
-        self.selfalbum = 'com.tencent.mm:id/c8p'   # 个人相册 item
+        self.selfalbum = 'com.tencent.mm:id/c96'   # 个人相册 item
 
         self.morebtn_xpath = '//android.widget.ImageButton[@content-desc="更多功能按钮，已折叠"]'  # 功能折叠按钮
-        self.album = 'com.tencent.mm:id/of'  # 聊天功能item list ID
+        self.album = 'com.tencent.mm:id/op'  # 聊天功能item list ID
 
-        self.pic_selected = 'com.tencent.mm:id/bn4'  # 选择第一张图片 勾选框
+        self.pic_selected = 'com.tencent.mm:id/bnk'  # 选择第一张图片 勾选框
         self.pic_comfirm = 'com.tencent.mm:id/h5'  # 选择照片中的 确定 按钮
-        self.pic = 'com.tencent.mm:id/ady'  # 聊天记录中的图片
+        self.pic = 'com.tencent.mm:id/aee'  # 聊天记录中的图片
 
         self.searchbtn = '//android.widget.TextView[@content-desc="搜索"]'  # 联系人搜索按钮
         self.search_edit = 'com.tencent.mm:id/hk'  # 联系人搜索框
@@ -141,8 +141,9 @@ class WechatPage():
                                 time.sleep(1)  # 等待发送图片
                                 for i in range(0, 5):
                                     self.cm.driver.find_elements_by_id(self.pic)[0].click()  # 点击展开图片
-                                    time.sleep(0.3)
+                                    time.sleep(0.5)
                                     self.cm.back()  # 还原图片
+                                    time.sleep(0.5)
                                 self.cm.back()
                     else:
                         print "connot open the chat page."
@@ -197,11 +198,11 @@ class WechatPage():
                         if tem.text == u'订阅号':
                             tem.click()  # 进入订阅号详情界面
                             if self.cm.shortwaitElementById(self.nikname):
-                                for i in range(0, 2):
+                                for i in range(0, 3):
                                     self.cm.my_swipe_to_up(during=400)
-                                for i in range(0, 2):
+                                for i in range(0, 3):
                                     self.cm.my_swipe_to_down(during=400)
-                                    time.sleep(0.1)
+                                    time.sleep(0.3)
                                 self.cm.back()
             else:
                 print 'Connot start wechat '
@@ -240,13 +241,15 @@ class WechatPage():
                             tem.click()
                             if self.cm.driver.find_elements_by_id(self.friend_name) \
                                     and self.cm.driver.find_elements_by_id(self.friend_name)[0].text == u'老化小霸王':
-                                for i in range(0, 5):     # 滑动个人朋友圈
-                                    self.cm.my_swipe_to_up(during=400)
-                                    time.sleep(0.3)
-                                for i in range(0, 5):
-                                    self.cm.my_swipe_to_down(during=400)
-                                    time.sleep(0.3)
+                                for i in range(0, 3):
+                                    for i1 in range(0, 5):     # 滑动个人朋友圈
+                                        self.cm.my_swipe_to_up(during=400)
+                                        time.sleep(0.3)
+                                    for i2 in range(0, 5):
+                                        self.cm.my_swipe_to_down(during=400)
+                                        time.sleep(0.3)
                                 self.cm.back()
+                                time.sleep(0.3)
                                 self.click_wechat()
         except:
             raise Exception
@@ -258,17 +261,22 @@ class WechatPage():
                 for tem in self.cm.driver.find_elements_by_id(self.contactitem):  # 查找固定好友
                     if tem.text == u'懒懒':
                         tem.click()
+                        time.sleep(0.3)
                         selfalbum = self.cm.driver.find_elements_by_id(self.selfalbum)[0]
                         if selfalbum.text == u'个人相册':   # 判断进入个人相册
                             selfalbum.click()
-                            for i in range(0, 2):  # 滑动好友朋友圈
-                                self.cm.my_swipe_to_up(during=400)
-                                time.sleep(0.3)
-                            for i in range(0, 2):
-                                self.cm.my_swipe_to_down(during=400)
-                                time.sleep(0.3)
+                            time.sleep(0.5)
+                            for i in range(0, 3):
+                                for i1 in range(0, 5):  # 滑动好友朋友圈
+                                    self.cm.my_swipe_to_up(during=400)
+                                    time.sleep(0.3)
+                                for i2 in range(0, 5):
+                                    self.cm.my_swipe_to_down(during=400)
+                                    time.sleep(0.3)
                             self.cm.back()  # 返回到 个人信息界面
+                            time.sleep(0.3)
                             self.cm.back()  # 返回到 联系人界面
+                            time.sleep(0.3)
                             self.click_wechat()
         except:
             raise Exception

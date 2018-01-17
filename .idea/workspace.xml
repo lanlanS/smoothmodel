@@ -1,192 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c9c143b6-38ec-480d-960b-3778d08b4006" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/11_1721.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/M91_wechat.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/M91_wechat_2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/datacollector/output/com.meizu.media.reader/0_AllFrame.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171115114721_金色机器.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171202182815.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171206111146.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171206113012.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171206142740.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171206142950.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171211165610.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171212155229.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171212160807.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171212161944.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171212172644.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171212173742.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171214205009.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171214210012.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171218155148.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171218155720.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171219202334.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171219203117.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171219203639.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171219204525.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221195259.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221195456.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221201030.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221211418.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221211923.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171221212124.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171222100008.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171222100245.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171225151903.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171225161821.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171226170400.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171226171111.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171226174436.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171226192425.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171226193846.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227112614.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227145916.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227151142.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227154233.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227161106.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227161645.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227165704.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227170957.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227171624.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227171932.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227172304.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171227172708.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171228153002.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171228153236.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171228173001.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20171228190127.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/性能评估模型_测试用例（初稿）.xlsx" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.android.settings/0_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.android.settings/0_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.android.settings/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.android.settings/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.android.settings/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/3_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/6_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/6_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/9_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/9_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameInfo.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameStats.xls" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/shengxia.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/shengxia.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1_1712.html" afterPath="$PROJECT_DIR$/1_1712.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.settings/0_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.settings/0_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.settings/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.settings/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.settings/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.settings/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.meizu.media.gallery/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/3_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/6_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/6_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/9_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/9_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_AllFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_NineFrame.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/Netease_page.py" afterPath="$PROJECT_DIR$/pageobject/Netease_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/setting_page.py" afterPath="$PROJECT_DIR$/pageobject/setting_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/taobao_page.py" afterPath="$PROJECT_DIR$/pageobject/taobao_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/toutiao_page.py" afterPath="$PROJECT_DIR$/pageobject/toutiao_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/wechat_page.py" afterPath="$PROJECT_DIR$/pageobject/wechat_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/weibo_page.py" afterPath="$PROJECT_DIR$/pageobject/weibo_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/zhihu_page.py" afterPath="$PROJECT_DIR$/pageobject/zhihu_page.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/HTMLTestRunner_mz.py" afterPath="$PROJECT_DIR$/report/HTMLTestRunner_mz.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/run.py" afterPath="$PROJECT_DIR$/run.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/system_testcase.py" afterPath="$PROJECT_DIR$/testcase/system_testcase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/wechat_testcase.py" afterPath="$PROJECT_DIR$/testcase/wechat_testcase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/weibo_testcase.py" afterPath="$PROJECT_DIR$/testcase/weibo_testcase.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase_list.xml" afterPath="$PROJECT_DIR$/testcase_list.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utill/adbMethod.py" afterPath="$PROJECT_DIR$/utill/adbMethod.py" />
-    </list>
+    <list default="true" id="c9c143b6-38ec-480d-960b-3778d08b4006" name="Default" comment="" />
     <ignored path="SmoothModel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -232,8 +47,8 @@
       <file leaf-file-name="testcase_list.xml" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testcase_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91382766">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.76953906">
+              <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -925,8 +740,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -934,7 +749,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24387528" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25083613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3768116" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3768116" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15991472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18485524" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1422,8 +1237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testcase_list.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91382766">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.76953906">
+          <caret line="25" column="15" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
           <folding />
         </state>
       </provider>

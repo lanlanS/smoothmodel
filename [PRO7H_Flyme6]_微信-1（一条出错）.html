@@ -53,7 +53,7 @@
         /* width: 500px;*/
     }
 
-    }
+    
     /* -- report ------------------------------------------------------------------------ */
     #show_detail_line {
         margin-top: 3ex;
@@ -97,8 +97,7 @@
     <script type="text/javascript" src="./js/echarts.common.min.js"></script>
 </head>
 <body>
-    <script language="javascript" type="text/javascript"><!--
-    output_list = Array();
+    <script language="javascript" type="text/javascript">
 
     /* level - 0:Summary; 1:Failed; 2:All */
     function showCase(level) {
@@ -176,19 +175,96 @@
         return s;
     }
 
-    function compare_file(files){   /* ----新增对比功能----- */
-        if(files.length)
-        {
-           var file = files[0];
-           var reader = new FileReader();
-           reader.onload = function()
-            {
-                var table_div = this.result.split("<p></p>")[2]
+    function compare_file(files) {   /* ----新增对比功能----- */
+        if (files.length) {
+            var file = files[0];
+            var reader = new FileReader();
+            debugger;
+            reader.onload = function (e) {
+                var resulttable_1 = document.getElementById("result_table");  // 原始结果 
                 debugger;
-                console.log(table_div)
-                document.getElementById("filecontent").innerHTML = table_div;   /* .getElementById("result_table") */
-            };
-           reader.readAsText(file);
+                console.log(resulttable_1)
+
+                // var result=file.getElementById("result_table");
+                var temp = this.result.split("<p></p>")[2];
+                var compare_table = temp.replace(/result_table/, "compare_result_table");
+                debugger;
+                document.getElementById("filecontent").innerHTML = compare_table;
+
+                debugger;
+                var resulttable_2 = document.getElementById("compare_result_table"); // 对比结果
+
+                debugger
+                var Rows_1 = resulttable_1.rows.length;   // 原始表的行数
+                var Cells_1 = resulttable_1.rows[1].cells.length;  // 原始表的最大列数
+                debugger
+                var Rows_2 = resulttable_2.rows.length; // 对比表的行数
+                var Cells_2 = resulttable_2.rows[1].cells.length;  // 对比表的最大列数
+
+                for (var i = 1; i < Rows_1; i++) {    //遍历Table的所有Row
+                    console.log(i)
+                    debugger
+                    if (resulttable_1.rows[i].cells.length > 2) {
+                        console.log(resulttable_1.rows[i].cells.length)
+                        for (var j = 1; j < Rows_2; j++) {    //遍历对比表格的的所有测试项
+                            var testcase_1 = resulttable_1.rows[i].cells[1].innerText;
+                            var testcase_2 = resulttable_2.rows[j].cells[1].innerText;
+                            console.log('resulttable_1[i][1]:'+resulttable_1.rows[i].cells[1].innerText)
+                            console.log('resulttable_2[j][1]:'+resulttable_2.rows[j].cells[1].innerText)
+                            console.log('resulttable_1[i][2]:'+resulttable_1.rows[i].cells[3].innerText)
+                            console.log(resulttable_1.rows[i].cells[2].innerText!='')
+                            console.log(resulttable_1.rows[i].cells[1].innerText == resulttable_2.rows[j].cells[1].innerText)
+                            console.log(testcase_1 == testcase_2)
+                            debugger
+                            if ((resulttable_1.rows[i].cells[2].innerText!='') && (testcase_1 == testcase_2)) {
+                                newtr = resulttable_1.insertRow(i+1);
+                                newtr.className= resulttable_1.rows[i].className;  // 写入 （对比数据）行的class 值 <tr class=>
+                                newtr.id = resulttable_1.rows[i].id;    // 写入 （对比数据）行的id 值 <tr id=>
+                                // 需要把这个表初始化完成
+                                for (tdnum=0;tdnum<=Cells_1;tdnum++){
+                                    temtd = newtr.insertCell(tdnum)
+                                    temtd.innerHTML = '　';
+                                }
+                                debugger
+                                for(ii=2;ii<11;ii++){
+                                    debugger
+                                    var value = resulttable_2.rows[i].cells[ii].innerText;
+                                    console.log('写入值:'+resulttable_2.rows[i].cells[ii].innerText)
+                                    debugger
+                                    resulttable_1.rows[i+1].cells[ii].innerText= value;
+                                }
+                                debugger
+                                resulttable_1.rows[i].cells[1].rowSpan = '2';
+                                resulttable_1.rows[i].cells[2].rowSpan = '2';
+                                resulttable_1.rows[i].cells[11].rowSpan = '2';
+
+                                debugger
+                                orignaldata = resulttable_1.rows[i].cells[11].innerHTML;  //获取当前帧分布表格InnerHTML
+                                console.log(orignaldata)
+                                orignaldata_arry = orignaldata.split('\n');
+                                debugger;
+                                tempdata = resulttable_2.rows[j].cells[11].innerHTML;
+                                console.log(tempdata)
+                                var re = new RegExp(/data:\[(\d+.*)\d]/)
+                                frame_comparedata = tempdata.match(re)   // 获取到 frame count data，填充到原始表格中
+                                debugger;
+                                for (i = 0; i < orignaldata_arry.length; i++) {
+                                    if (orignaldata_arry[i] == 'series: [') {
+                                        orignaldata_arry.splice(i + 5, 0, '{')
+                                        orignaldata_arry.splice(i + 6, 0, "name:/'compare_version/',")
+                                        orignaldata_arry.splice(i + 7, 0, "type:/'bar/',")
+                                        orignaldata_arry.splice(i + 8, 0, frame_comparedata)
+                                    }
+
+                                }
+                                debugger;
+                                resulttable_1.rows[i].cells[2].innerText = orignaldata_arry.join('\n')
+                            }
+                        }
+                    }
+                }
+            }
+            reader.readAsText(file);
         }
     }
 
@@ -206,7 +282,7 @@
         d.close();
     }
     */
-    --></script>
+   </script>
 
     <div id="div_base">
         
@@ -1259,6 +1335,7 @@ ValueError: invalid literal for long() with base 10: 'SurfaceFlinger appears to 
 
 
         <div id='ending'>&nbsp;</div>
+        <div id="filecontent"> </div>
         
         <script type="text/javascript">
             // 基于准备好的dom，初始化echarts实例

@@ -11,7 +11,7 @@ class ToutiaoPage():
 
         # App Info
         self.tt_pkgname = 'com.ss.android.article.news'
-        self.tt_mainActivity = 'com.ss.android.article.news.activity.MainActivity'
+        self.tt_mainActivity = '.activity.SplashActivity'
         self.tt_surface = 'com.ss.android.article.news/com.ss.android.article.news.activity.MainActivity'
 
         # Element Info

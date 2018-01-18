@@ -394,7 +394,7 @@ class Template_mixin(object):
                         }
                     },
                     legend: {
-                        data:['当前版本']
+                        data:['current']
                     },
                     xAxis: [
                         {
@@ -403,9 +403,9 @@ class Template_mixin(object):
                             data: %(frametime)s,
                             axisPointer: {
                                 type: 'shadow'
-                            }
+                            },
                             axisLabel: {
-                            formatter: '{value}%% '
+                                formatter: '{value}ms '
                             }
                         }
                     ],
@@ -415,14 +415,14 @@ class Template_mixin(object):
                             name: '百分比',
                             interval: 10,
                             axisLabel: {
-                            formatter: '{value}ms '
+                                formatter: '{value}ms '
                             }
                         },
 
                     ],
                     series: [
                         {
-                            name:'当前版本',
+                            name:'current',
                             type:'bar',
                             data:%(framecount)s
                         },

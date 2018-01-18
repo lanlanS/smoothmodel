@@ -156,15 +156,15 @@
 
 
     function showTestDetail(div_id){
-        var details_div = document.getElementById(div_id)
-        var displayState = details_div.style.display
+        var details_div = document.getElementById(div_id);
+        var displayState = details_div.style.display;
         // alert(displayState)
         if (displayState != 'block' ) {
-            displayState = 'block'
-            details_div.style.display = 'block'
+            displayState = 'block';
+            details_div.style.display = 'block';
         }
         else {
-            details_div.style.display = 'none'
+            details_div.style.display = 'none';
         }
     }
 
@@ -177,67 +177,75 @@
     }
 
     function compare_file(files){   /* ----新增对比功能----- */
-        if(files.length)
-        {
-           var file = files[0];
-           var reader = new FileReader();
-           reader.onload = function()
-            {
+        debugger
+        if (files.length) {
+            var file = files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
                 var resulttable_1 = document.getElementById("result_table");  // 原始结果 
                 debugger;
                 console.log(resulttable_1)
 
                 // var result=file.getElementById("result_table");
-                var temp = this.result.split("<p></p>")[2]
-                debugger
-                var compare_table = temp.replace(/result_table/,"compare_result_table")
-                debugger
-                document.getElementById("filecontent").innerHTML = compare_table;   /* .getElementById("result_table") */
-            
-                debugger
-                var resulttable_2 = document.getElementById("compare_result_table")  // 对比结果
+                var temp = this.result.split("<p></p>")[2];
+                debugger;
+                var compare_table = temp.replace(/result_table/, "compare_result_table");
+                debugger;
+                document.getElementById("filecontent").innerHTML = compare_table;
+                /* .getElementById("result_table") */
+
+                debugger;
+                var resulttable_2 = document.getElementById("compare_result_table"); // 对比结果
 
                 // alert(resulttable_1.tBodies.length);   // tBodies 的数量
                 // alert(resulttable_2.tBodies.length);
 
-                var Rows_1 = resulttable_1.rows.length;   // 原始表的行数
-                var Cells_1 = resulttable_1.rows[1].cells.length   // 原始表的最大列数
+                // var Rows_1 = resulttable_1.rows.length;   // 原始表的行数
+                // var Cells_1 = resulttable_1.rows[1].cells.length;  // 原始表的最大列数
 
-                var Rows_2 = resulttable_2.rows.length; // 对比表的行数
-                var Cells_2 = resulttable_2.rows[1].cells.length  // 对比表的最大列数
+                // var Rows_2 = resulttable_2.rows.length; // 对比表的行数
+                // var Cells_2 = resulttable_2.rows[1].cells.length;  // 对比表的最大列数
 
-                for (var i = 0; i < Rows_2 ; i++) {    //遍历对比表格的的所有测试项
-                    tableInfo += tableObj.rows[i].cells[1].innerText;   //获取Table中单元格的内容
-                    tableInfo += "   ";
+                // for (var i = 1; i < Rows_1; i++) {    //遍历Table的所有Row
+                //     if (resulttable_1.rows[i].length > 2) {
+                //         for (var j = 1; j < Rows_2; j++) {    //遍历对比表格的的所有测试项
+                //             if (resulttable_1.rows[i].cells[2].innerText == resulttable_2.rows[j].cells[2].innerText) {
+                //                 resulttable_1.rows[i].cells[1].rowSpan = '2';
+                //                 resulttable_1.rows[i].cells[2].rowSpan = '2';
+
+                //                 resulttable_1.rows[i].cells[11].innerHtml = '2';
+                //                 orignaldata = resulttable_1.rows[i].cells[11].innerHTML;  //获取当前帧分布表格InnerHTML
+                //                 orignaldata_arry = orignaldatasplit('\n');
+                //                 debugger;
+                //                 tempdata = resulttable_2.rows[j].cells[11].innerHTML;
+                //                 var re = new RegExp(/data:\[(\d+.*)\d]/)
+                //                 frame_comparedata = tempdata.match(re)   // 获取到 frame count data，填充到原始表格中
+                //                 debugger;
+                //                 for(i=0;i<orignaldata_arry.length;i++){
+                //                     if ( orignaldata_arry[i] == 'series: ['){
+                //                         orignaldata_arry.splice(i+5,0,'{')
+                //                         orignaldata_arry.splice(i+6,0,"name:/'compare_version/',")
+                //                         orignaldata_arry.splice(i+7,0,"type:/'bar/',")
+                //                         orignaldata_arry.splice(i+8,0,frame_comparedata)
+                //                     }
+
+                //                 }
+                //                 debugger;
+                //                 resulttable_1.rows[i].cells[2].innerText = orignaldata_arry.join('\n')
+
+                //             }
+                //         }
+
+                //     }
                 }
-
-
-                for (var i = 1; i < Rows_1 ; i++) {    //遍历Table的所有Row
-                    if (resulttable_1.rows[i].length > 2){
-                        for (var j = 1; j < Rows_2 ; j++) {    //遍历对比表格的的所有测试项
-                                if (resulttable_1.rows[i].cells[2].innerText == resulttable_2.rows[j].cells[2].innerText){
-                                    resulttable_1.rows[i].cells[1].rowSpan='2';
-                                    resulttable_1.rows[i].cells[2].rowSpan='2';
-                                    
-                                    resulttable_1.rows[i].cells[11].rowSpan='2';
-                                    addFramedata = resulttable_2.rows[j].cells[11].getElementsByTagName['script']
-                                    
-
-
-
-
-                                }
-                            }
-                        
-                    }
-            };
-           reader.readAsText(file);
-        }
+                reader.readAsText(file);
+            }
+        // }
+        
     }
 
-    
 
-    /* obsoleted by detail in <div>
+  /*   obsoleted by detail in <div>
     function showOutput(id, name) {
         var w = window.open("", //url
                         name,
@@ -249,9 +257,9 @@
         d.write("<a href='javascript:window.close()'>close</a>\n");
         d.write("</pre>\n");
         d.close();
-    }
-    */ 
-    </script>
+    }  */
+
+</script>
 
     <div id="div_base">
         

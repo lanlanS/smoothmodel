@@ -197,7 +197,7 @@ class Template_mixin(object):
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     %(stylesheet)s
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="./js/echarts.common.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.0.2/echarts-en.common.min.js"></script>
 </head>
 <body>
     <script language="javascript" type="text/javascript"><!--
@@ -257,6 +257,30 @@ class Template_mixin(object):
         }
     }
 
+    function showEchatDetial(div_id,option){
+        var details_div = document.getElementById(div_id)
+        var displayState = details_div.style.display
+
+        if (displayState != 'block' ) {
+            displayState = 'block'
+            details_div.style.display = 'block'
+        }
+        else {
+            details_div.style.display = 'none'
+        }
+        debugger
+        getechart(div_id,option)
+
+    }
+
+    function getechart(div_id,option){
+        // 基于准备好的dom，初始化echarts实例
+        var myFrameChart = echarts.init(document.getElementById(div_id));
+        // 指定图表的配置项和数据
+        myFrameChart.setOption(option);
+        console.log(option.series[0].data)
+    }
+
 
     function showTestDetail(div_id){
         var details_div = document.getElementById(div_id)
@@ -283,16 +307,15 @@ class Template_mixin(object):
         if (files.length) {
             var file = files[0];
             var reader = new FileReader();
-            debugger;
+
             reader.onload = function (e) {
                 var resulttable_1 = document.getElementById("result_table");  // 原始结果
-                debugger;
                 console.log(resulttable_1)
 
-                // var result=file.getElementById("result_table");
                 var temp = this.result.split("<p></p>")[2];
-                var compare_table = temp.replace(/result_table/, "compare_result_table");
-                debugger;
+                var a = temp.replace(/result_table/, "compare_result_table");
+                var compare_table = a.replace(/option/g,"result_option")
+                console.log(compare_table)
                 document.getElementById("filecontent").innerHTML = compare_table;
 
                 debugger;
@@ -304,12 +327,12 @@ class Template_mixin(object):
                 var Cells_2 = resulttable_2.rows[1].cells.length;  // 对比表的最大列数
 
                 for (var i = 1; i < Rows_1; i++) {    //遍历Table的所有Row
-                    console.log(i)
+
                     if (resulttable_1.rows[i].cells.length > 2) {
                         console.log(resulttable_1.rows[i].cells.length)
                         for (var j = 1; j < Rows_2; j++) {    //遍历对比表格的的所有测试项
                             debugger
-                            console.log(j)
+
                             var testcase_1 = resulttable_1.rows[i].cells[1].innerText;
                             var testcase_2 = resulttable_2.rows[j].cells[1].innerText;
                             console.log('resulttable_1[i][1]:'+resulttable_1.rows[i].cells[1].innerText)
@@ -321,11 +344,10 @@ class Template_mixin(object):
                                 newtr = resulttable_1.insertRow(i+1);
                                 newtr.className= resulttable_1.rows[i].className;  // 写入 （对比数据）行的class 值 <tr class=>
                                 newtr.id = resulttable_1.rows[i].id;    // 写入 （对比数据）行的id 值 <tr id=>
-                                // 新增的行数先初始化完成
+                                Rows_1 = Rows_1+1;  // 新增的行数先初始化完成
                                 for (tdnum=0;tdnum<=8;tdnum++){   // 仅需要补充 8个 单元格
                                     temtd = newtr.insertCell(tdnum)
                                     temtd.innerHTML = '　';
-                                    // temtd.style.backgroundColor='gray';
                                     temtd.style.color='blue';
                                     temtd.align='center';
                                 }
@@ -334,39 +356,38 @@ class Template_mixin(object):
                                 resulttable_1.rows[i].cells[11].rowSpan = '2';
                                 resulttable_1.rows[i].cells[12].rowSpan = '2';
 
-                                debugger
+                                // debugger
                                 for(ii=2;ii<11;ii++){
                                     if (ii == 11){
                                         ii = 2;
                                     };
-                                    debugger
+
                                     var value = resulttable_2.rows[j].cells[ii].innerText;
                                     console.log('写入值:'+resulttable_2.rows[j].cells[ii].innerText)
                                     resulttable_1.rows[i+1].cells[ii-2].innerText= value;
                                 }
 
-                                // debugger
-                                // orignaldata = window.option['pt1.1'].series[0].data;  //获取当前帧分布表格option变量
-                                // console.log(orignaldata)
-
-                                debugger;
+                                // debugger;
                                 tempdata = resulttable_2.rows[j].cells[11].innerHTML;
                                 console.log(tempdata)
                                 var re = new RegExp(/data:\[(\d+.*)\d]/)
-                                debugger;
+                                // debugger;
                                 temp_comparedata = tempdata.match(re)[1].split(',');  // 获取到 frame count data，填充到原始表格中
                                 console.log(temp_comparedata)
-                                debugger;
+                                // debugger;
                                 var frame_comparedata=[];
                                 for(i1=0;i1<temp_comparedata.length;i1++){
                                     frame_comparedata.push(Number(temp_comparedata[i1].trim()));
                                 }
-                                console.log(frame_comparedata)
+                                // console.log(frame_comparedata)
 
-                                // window.option['pt1.1'].legend.data.push('compare_version')
-                                // window.option['pt1.1'].series.push({name:'compare_version',type:'bar',data:frame_comparedata});
-                                // console.log(window.option['pt1.1'].series)
-                                // console.log(window.option['pt1.1'].series[1])
+                                debugger
+                                optionid = "option_" + resulttable_1.rows[i].id.replace('.','_');
+                                console.log(optionid)
+                                eval(optionid).legend.data.push('compare_version');
+                                eval(optionid).series.push({name:'compare_version',type:'bar',data:frame_comparedata});
+                                console.log(eval(optionid).series)
+                                console.log(eval(optionid).series[1])
 
                             }
                         }
@@ -409,7 +430,7 @@ class Template_mixin(object):
             var myChart = echarts.init(document.getElementById('chart'));
 
             // 指定图表的配置项和数据
-            var option = {
+            var option_result = {
                 title : {
                     text: '测试执行情况',
                     x:'center'
@@ -446,18 +467,15 @@ class Template_mixin(object):
             };
 
             // 使用刚指定的配置项和数据显示图表。
-            myChart.setOption(option);
+            myChart.setOption(option_result);
         </script>
         """  # variables: (Pass, fail, error)
 
     Frame_Chart = """
         <div id="%(chart_id)s" style="width:600px;height:500px;float:left;" class="popup_window">
-            <script type="text/javascript">
-                // 基于准备好的dom，初始化echarts实例
-                var myFrameChart = echarts.init(document.getElementById('%(chart_id)s'));
-
+            <script  type="text/javascript">
                 // 指定图表的配置项和数据
-                var option = {
+                var %(option_id)s = {
                     tooltip: {
                         trigger: 'axis',
                         axisPointer: {
@@ -511,7 +529,6 @@ class Template_mixin(object):
 
                     ]
                 };
-                myFrameChart.setOption(option);
             </script>
         </div>
         """  # variables: (frametime, framecount)
@@ -756,7 +773,7 @@ class Template_mixin(object):
     <td align="center"> %(slow_bitmap)s </td>
     <td align="center"> %(slow_draw)s </td>
     <td align="center">
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('%(chart_id)s')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showEchatDetial('%(chart_id)s',%(option_id)s)" >
         帧分布直方图</a>
             %(FrameChart)s
     </td>
@@ -1107,9 +1124,10 @@ class HTMLTestRunner(Template_mixin):
         )
         return chart
 
-    def _generate_framechart(self, chart_id, time, count):
+    def _generate_framechart(self, chart_id, option_id, time, count):
         frame_chart = self.Frame_Chart % dict(  # Frame_Chart : javascript
                 chart_id=str(chart_id),
+                option_id=str(option_id),
                 frametime=str(time),
                 framecount=str(count),
         )
@@ -1246,8 +1264,9 @@ class HTMLTestRunner(Template_mixin):
         #     avgfps = '0'
 
         chart_id_data = 'framechart_' + tid
+        option_id = 'option_' + tid.replace('.', '_')
         if time and count:
-            frame_chart = self._generate_framechart(chart_id_data, time, count)
+            frame_chart = self._generate_framechart(chart_id_data, option_id, time, count)
 
             count_int = [float(i.strip('[').strip(']')) for i in count.split(',')]
             time_int = [int(i.strip('[').strip(']')) for i in time.split(',')]
@@ -1267,7 +1286,7 @@ class HTMLTestRunner(Template_mixin):
                 mavgeScore = 0
         else:
             time = count = '0'
-            frame_chart = self._generate_framechart(chart_id_data, time, count)
+            frame_chart = self._generate_framechart(chart_id_data, option_id, time, count)
             avgeScore = mavgeScore = excellent_rate = 0
 
         self.sscore.append(avgeScore)
@@ -1296,6 +1315,7 @@ class HTMLTestRunner(Template_mixin):
                     slow_bitmap=v_slow_bitmap,
                     slow_draw=v_slow_draw,
                     chart_id=chart_id_data.decode("utf-8"),
+                    option_id=option_id.decode("utf_8")
             )
             rows.append(row)
         if not has_output:

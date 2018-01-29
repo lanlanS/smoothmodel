@@ -150,13 +150,14 @@ class Systemtest(unittest.TestCase):
             jank_count = []
             max_frame_delay = []
             self.action.adb_swipe_action('down')
+            self.action.adb_swipe_action('up')
             if self.getframe.clear_FrameStats():
-                for loop in range(1):
+                for loop in range(5):
                     self.getfps.Start()  # start collect fps
-                    for i in range(0, 10):
+                    for i in range(0, 5):
                         time.sleep(0.1)
                         self.action.adb_swipe_action('right')
-                    for i in range(0, 10):
+                    for i in range(0, 5):
                         time.sleep(0.1)
                         self.action.adb_swipe_action('left')
 

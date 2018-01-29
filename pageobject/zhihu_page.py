@@ -86,6 +86,7 @@ class ZhihuPage():
         content.click()
         time.sleep(1)
         if self.cm.driver.find_element_by_id('com.zhihu.android:id/comment_btn'):  # 判断是否进入文章界面，存在 评论id
+            time.sleep(1)
             for i in range(0, 5):
                 self.cm.my_swipe_to_up(during=400)
             for i in range(0, 5):
@@ -96,7 +97,7 @@ class ZhihuPage():
         for i in range(0, 3):
             content = self.find_context()
             content.click()
-            time.sleep(1)
+            time.sleep(1.5)
             self.cm.back()
 
     def teardown(self):

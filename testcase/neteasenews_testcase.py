@@ -130,7 +130,7 @@ class Neteasenewstest(unittest.TestCase):
             max_frame_delay = []
 
             if self.getframe.clear_FrameStats():
-                for loop in range(5):
+                for loop in range(1):
                     self.getfps.Start()  # start collect fps
 
                     self.neteasenews_po.switch_newspage()

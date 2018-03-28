@@ -76,8 +76,8 @@ class SettingPage():
 
     def wifipage_swipe(self):  # 无线网络界面上下滑动
         try:
-            if self.cm.shortwaitElementById(self.wifiicon):
-                self.cm.driver.find_elements_by_id(self.wifiicon)[1].click()
+            if self.cm.driver.find_elements_by_id(self.wifiicon):
+                self.cm.driver.find_elements_by_id(self.wifiicon)[2].click()
                 for i in range(0, 5):
                     self.cm.my_swipe_to_down(during=400)
                 for i in range(0, 5):

@@ -171,7 +171,7 @@ class wechattest(unittest.TestCase):
             max_frame_delay = []
 
             if self.getframe.clear_FrameStats():
-                for loop in range(1):
+                for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
                     self.wechat_po.swipUp_chatpage()
@@ -212,7 +212,7 @@ class wechattest(unittest.TestCase):
             max_frame_delay = []
 
             if self.getframe.clear_FrameStats():
-                for loop in range(1):
+                for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
                     self.wechat_po.swipe_subscription()
@@ -259,7 +259,7 @@ class wechattest(unittest.TestCase):
                 for loop in range(1):
                     self.getfps.Start()  # start collect fps
 
-                    eval('self.wechat_po.swipe_myPosts()')
+                    self.wechat_po.swipe_myPosts()
 
                     results = self.getfps.SampleResults()
                     fps.append(results[1].value)
@@ -300,7 +300,7 @@ class wechattest(unittest.TestCase):
 
         try:
             if self.getframe.clear_FrameStats():
-                for loop in range(1):
+                for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
                     self.wechat_po.swipe_friendlist()

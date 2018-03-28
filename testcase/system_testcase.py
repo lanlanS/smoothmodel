@@ -52,7 +52,7 @@ class Systemtest(unittest.TestCase):
                 for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
-                    for i in range(0, 5):
+                    for i in range(0, 3):
                         self.action.adb_swipe_action('down')
                         time.sleep(0.3)
                         self.action.adb_backkey()
@@ -102,7 +102,7 @@ class Systemtest(unittest.TestCase):
                 for loop in range(5):
                     self.getfps.Start()  # start collect fps
 
-                    os.popen('adb shell am broadcast -a com.android.systemui.TOGGLE_RECENTS')
+                    os.popen('adb shell am broadcast -a com.android.systemui.TOGGLE_RECENTS')  # 上滑呼出任务管理器
                     time.sleep(0.3)
                     for i in range(0, 5):
                         self.action.adb_swipe_action('right')
@@ -116,7 +116,6 @@ class Systemtest(unittest.TestCase):
                     max_frame_delay.append(results[3].value)
 
                     self.getfps.Stop()
-                    loop += 1
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
@@ -150,16 +149,17 @@ class Systemtest(unittest.TestCase):
             fps = []
             jank_count = []
             max_frame_delay = []
-
+            # self.action.adb_swipe_action('down')
+            # self.action.adb_swipe_action('up')
             if self.getframe.clear_FrameStats():
                 for loop in range(5):
                     self.getfps.Start()  # start collect fps
                     for i in range(0, 5):
+                        time.sleep(0.1)
                         self.action.adb_swipe_action('right')
-                        time.sleep(0.3)
                     for i in range(0, 5):
+                        time.sleep(0.1)
                         self.action.adb_swipe_action('left')
-                        time.sleep(0.3)
 
                     results = self.getfps.SampleResults()
                     fps.append(results[1].value)
@@ -167,7 +167,6 @@ class Systemtest(unittest.TestCase):
                     max_frame_delay.append(results[3].value)
 
                     self.getfps.Stop()
-                    loop += 1
             self.getframe.dumpsysFramestats(caseid)  # start collect framestats
 
             try:
@@ -186,6 +185,99 @@ class Systemtest(unittest.TestCase):
             self.error_info()
 
         self.action.adb_homekey()  # 回到桌面
+
+    def test_4_swipe_notify(self):
+        caseid = '4'
+        caseName = u'下滑通知信息'
+        print "case id:" + caseid
+        print "case Name:" + caseName
+
+        self.getfps = SurfaceStatsCollector(self.system_po.systemui_surface)
+        self.getframe = GetFramestats(self.system_po.systemui_pkgname)
+        self.action.adb_homekey()
+
+        try:
+            fps = []
+            jank_count = []
+            max_frame_delay = []
+            self.action.adb_swipe_action('down')
+            if self.getframe.clear_FrameStats():
+                for loop in range(1):
+                    self.getfps.Start()  # start collect fps
+                    for i in range(0, 15):
+                        time.sleep(0.3)
+                        self.action.adb_swipe('550 950 550 1500')
+                        time.sleep(0.3)
+                        self.action.adb_swipe('550 1500 550 950')
+
+                    results = self.getfps.SampleResults()
+                    fps.append(results[1].value)
+                    jank_count.append(results[2].value)
+                    max_frame_delay.append(results[3].value)
+
+                    self.getfps.Stop()
+            self.getframe.dumpsysFramestats(caseid)  # start collect framestats
+            self.action.adb_homekey()
+            try:
+                print 'fps: ' + str(fps)
+                print fps
+                print 'jank count: ' + str(max(jank_count))
+                print jank_count
+                print 'max frame delay: ' + str(max(max_frame_delay))
+                print max_frame_delay
+
+                self.getframe.beginProcessResult(caseid)
+            except:
+                print u'数据收集有误'
+        except Exception:
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
+
+    def test_5_click_wifiicon(self):
+        caseid = '5'
+        caseName = u'点击WiFi图标'
+        print "case id:" + caseid
+        print "case Name:" + caseName
+
+        self.getfps = SurfaceStatsCollector(self.system_po.systemui_surface)
+        self.getframe = GetFramestats(self.system_po.systemui_pkgname)
+        self.action.adb_homekey()
+
+        try:
+            fps = []
+            jank_count = []
+            max_frame_delay = []
+            self.action.adb_swipe_action('down')
+            if self.getframe.clear_FrameStats():
+                for loop in range(1):
+                    self.getfps.Start()  # start collect fps
+                    for i in range(0, 15):
+                        time.sleep(0.3)
+                        self.action.adb_click('220 445')
+                        time.sleep(0.2)
+                        self.action.adb_backkey()
+                    results = self.getfps.SampleResults()
+                    fps.append(results[1].value)
+                    jank_count.append(results[2].value)
+                    max_frame_delay.append(results[3].value)
+
+                    self.getfps.Stop()
+            self.getframe.dumpsysFramestats(caseid)  # start collect framestats
+            self.action.adb_homekey()
+            try:
+                print 'fps: ' + str(fps)
+                print fps
+                print 'jank count: ' + str(max(jank_count))
+                print jank_count
+                print 'max frame delay: ' + str(max(max_frame_delay))
+                print max_frame_delay
+
+                self.getframe.beginProcessResult(caseid)
+            except:
+                print u'数据收集有误'
+        except Exception:
+            self.getframe.dumpsysFramestats(caseid)
+            self.error_info()
 
     def error_info(self):
         self.getfps.Stop()

@@ -44,7 +44,7 @@ class weibotest(unittest.TestCase):
             fps = []
             jank_count = []
             max_frame_delay = []
-
+            # self.weibo_po.click_hotpage()
             if self.getframe.clear_FrameStats():
                 for loop in range(5):
                     self.getfps.Start()  # start collect fps
@@ -128,7 +128,7 @@ class weibotest(unittest.TestCase):
         max_frame_delay = []
 
         if self.getframe.clear_FrameStats():
-            for loop in range(5):
+            for loop in range(1):
                 self.getfps.Start()  # start collect fps
 
                 self.weibo_po.clickpic()

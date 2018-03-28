@@ -1,7 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="c9c143b6-38ec-480d-960b-3778d08b4006" name="Default" comment="" />
+=======
+    <list default="true" id="c9c143b6-38ec-480d-960b-3778d08b4006" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180105212334.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180105212621.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180105214220.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180108164609.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180108165635.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180108165820.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109160541.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109162250.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109164012.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109165034.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109170020.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180109202535.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110114025.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110135110.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110160936.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110164730.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110164844.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110165120.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110165437.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110170406.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110170523.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110170646.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110170905.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110171015.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110171229.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110171426.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110172621.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110172742.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110175647.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110175838.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110175952.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110181228.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110181244.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180110192620.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111154227.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111155317.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111160453.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111162308.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111183500.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111183815.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180111184019.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180112105931.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/result_20180112110038.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/P10_M1621对比结果.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[OnePlus5T]_20180116115030_3rd应用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[OnePlus5T]_微信.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme 6]_系统应用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme 7]_系统应用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme6]_3rd应用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme6]_微信.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme7]_3rd应用.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme7]_微信-1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/smoothmodel_output/[PRO7H_Flyme7]_微信.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/wangyi.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/3_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/6_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/6_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/9_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.tencent.mm/9_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameInfo.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameInfo.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameStats.xls" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_FrameStats.xls" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smoothmodel_output/1+ 对比 Flyme/1+对比Flyme.xlsx" afterPath="$PROJECT_DIR$/smoothmodel_output/1+ 对比 Flyme/1+对比Flyme.xlsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/[PRO7H_Flyme6]_微信-1（一条出错）.html" afterPath="$PROJECT_DIR$/[PRO7H_Flyme6]_微信-1（一条出错）.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.android.systemui/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.android.systemui/0_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.meizu.flyme.launcher/3_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/0_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.netease.newsreader.activity/2_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/2_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.sina.weibo/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.sina.weibo/3_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/0_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/0_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.ss.android.article.news/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.ss.android.article.news/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/2_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.taobao.taobao/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.taobao.taobao/3_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/2_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/3_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/4_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/4_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/5_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/5_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/6_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/6_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/7_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/7_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/8_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/8_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.tencent.mm/9_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.tencent.mm/9_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/1_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/1_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/2_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/2_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/3_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/3_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_AllFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_AllFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output/com.zhihu.android/4_NineFrame.txt" afterPath="$PROJECT_DIR$/output/com.zhihu.android/4_NineFrame.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/Netease_page.py" afterPath="$PROJECT_DIR$/pageobject/Netease_page.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pageobject/zhihu_page.py" afterPath="$PROJECT_DIR$/pageobject/zhihu_page.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/neteasenews_testcase.py" afterPath="$PROJECT_DIR$/testcase/neteasenews_testcase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase/system_testcase.py" afterPath="$PROJECT_DIR$/testcase/system_testcase.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testcase_list.xml" afterPath="$PROJECT_DIR$/testcase_list.xml" />
+    </list>
+>>>>>>> compare_func
     <ignored path="SmoothModel.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -15,17 +178,18 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SmoothModel$Unittests_in_wechattest.coverage" NAME="Unittests in wechattest Coverage Results" MODIFIED="1504598445573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
+    <SUITE FILE_PATH="coverage/SmoothModel$getFramestats.coverage" NAME="getFramestats Coverage Results" MODIFIED="1509536437743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datacollector" />
+    <SUITE FILE_PATH="coverage/SmoothModel$getDeviceinfo.coverage" NAME="getDeviceinfo Coverage Results" MODIFIED="1506062576374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
+    <SUITE FILE_PATH="coverage/SmoothModel$OATfilecheck.coverage" NAME="OATfilecheck Coverage Results" MODIFIED="1515142131316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/otafilecheck" />
+    <SUITE FILE_PATH="coverage/SmoothModel$logAndExceptioncheck_v1_7.coverage" NAME="logAndExceptioncheck_v1.7 Coverage Results" MODIFIED="1510813475850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/ClearLog" />
+    <SUITE FILE_PATH="coverage/SmoothModel$run.coverage" NAME="run Coverage Results" MODIFIED="1516952296636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SmoothModel$wechat_testcase.coverage" NAME="wechat_testcase Coverage Results" MODIFIED="1504598398620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
     <SUITE FILE_PATH="coverage/SmoothModel$adbMethod.coverage" NAME="adbMethod Coverage Results" MODIFIED="1513848167355" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
     <SUITE FILE_PATH="coverage/SmoothModel$getFps.coverage" NAME="getFps Coverage Results" MODIFIED="1505123845272" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datacollector" />
-    <SUITE FILE_PATH="coverage/SmoothModel$getFramestats.coverage" NAME="getFramestats Coverage Results" MODIFIED="1509536437743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/datacollector" />
     <SUITE FILE_PATH="coverage/SmoothModel$Setup.coverage" NAME="Setup Coverage Results" MODIFIED="1504163138397" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
     <SUITE FILE_PATH="coverage/SmoothModel$ServerControl.coverage" NAME="ServerControl Coverage Results" MODIFIED="1504163221038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
     <SUITE FILE_PATH="coverage/SmoothModel$Unittest_wechattest_test_swip_recordlist.coverage" NAME="Unittest wechattest.test_swip_recordlist Coverage Results" MODIFIED="1505466484412" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
-    <SUITE FILE_PATH="coverage/SmoothModel$getDeviceinfo.coverage" NAME="getDeviceinfo Coverage Results" MODIFIED="1506062576374" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
     <SUITE FILE_PATH="coverage/SmoothModel$xmlreader.coverage" NAME="xmlreader Coverage Results" MODIFIED="1507711963727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utill" />
-    <SUITE FILE_PATH="coverage/SmoothModel$logAndExceptioncheck_v1_7.coverage" NAME="logAndExceptioncheck_v1.7 Coverage Results" MODIFIED="1510813475850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/ClearLog" />
-    <SUITE FILE_PATH="coverage/SmoothModel$run.coverage" NAME="run Coverage Results" MODIFIED="1514463944134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/SmoothModel$wechat_testcase.coverage" NAME="wechat_testcase Coverage Results" MODIFIED="1504598398620" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/testcase" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -43,56 +207,80 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="testcase_list.xml" pinned="true" current-in-tab="false">
+      <file leaf-file-name="testcase_list.xml" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testcase_list.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="83" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
+            <state vertical-scroll-proportion="0.7688787">
+              <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="HTMLTestRunner_mz.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.56614786">
               <caret line="454" column="0" selection-start-line="454" selection-start-column="0" selection-end-line="454" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="case.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/unittest/case.py">
+=======
+      <file leaf-file-name="remote_connection.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+>>>>>>> compare_func
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="suite.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/unittest/suite.py">
+      <file leaf-file-name="urllib2.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/urllib2.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="weibo_page.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pageobject/weibo_page.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="getFramestats.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/datacollector/getFramestats.py">
+=======
+      <file leaf-file-name="urllib.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/urllib.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+              <caret line="1195" column="0" selection-start-line="1195" selection-start-column="0" selection-end-line="1195" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="urlparse.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/urlparse.py">
+>>>>>>> compare_func
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="setting_page.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pageobject/setting_page.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -101,20 +289,29 @@
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/logging/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="1145" column="0" selection-start-line="1145" selection-start-column="0" selection-end-line="1145" selection-end-column="0" />
+              <folding />
+>>>>>>> compare_func
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="system_testcase.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcase/system_testcase.py">
+      <file leaf-file-name="string.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/string.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+              <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="run.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -127,19 +324,23 @@
       </file>
       <file leaf-file-name="adbMethod.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/utill/adbMethod.py">
+=======
+      <file leaf-file-name="utils.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/utils.py">
+>>>>>>> compare_func
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="taobao_testcase.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testcase/taobao_testcase.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/Python27/Lib/json/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="160" column="14" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
+              <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,9 +361,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Report.html" />
-        <option value="$PROJECT_DIR$/HTMLTestRunner.py" />
-        <option value="$PROJECT_DIR$/utill/xmlreader.py" />
         <option value="C:/Python27/Lib/HTMLTestRunner.py" />
         <option value="$PROJECT_DIR$/result_20171023171131.html" />
         <option value="$PROJECT_DIR$/result_20171025110828.html" />
@@ -172,7 +370,6 @@
         <option value="$PROJECT_DIR$/result_20171031165400.html" />
         <option value="$PROJECT_DIR$/result_20171102152511.html" />
         <option value="$PROJECT_DIR$/result_20171103111905.html" />
-        <option value="$PROJECT_DIR$/pageobject/toutiao_page.py" />
         <option value="$PROJECT_DIR$/1793_result_20171103170647.html" />
         <option value="$PROJECT_DIR$/result_20171102193424.html" />
         <option value="$PROJECT_DIR$/result_20171115100848_黑色机器.html" />
@@ -186,30 +383,34 @@
         <option value="$PROJECT_DIR$/utill/Setup.py" />
         <option value="$PROJECT_DIR$/utill/getDeviceinfo.py" />
         <option value="$PROJECT_DIR$/pageobject/systemui_page.py" />
-        <option value="$PROJECT_DIR$/utill/adbMethod.py" />
         <option value="$PROJECT_DIR$/testcase/systemui_testcase.py" />
         <option value="$PROJECT_DIR$/pageobject/setting.py" />
         <option value="$PROJECT_DIR$/pageobject/system_page.py" />
-        <option value="$PROJECT_DIR$/pageobject/setting_page.py" />
-        <option value="$PROJECT_DIR$/pageobject/Netease_page.py" />
         <option value="$PROJECT_DIR$/utill/func_tools.py" />
         <option value="$PROJECT_DIR$/pageobject/gallery_page.py" />
-        <option value="$PROJECT_DIR$/run.py" />
-        <option value="$PROJECT_DIR$/testcase/neteasenews_testcase.py" />
-        <option value="$PROJECT_DIR$/testcase/setting_testcase.py" />
-        <option value="$PROJECT_DIR$/testcase/system_testcase.py" />
         <option value="$PROJECT_DIR$/testcase/taobao_testcase.py" />
         <option value="$PROJECT_DIR$/testcase/toutiao_testcase.py" />
         <option value="$PROJECT_DIR$/testcase/zhihu_testcase.py" />
-        <option value="$PROJECT_DIR$/testcase/weibo_testcase.py" />
         <option value="$PROJECT_DIR$/testcase/gallery_testcase.py" />
         <option value="$PROJECT_DIR$/datacollector/getFramestats.py" />
         <option value="$PROJECT_DIR$/testcase/wechat_testcase.py" />
-        <option value="$PROJECT_DIR$/pageobject/zhihu_page.py" />
-        <option value="$PROJECT_DIR$/pageobject/taobao_page.py" />
         <option value="$PROJECT_DIR$/pageobject/wechat_page.py" />
-        <option value="$PROJECT_DIR$/pageobject/weibo_page.py" />
+        <option value="$PROJECT_DIR$/pageobject/setting_page.py" />
+        <option value="$PROJECT_DIR$/testcase/weibo_testcase.py" />
+        <option value="D:/otafilecheck/OATfilecheck.py" />
+        <option value="$PROJECT_DIR$/pageobject/taobao_page.py" />
+        <option value="$PROJECT_DIR$/testcase/setting_testcase.py" />
+        <option value="$PROJECT_DIR$/utill/adbMethod.py" />
+        <option value="$PROJECT_DIR$/run.py" />
+        <option value="$PROJECT_DIR$/[PRO7H]_test.html" />
+        <option value="$PROJECT_DIR$/[PRO7H_Flyme6]_微信-1（一条出错）.html" />
+        <option value="$PROJECT_DIR$/pageobject/toutiao_page.py" />
+        <option value="$PROJECT_DIR$/pageobject/zhihu_page.py" />
+        <option value="$PROJECT_DIR$/testcase/system_testcase.py" />
         <option value="$PROJECT_DIR$/report/HTMLTestRunner_mz.py" />
+        <option value="$PROJECT_DIR$/testcase/neteasenews_testcase.py" />
+        <option value="$PROJECT_DIR$/pageobject/Netease_page.py" />
+        <option value="$PROJECT_DIR$/pageobject/weibo_page.py" />
         <option value="$PROJECT_DIR$/testcase_list.xml" />
       </list>
     </option>
@@ -368,7 +569,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="E:\node\node.exe" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mainthread_IO_SQL_v1.1.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../wechat_jump_game" />
     <property name="ignore_missing_gitignore" value="true" />
   </component>
   <component name="RunManager" selected="Python.run">
@@ -408,24 +609,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="xmlreader" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/utill" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SmoothModel" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utill/xmlreader.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="logAndExceptioncheck_v1.7" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -458,6 +641,24 @@
       <module name="SmoothModel" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utill/adbMethod.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="OATfilecheck" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/otafilecheck" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SmoothModel" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="D:/otafilecheck/OATfilecheck.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -669,17 +870,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.getFramestats" />
       <item index="1" class="java.lang.String" itemvalue="Python.run" />
-      <item index="2" class="java.lang.String" itemvalue="Python.xmlreader" />
-      <item index="3" class="java.lang.String" itemvalue="Python.logAndExceptioncheck_v1.7" />
-      <item index="4" class="java.lang.String" itemvalue="Python.adbMethod" />
+      <item index="2" class="java.lang.String" itemvalue="Python.logAndExceptioncheck_v1.7" />
+      <item index="3" class="java.lang.String" itemvalue="Python.adbMethod" />
+      <item index="4" class="java.lang.String" itemvalue="Python.OATfilecheck" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.run" />
-        <item index="1" class="java.lang.String" itemvalue="Python.adbMethod" />
-        <item index="2" class="java.lang.String" itemvalue="Python.logAndExceptioncheck_v1.7" />
-        <item index="3" class="java.lang.String" itemvalue="Python.getFramestats" />
-        <item index="4" class="java.lang.String" itemvalue="Python.xmlreader" />
+        <item index="1" class="java.lang.String" itemvalue="Python.OATfilecheck" />
+        <item index="2" class="java.lang.String" itemvalue="Python.adbMethod" />
+        <item index="3" class="java.lang.String" itemvalue="Python.logAndExceptioncheck_v1.7" />
+        <item index="4" class="java.lang.String" itemvalue="Python.getFramestats" />
       </list>
     </recent_temporary>
   </component>
@@ -738,6 +939,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -747,38 +949,53 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24526198" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16684435" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3690078" sideWeight="0.5234541" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24303234" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25083613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44593087" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
+>>>>>>> compare_func
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15991472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18729097" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18394649" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44927537" sideWeight="0.47867805" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32664436" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18283166" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2374582" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
+>>>>>>> compare_func
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49832776" sideWeight="0.47867805" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3690078" sideWeight="0.5234541" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24526198" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46265328" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18729097" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15245202" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24414715" sideWeight="0.49573562" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25083613" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972129" sideWeight="0.47654584" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18506132" sideWeight="0.4978678" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16204691" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18283166" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15991472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2374582" sideWeight="0.4904051" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15991472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49832776" sideWeight="0.47867805" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39687848" sideWeight="0.47867805" order="7" side_tool="false" content_ui="tabs" x="14" y="365" width="1892" height="287" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -795,30 +1012,50 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/pageobject/wechat_page.py</url>
-          <line>133</line>
-          <option name="timeStamp" value="265" />
+        <line-breakpoint type="python-line">
+          <url>file://D:/otafilecheck/OATfilecheck.py</url>
+          <line>71</line>
+          <option name="timeStamp" value="290" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/pageobject/taobao_page.py</url>
+          <line>95</line>
+          <option name="timeStamp" value="293" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/pageobject/weibo_page.py</url>
+          <line>96</line>
+          <option name="timeStamp" value="294" />
+        </line-breakpoint>
+        <line-breakpoint type="python-line">
+          <url>file://$PROJECT_DIR$/testcase/setting_testcase.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="304" />
+        </line-breakpoint>
+        <line-breakpoint type="python-line">
           <url>file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py</url>
-          <line>1059</line>
-          <option name="timeStamp" value="266" />
+          <line>1267</line>
+          <option name="timeStamp" value="311" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/pageobject/wechat_page.py</url>
-          <line>142</line>
-          <option name="timeStamp" value="267" />
+        <line-breakpoint type="python-line">
+          <url>file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py</url>
+          <line>1140</line>
+          <option name="timeStamp" value="312" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/testcase/gallery_testcase.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="280" />
+        <line-breakpoint type="python-line">
+          <url>file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py</url>
+          <line>1276</line>
+          <option name="timeStamp" value="313" />
+        </line-breakpoint>
+        <line-breakpoint type="python-line">
+          <url>file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py</url>
+          <line>1107</line>
+          <option name="timeStamp" value="315" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/testcase/system_testcase.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="282" />
+          <line>265</line>
+          <option name="timeStamp" value="316" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -831,53 +1068,17 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="283" />
+      <option name="time" value="318" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="self.fscore" />
+        <watch expression="self.jscore" />
+        <watch expression="self.sscore" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python27/Lib/site-packages/appium/webdriver/mobilecommand.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/uiautomator/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="598" column="8" selection-start-line="598" selection-start-column="8" selection-end-line="598" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/command.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27764976">
-          <caret line="58" column="43" selection-start-line="58" selection-start-column="43" selection-end-line="58" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utill/waiteElement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utill/xmlreader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utill/getDeviceinfo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="16" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/subprocess.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -885,66 +1086,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/string.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/urlparse.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="174" column="0" selection-start-line="174" selection-start-column="0" selection-end-line="174" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/logging/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35198557">
-          <caret line="1145" column="0" selection-start-line="1145" selection-start-column="0" selection-end-line="1145" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/json/encoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="206" column="0" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/json/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/support/wait.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43451142">
-          <caret line="404" column="0" selection-start-line="404" selection-start-column="0" selection-end-line="404" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobject/Netease_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32225913">
-          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -962,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="493" column="0" selection-start-line="493" selection-start-column="0" selection-end-line="493" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.PyCharm50/system/python_stubs/-762174762/_io.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -983,31 +1121,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="775" column="0" selection-start-line="775" selection-start-column="0" selection-end-line="775" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobject/system_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="62" selection-start-line="16" selection-start-column="62" selection-end-line="16" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utill/Setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="68" column="33" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/toutiao_testcase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0028288">
-          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1025,13 +1142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/StringIO.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48565122">
-          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pageobject/gallery_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.48565122">
@@ -1041,107 +1151,136 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testcase/gallery_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10599078">
-          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
-          <folding>
-            <element signature="e#15#30#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/neteasenews_testcase.py">
+    <entry file="file://$PROJECT_DIR$/testcase/toutiao_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="123" column="33" selection-start-line="123" selection-start-column="21" selection-end-line="123" selection-end-column="33" />
+          <caret line="75" column="29" selection-start-line="75" selection-start-column="29" selection-end-line="75" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/setting_testcase.py">
+    <entry file="file://$PROJECT_DIR$/testcase/taobao_testcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9322034">
+          <caret line="130" column="42" selection-start-line="130" selection-start-column="42" selection-end-line="130" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobject/setting_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="142" column="0" selection-start-line="142" selection-start-column="0" selection-end-line="142" selection-end-column="0" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobject/system_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webelement.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="392" column="0" selection-start-line="392" selection-start-column="0" selection-end-line="392" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/unittest/suite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/otafilecheck/OATfilecheck.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testcase/wechat_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="41" selection-start-line="135" selection-start-column="41" selection-end-line="135" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/zhihu_testcase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="136" column="44" selection-start-line="136" selection-start-column="44" selection-end-line="136" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageobject/zhihu_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="33" selection-start-line="90" selection-start-column="33" selection-end-line="90" selection-end-column="33" />
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utill/commonMethod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pageobject/taobao_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="38" selection-end-line="105" selection-end-column="38" />
+          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pageobject/wechat_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="15" selection-start-line="150" selection-start-column="15" selection-end-line="150" selection-end-column="15" />
-          <folding>
-            <element signature="e#15#24#0" expanded="false" />
-          </folding>
+          <caret line="42" column="40" selection-start-line="42" selection-start-column="40" selection-end-line="42" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/datacollector/getFps.py">
+    <entry file="file://$PROJECT_DIR$/[PRO7H]_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+        <state vertical-scroll-proportion="-2.2676282">
+          <caret line="45" column="17" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/weibo_testcase.py">
+    <entry file="file://$PROJECT_DIR$/testcase/zhihu_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageobject/weibo_page.py">
+    <entry file="file://$PROJECT_DIR$/[PRO7H_Flyme6]_微信-1（一条出错）.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="0.37231505">
+          <caret line="258" column="25" selection-start-line="258" selection-start-column="25" selection-end-line="258" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase/taobao_testcase.py">
+    <entry file="file://$PROJECT_DIR$/pageobject/zhihu_page.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="14" selection-start-line="160" selection-start-column="14" selection-end-line="160" selection-end-column="14" />
-          <folding />
+          <caret line="97" column="38" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testcase_list.xml">
+    <entry file="file://$PROJECT_DIR$/testcase/setting_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="83" selection-start-line="60" selection-start-column="83" selection-end-line="60" selection-end-column="83" />
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1149,50 +1288,189 @@
     <entry file="file://$PROJECT_DIR$/utill/adbMethod.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding />
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/testcase/neteasenews_testcase.py">
+=======
     <entry file="file://$PROJECT_DIR$/testcase/system_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/unittest/suite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="328" column="0" selection-start-line="328" selection-start-column="0" selection-end-line="328" selection-end-column="0" />
+        <state vertical-scroll-proportion="-14.033898">
+          <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datacollector/getFramestats.py">
+>>>>>>> compare_func
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.5084746">
+          <caret line="347" column="18" selection-start-line="347" selection-start-column="18" selection-end-line="347" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/neteasenews_testcase.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="131" column="12" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+          <caret line="135" column="47" selection-start-line="135" selection-start-column="47" selection-end-line="135" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobject/toutiao_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobject/Netease_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="27" selection-start-line="76" selection-start-column="27" selection-end-line="76" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase/weibo_testcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/datacollector/getFps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/StringIO.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="222" column="0" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/report/HTMLTestRunner_mz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding>
+            <element signature="e#3125#3140#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="233" column="0" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pageobject/setting_page.py">
+    <entry file="file://C:/Python27/Lib/json/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+<<<<<<< HEAD
+          <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
+=======
+          <caret line="209" column="0" selection-start-line="209" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+>>>>>>> compare_func
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="243" column="0" selection-start-line="243" selection-start-column="0" selection-end-line="243" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/string.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="175" column="0" selection-start-line="175" selection-start-column="0" selection-end-line="175" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/logging/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1145" column="0" selection-start-line="1145" selection-start-column="0" selection-end-line="1145" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/testcase/system_testcase.py">
+=======
+    <entry file="file://C:/Python27/Lib/urlparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/selenium/webdriver/remote/remote_connection.py">
+>>>>>>> compare_func
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/urllib.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1195" column="0" selection-start-line="1195" selection-start-column="0" selection-end-line="1195" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/urllib2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pageobject/weibo_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="115" column="35" selection-start-line="115" selection-start-column="35" selection-end-line="115" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testcase_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="e#15#24#0" expanded="true" />
           </folding>
+=======
+        <state vertical-scroll-proportion="0.7688787">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+>>>>>>> compare_func
         </state>
       </provider>
     </entry>

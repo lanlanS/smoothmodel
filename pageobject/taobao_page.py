@@ -80,9 +80,11 @@ class TbPage():
         search_bar = self.cm.driver.find_element_by_id(self.taobao_search_bar)
         if search_bar:
             search_bar.click()
+            time.sleep(0.3)
             search_btn = self.cm.driver.find_element_by_id(self.taobao_search_btn)
             if search_btn:
                 search_btn.click()
+                time.sleep(0.3)
                 goods = self.cm.driver.find_element_by_id(self.gooditem)
                 if goods:
                     return goods
@@ -90,8 +92,9 @@ class TbPage():
     def switch_goodspage(self):
         goods = self.find_a_goods()
         for i in range(0, 10):
+            time.sleep(0.5)
             goods.click()
-            time.sleep(0.3)
+            time.sleep(0.5)
             self.cm.back()
 
     def swipe_goodspage(self):

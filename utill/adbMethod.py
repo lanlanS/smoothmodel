@@ -29,6 +29,14 @@ class adbmethod:
         if direction in dirc.keys():
             os.popen('adb -s ' + self.sn + ' shell input swipe ' + ' '.join(dirc[direction]) + ' 200')
 
+    def adb_swipe(self, arry):
+        # arry string list
+        os.popen('adb -s ' + self.sn + ' shell input swipe ' + arry + ' 200')
+
+    def adb_click(self, arry):
+        # arry string list
+        os.popen('adb -s ' + self.sn + ' shell input tap ' + arry)
+
     def adb_backkey(self):
         os.popen('adb -s ' + self.sn + ' shell input keyevent 4')
 

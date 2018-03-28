@@ -18,7 +18,7 @@ class ZhihuPage():
         self.zhihu_surface = 'com.zhihu.android/com.zhihu.android.app.ui.activity.MainActivity'
 
         # Element Info
-        self.ViewpageID1 = ' com.zhihu.android:id / tab_title'
+        self.ViewpageID1 = 'com.zhihu.android:id/title'
 
     def setup(self):
         self.zhihu_setup.setup(self.zhihu_pkgname, self.zhihu_mainActivity)
@@ -75,7 +75,7 @@ class ZhihuPage():
 
     def find_context(self):
         try:
-            content = self.cm.driver.find_element_by_id("com.zhihu.android:id/body")
+            content = self.cm.driver.find_element_by_id("com.zhihu.android:id/content")
             if content:
                 return content
         except NoSuchElementException:
@@ -84,8 +84,9 @@ class ZhihuPage():
     def swipe_down_contentpage(self):
         content = self.find_context()
         content.click()
-        time.sleep(0.5)
+        time.sleep(1)
         if self.cm.driver.find_element_by_id('com.zhihu.android:id/comment_btn'):  # 判断是否进入文章界面，存在 评论id
+            time.sleep(1)
             for i in range(0, 5):
                 self.cm.my_swipe_to_up(during=400)
             for i in range(0, 5):
@@ -93,10 +94,10 @@ class ZhihuPage():
             self.cm.back()
 
     def swich_contentpage(self):
-        for i in range(0, 5):
+        for i in range(0, 3):
             content = self.find_context()
             content.click()
-            time.sleep(0.5)
+            time.sleep(1.5)
             self.cm.back()
 
     def teardown(self):

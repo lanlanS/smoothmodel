@@ -72,9 +72,18 @@ class NeteasePage():
 
     def switch_newspage(self):
         for i in range(0, 5):
-            content = self.cm.driver.find_element_by_id("com.netease.newsreader.activity:id/ea")
+            time.sleep(0.5)
+            news_xpath = '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/' \
+                         'android.widget.LinearLayout/android.widget.FrameLayout/com.netease.nr.phone.main.view.NTDrawerLayout/' \
+                         'android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.FrameLayout[3]/' \
+                         'android.widget.FrameLayout/android.support.v4.view.ViewPager/android.widget.FrameLayout/' \
+                         'android.view.ViewGroup/android.view.ViewGroup/android.support.v7.widget.RecyclerView/' \
+                         'android.widget.RelativeLayout[1]/android.widget.LinearLayout[1]/android.widget.RelativeLayout/' \
+                         'android.widget.TextView'
+            content = self.cm.driver.find_element_by_xpath(news_xpath)  # com.netease.newsreader.activity:id/eu
+            time.sleep(0.3)
             content.click()
-            time.sleep(1)
+            time.sleep(0.5)
             self.cm.back()
 
     def teardown(self):

@@ -197,7 +197,7 @@ class Template_mixin(object):
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     %(stylesheet)s
     <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <script type="text/javascript" src="report/js/echarts.common.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.0.2/echarts-en.common.min.js"></script>
 </head>
 <body>
     <script language="javascript" type="text/javascript"><!--
@@ -257,6 +257,30 @@ class Template_mixin(object):
         }
     }
 
+    function showEchatDetial(div_id,option){
+        var details_div = document.getElementById(div_id)
+        var displayState = details_div.style.display
+
+        if (displayState != 'block' ) {
+            displayState = 'block'
+            details_div.style.display = 'block'
+        }
+        else {
+            details_div.style.display = 'none'
+        }
+        debugger
+        getechart(div_id,option)
+
+    }
+
+    function getechart(div_id,option){
+        // 基于准备好的dom，初始化echarts实例
+        var myFrameChart = echarts.init(document.getElementById(div_id));
+        // 指定图表的配置项和数据
+        myFrameChart.setOption(option);
+        console.log(option.series[0].data)
+    }
+
 
     function showTestDetail(div_id){
         var details_div = document.getElementById(div_id)
@@ -277,6 +301,101 @@ class Template_mixin(object):
         s = s.replace(/</g,'&lt;');
         s = s.replace(/>/g,'&gt;');
         return s;
+    }
+
+    function compare_file(files) {   /* ----新增对比功能----- */
+        if (files.length) {
+            var file = files[0];
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var resulttable_1 = document.getElementById("result_table");  // 原始结果
+                console.log(resulttable_1)
+
+                var temp = this.result.split("<p></p>")[2];
+                var a = temp.replace(/result_table/, "compare_result_table");
+                var compare_table = a.replace(/option/g,"result_option")
+                console.log(compare_table)
+                document.getElementById("filecontent").innerHTML = compare_table;
+
+                debugger;
+                var resulttable_2 = document.getElementById("compare_result_table"); // 对比结果
+
+                var Rows_1 = resulttable_1.rows.length;   // 原始表的行数
+                var Cells_1 = resulttable_1.rows[1].cells.length;  // 原始表的最大列数
+                var Rows_2 = resulttable_2.rows.length; // 对比表的行数
+                var Cells_2 = resulttable_2.rows[1].cells.length;  // 对比表的最大列数
+
+                for (var i = 1; i < Rows_1; i++) {    //遍历Table的所有Row
+
+                    if (resulttable_1.rows[i].cells.length > 2) {
+                        console.log(resulttable_1.rows[i].cells.length)
+                        for (var j = 1; j < Rows_2; j++) {    //遍历对比表格的的所有测试项
+                            debugger
+
+                            var testcase_1 = resulttable_1.rows[i].cells[1].innerText;
+                            var testcase_2 = resulttable_2.rows[j].cells[1].innerText;
+                            console.log('resulttable_1[i][1]:'+resulttable_1.rows[i].cells[1].innerText)
+                            console.log('resulttable_2[j][1]:'+resulttable_2.rows[j].cells[1].innerText)
+                            console.log(resulttable_1.rows[i].cells[2].innerText!='')
+                            console.log(testcase_1.trim() == testcase_2.trim())
+                            debugger
+                            if ((resulttable_1.rows[i].cells[2].innerText!='') && (testcase_1.trim() == testcase_2.trim())) {
+                                newtr = resulttable_1.insertRow(i+1);
+                                newtr.className= resulttable_1.rows[i].className;  // 写入 （对比数据）行的class 值 <tr class=>
+                                newtr.id = resulttable_1.rows[i].id;    // 写入 （对比数据）行的id 值 <tr id=>
+                                Rows_1 = Rows_1+1;  // 新增的行数先初始化完成
+                                for (tdnum=0;tdnum<=8;tdnum++){   // 仅需要补充 8个 单元格
+                                    temtd = newtr.insertCell(tdnum)
+                                    temtd.innerHTML = '　';
+                                    temtd.style.color='blue';
+                                    temtd.align='center';
+                                }
+                                resulttable_1.rows[i].cells[0].rowSpan = '2';
+                                resulttable_1.rows[i].cells[1].rowSpan = '2';
+                                resulttable_1.rows[i].cells[11].rowSpan = '2';
+                                resulttable_1.rows[i].cells[12].rowSpan = '2';
+
+                                // debugger
+                                for(ii=2;ii<11;ii++){
+                                    if (ii == 11){
+                                        ii = 2;
+                                    };
+
+                                    var value = resulttable_2.rows[j].cells[ii].innerText;
+                                    console.log('写入值:'+resulttable_2.rows[j].cells[ii].innerText)
+                                    resulttable_1.rows[i+1].cells[ii-2].innerText= value;
+                                }
+
+                                // debugger;
+                                tempdata = resulttable_2.rows[j].cells[11].innerHTML;
+                                console.log(tempdata)
+                                var re = new RegExp(/data:\[(\d+.*)\d]/)
+                                // debugger;
+                                temp_comparedata = tempdata.match(re)[1].split(',');  // 获取到 frame count data，填充到原始表格中
+                                console.log(temp_comparedata)
+                                // debugger;
+                                var frame_comparedata=[];
+                                for(i1=0;i1<temp_comparedata.length;i1++){
+                                    frame_comparedata.push(Number(temp_comparedata[i1].trim()));
+                                }
+                                // console.log(frame_comparedata)
+
+                                debugger
+                                optionid = "option_" + resulttable_1.rows[i].id.replace('.','_');
+                                console.log(optionid)
+                                eval(optionid).legend.data.push('compare_version');
+                                eval(optionid).series.push({name:'compare_version',type:'bar',data:frame_comparedata});
+                                console.log(eval(optionid).series)
+                                console.log(eval(optionid).series[1])
+
+                            }
+                        }
+                    }
+                }
+            }
+            reader.readAsText(file);
+        }
     }
 
     /* obsoleted by detail in <div>
@@ -311,7 +430,7 @@ class Template_mixin(object):
             var myChart = echarts.init(document.getElementById('chart'));
 
             // 指定图表的配置项和数据
-            var option = {
+            var option_result = {
                 title : {
                     text: '测试执行情况',
                     x:'center'
@@ -348,18 +467,15 @@ class Template_mixin(object):
             };
 
             // 使用刚指定的配置项和数据显示图表。
-            myChart.setOption(option);
+            myChart.setOption(option_result);
         </script>
         """  # variables: (Pass, fail, error)
 
     Frame_Chart = """
         <div id="%(chart_id)s" style="width:600px;height:500px;float:left;" class="popup_window">
-            <script type="text/javascript">
-                // 基于准备好的dom，初始化echarts实例
-                var myFrameChart = echarts.init(document.getElementById('%(chart_id)s'));
-
+            <script  type="text/javascript">
                 // 指定图表的配置项和数据
-                var option = {
+                var %(option_id)s = {
                     tooltip: {
                         trigger: 'axis',
                         axisPointer: {
@@ -378,7 +494,7 @@ class Template_mixin(object):
                         }
                     },
                     legend: {
-                        data:['%%']
+                        data:['current']
                     },
                     xAxis: [
                         {
@@ -387,6 +503,9 @@ class Template_mixin(object):
                             data: %(frametime)s,
                             axisPointer: {
                                 type: 'shadow'
+                            },
+                            axisLabel: {
+                                formatter: '{value}ms '
                             }
                         }
                     ],
@@ -396,21 +515,20 @@ class Template_mixin(object):
                             name: '百分比',
                             interval: 10,
                             axisLabel: {
-                            formatter: '{value} '
+                                formatter: '{value}%% '
                             }
                         },
 
                     ],
                     series: [
                         {
-                            name:'次数',
+                            name:'current',
                             type:'bar',
                             data:%(framecount)s
                         },
 
                     ]
                 };
-                myFrameChart.setOption(option);
             </script>
         </div>
         """  # variables: (frametime, framecount)
@@ -579,7 +697,7 @@ class Template_mixin(object):
         <button class="btn btn-default" onclick='javascript:showCase(2)'>全部</button>
         <!-- 新增对比功能： 增加对比功能按钮 -->
         <label class="btn btn-default" for="xFile">对比历史数据</label>
-        <form><input type="file" id="xFile" style="position:absolute;clip:rect(0 0 0 0);"></form>
+        <form><input type="file" id="xFile" accept="excel/xls,excel/xlsx" style="position:absolute;clip:rect(0 0 0 0);"onchange="compare_file(this.files)"></form>
     </div>
 
     <p></p>
@@ -594,9 +712,9 @@ class Template_mixin(object):
         </colgroup>
         <tr id='header_row'>
             <td colspan='2'>测试套件/测试用例</td>
-            <td> FPS </td>
-            <td> 掉帧数 </td>
-            <td> Max Drop Frame </td>
+            <td> 整体平均每帧耗时 </td>
+            <td> 修正平均每帧耗时 </td>
+            <td> 优秀率（5-8ms帧数占比）</td>
             <td> 掉帧率（Miss Vsync） </td>
             <td> 劣帧率 （Janky Frame）</td>
             <td> High input latency </td>
@@ -607,15 +725,20 @@ class Template_mixin(object):
             <td> 查看 </td>
         </tr>
         %(test_list)s
+    <p></p>
         <tr id='total_row'>
-            <td colspan='2'>总计</td>
-            <td colspan='3'>Total: %(count)s</td>
+            <td colspan='2'>总分</td>
+            <td align="center"> %(sscore)s</td>
+            <td align="center"> %(mscore)s</td>
+            <td align="center"> %(escore)s</td>
             <td colspan='3'>Pass: %(Pass)s</td>
             <td colspan='3'>Failed: %(fail)s</td>
             <td colspan='2'>Error: %(error)s</td>
         </tr>
     </table>
-"""  # variables: (test_list, count, Pass, fail, error)
+
+
+"""  # variables: (test_list, sscore, mscore, escore, Pass, fail, error)
 
     REPORT_CLASS_TMPL = u"""
     <tr class='%(style)s'>
@@ -640,9 +763,9 @@ class Template_mixin(object):
     <td align='center'>%(case_id)s</td>
     <td class='%(style)s'><div class='testcase'>%(desc)s</div></td>
 
-    <td align="center"> %(fps)s </td>
-    <td align="center"> %(jank)s </td>
-    <td align="center"> %(max_drop)s </td>
+    <td align="center"><b> %(avgeScore)s </b></td>
+    <td align="center"> %(mavgeScore)s </td>
+    <td align="center"> %(excellent_rate)s </td>
     <td align="center"> %(missvsync)s </td>
     <td align="center"> %(janky)s </td>
     <td align="center"> %(inputlatency)s </td>
@@ -650,7 +773,7 @@ class Template_mixin(object):
     <td align="center"> %(slow_bitmap)s </td>
     <td align="center"> %(slow_draw)s </td>
     <td align="center">
-        <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('%(chart_id)s')" >
+        <a class="popup_link" onfocus='this.blur();' href="javascript:showEchatDetial('%(chart_id)s',%(option_id)s)" >
         帧分布直方图</a>
             %(FrameChart)s
     </td>
@@ -681,9 +804,9 @@ class Template_mixin(object):
 
     REPORT_TEST_OUTPUT_TMPL = r"""%(id)s: %(output)s"""  # variables: (id, output)
     REPORT_TEST_OUTPUT_CASEID = r"""%(case_id)s"""  # variables: (case id)
-    REPORT_TEST_OUTPUT_FPS = r"""%(fps)s"""  # variables: (fps)
-    REPORT_TEST_OUTPUT_JANK = r"""%(jank)s"""  # variables: (jank)
-    REPORT_TEST_OUTPUT_MAX_DROP = r"""%(max_drop)s"""  # variables: (max drop)
+    REPORT_TEST_OUTPUT_SUMS = r"""%(avgeScore)s"""  # variables: (avgeScore)
+    REPORT_TEST_OUTPUT_MSCORE = r"""%(mavgeScore)s"""  # variables: (modifySocre)
+    REPORT_TEST_OUTPUT_ERATE = r"""%(excellent_rate)s"""  # variables: (excellent_rate)
     # REPORT_TEST_OUTPUT_FRAME = r"""%(frameinfo_add)s"""  # variables: (frameinfo file address)
 
     REPORT_TEST_OUTPUT_MissVsync = r"""%(missvsync)s"""  # variables: (Number Missed Vsync)
@@ -697,7 +820,10 @@ class Template_mixin(object):
     # ENDING
     #
 
-    ENDING_TMPL = """<div id='ending'>&nbsp;</div>"""
+    ENDING_TMPL = """
+    <div id='ending'>&nbsp;</div>
+    <div id="filecontent"> </div>
+    """
 
 
 # -------------------- The end of the Template class -------------------
@@ -858,6 +984,10 @@ class HTMLTestRunner(Template_mixin):
 
         self.startTime = datetime.datetime.now()
 
+        self.sscore = []
+        self.mscore = []
+        self.escore = []
+
     def run(self, test):
         """Run the given test case or test suite."""
         result = _TestResult(self.verbosity)
@@ -977,7 +1107,9 @@ class HTMLTestRunner(Template_mixin):
 
         report = self.REPORT_TMPL % dict(
                 test_list=''.join(rows),
-                count=str(result.success_count + result.failure_count + result.error_count),
+                sscore=str('%.2f' % (sum(self.sscore) / len(self.sscore))),
+                mscore=str('%.2f' % (sum(self.mscore) / len(self.mscore))),
+                escore=str('%.2f' % (sum(self.escore) / len(self.escore))),
                 Pass=str(result.success_count),
                 fail=str(result.failure_count),
                 error=str(result.error_count),
@@ -992,9 +1124,10 @@ class HTMLTestRunner(Template_mixin):
         )
         return chart
 
-    def _generate_framechart(self, chart_id, time, count):
+    def _generate_framechart(self, chart_id, option_id, time, count):
         frame_chart = self.Frame_Chart % dict(  # Frame_Chart : javascript
                 chart_id=str(chart_id),
+                option_id=str(option_id),
                 frametime=str(time),
                 framecount=str(count),
         )
@@ -1004,10 +1137,19 @@ class HTMLTestRunner(Template_mixin):
         # e.g. 'pt1.1', 'ft1.1', etc
         has_output = bool(o or e)
         tid = (n == 0 and 'p' or 'f') + 't%s.%s' % (cid + 1, tid + 1)
-        # name = t.id().split('.')[-1]
-        name = o.split('\n')[4].split(':')[-1]  # 修改测试用例名字
+
+        for tem in o.split('\n'):
+            if tem.startswith('case Name:'):
+                name = tem.split(':')[-1]  # 修改测试用例名字
+                break
+            else:
+                name = 'UNKNOW'
+
         doc = t.shortDescription() or ""
-        desc = doc and ('%s: %s' % (name, doc)) or name
+        if name:
+            desc = doc and ('%s: %s' % (name, doc)) or name
+        else:
+            desc = doc and ('%s: %s' % ('UNKNOW', doc)) or 'UNKNOW'
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
 
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
@@ -1019,15 +1161,15 @@ class HTMLTestRunner(Template_mixin):
                 case_id=saxutils.escape(o + e)
         )
 
-        fps = self.REPORT_TEST_OUTPUT_FPS % dict(  # new added
-                fps=saxutils.escape(o + e)
+        avgeScore = self.REPORT_TEST_OUTPUT_SUMS % dict(  # new added
+                avgeScore=saxutils.escape(o + e)
         )
 
-        jank = self.REPORT_TEST_OUTPUT_JANK % dict(  # new added
-                jank=saxutils.escape(o + e)
+        mavgeScore = self.REPORT_TEST_OUTPUT_MSCORE % dict(  # new added
+                mavgeScore=saxutils.escape(o + e)
         )
-        max_drop = self.REPORT_TEST_OUTPUT_MAX_DROP % dict(  # new added
-                max_drop=saxutils.escape(o + e)
+        excellent_rate = self.REPORT_TEST_OUTPUT_ERATE % dict(  # new added
+                excellent_rate=saxutils.escape(o + e)
         )
 
         # frameinfo_add = self.REPORT_TEST_OUTPUT_FRAME % dict(  # new added # DELETE THIS CROW
@@ -1054,47 +1196,169 @@ class HTMLTestRunner(Template_mixin):
                 slow_draw=script
         )
 
-        time = script.split('\n')[13].split(":")[-1]
-        count = script.split('\n')[14].split(":")[-1]
+        # 初始化数据
+        v_case_id = '0'
+        v_inputlatency = '0'
+        v_jank = v_max_drop = '0'
+        v_janky = v_missvsync = v_slow_bitmap = v_slow_draw = v_slow_ui = '0'
+
+        time = count = '0'
+        fpslist = '0'
+
+        # 匹配数据
+        for tmp in script.split('\n'):
+            if tmp.startswith('case id:'):
+                v_case_id = tmp.split(':')[-1]
+                continue
+
+            if tmp.startswith('jank rate:'):
+                v_janky = tmp.split(':')[1]
+                continue
+            if tmp.startswith('real jank rate:'):
+                v_missvsync = tmp.split(':')[1]
+                # jankscore = (100-float(v_missvsync.split('%')[0])) * 0.3
+                # self.jscore.append(jankscore)
+                continue
+            if tmp.startswith('High input latency:'):
+                v_inputlatency = tmp.split(':')[1]
+                continue
+            if tmp.startswith('Slow UI thread:'):
+                v_slow_ui = tmp.split(':')[1]
+                continue
+            if tmp.startswith('Slow bitmap uploads:'):
+                v_slow_bitmap = tmp.split(':')[1]
+                continue
+            if tmp.startswith('Slow issue draw commands rate:'):
+                v_slow_draw = tmp.split(':')[1]
+                continue
+
+            if tmp.startswith('Frame Latency:'):  # time = script.split('\n')[13].split(":")[-1]
+                time = tmp.split(":")[-1]
+                continue
+            if tmp.startswith('Frame Count:'):  # count = script.split('\n')[14].split(":")[-1]
+                count = tmp.split(":")[-1]
+                continue
+
+                # if tmp.startswith('fps:'):  # fpslist = fps.split('\n')[16].split(':')[1].split(',')
+                #     fpslist = tmp.split(':')[1].split(',')
+                #     continue
+                # if tmp.startswith('jank count:'):
+                #     v_jank = tmp.split(':')[1]
+                #     continue
+                # if tmp.startswith('max frame delay:'):
+                #     v_max_drop = tmp.split(':')[1]
+                #     continue
+
+        # totalfps = 0
+        # fpslist_len = 0
+        # if fpslist:
+        #     for i in fpslist:
+        #         if i.strip(' [').strip(']') != 'None':
+        #             totalfps += int(i.strip(' [').strip(']'))
+        #             fpslist_len += 1
+        #     if fpslist_len != 0:
+        #         avgfps = int(totalfps / fpslist_len)
+        #     else:
+        #         avgfps = '0'
+        # else:
+        #     avgfps = '0'
+
         chart_id_data = 'framechart_' + tid
-        fpslist = fps.split('\n')[16].split(':')[1].split(',')
-        totalfps = 0
-        fpslist_len = 0
-        for i in fpslist:
-            if i is not 'None':
-                totalfps += int(i.strip(' [').strip(']'))
-                fpslist_len += 1
-        avgfps = int(totalfps / fpslist_len)
+        option_id = 'option_' + tid.replace('.', '_')
+        if time and count:
+            frame_chart = self._generate_framechart(chart_id_data, option_id, time, count)
 
-        frame_chart = self._generate_framechart(chart_id_data, time, count)
+            count_int = [float(i.strip('[').strip(']')) for i in count.split(',')]
+            time_int = [int(i.strip('[').strip(']')) for i in time.split(',')]
+            scorelist = []
+            avgelist = []
 
-        row = tmpl % dict(
-                tid=tid,
-                Class=(n == 0 and 'hiddenRow' or 'none'),
-                style=(n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none')),
-                desc=desc,
-                FrameChart=frame_chart.decode("utf-8"),
-                script=script,
-                case_id=case_id.split('\n')[3].split(':')[-1],
-                status=self.STATUS[n],
-                fps=str(avgfps).decode("utf-8"),
-                jank=jank.split('\n')[18].split(':')[1],
-                max_drop=max_drop.split('\n')[20].split(':')[1],
-                # frameinfo_add=frameinfo_add.split('\n')[12].split("output\\")[1],
-                missvsync=missvsyncdata.split('\n')[8].split(':')[1],
-                janky=jankydata.split('\n')[7].split(':')[1],
-                inputlatency=inputlatencydata.split('\n')[9].split(':')[1],
-                slow_ui=slow_ui.split('\n')[10].split(':')[1],
-                slow_bitmap=slow_bitmap.split('\n')[11].split(':')[1],
-                slow_draw=slow_drawdata.split('\n')[12].split(':')[1],
-                chart_id=chart_id_data.decode("utf-8"),
-        )
-        rows.append(row)
+            avgelist = [x * y for x, y in zip(time_int, count_int)]
+            avgeScore = sum(avgelist) / 100
+            excellent_rate = sum(count_int[:4])
+
+            for t in time_int:
+                if t < 100:
+                    scorelist.append(t * count_int[time_int.index(t)])
+            if scorelist and sum(count_int[0:47]):
+                mavgeScore = sum(scorelist) / sum(count_int[0:47])
+            else:
+                mavgeScore = 0
+        else:
+            time = count = '0'
+            frame_chart = self._generate_framechart(chart_id_data, option_id, time, count)
+            avgeScore = mavgeScore = excellent_rate = 0
+
+        self.sscore.append(avgeScore)
+        self.mscore.append(mavgeScore)
+        self.escore.append(excellent_rate)
+
+        if v_case_id and v_inputlatency and avgeScore and mavgeScore and excellent_rate and v_janky and v_missvsync and v_slow_bitmap and \
+                v_slow_draw and v_slow_ui:
+            row = tmpl % dict(
+                    tid=tid,
+                    Class=(n == 0 and 'hiddenRow' or 'none'),
+                    style=(n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none')),
+                    desc=desc,
+                    FrameChart=frame_chart.decode("utf-8"),
+                    script=script,
+                    case_id=v_case_id,
+                    status=self.STATUS[n],
+                    avgeScore=str('%.2f' % avgeScore),
+                    mavgeScore=str('%.2f' % mavgeScore),
+                    excellent_rate=str(excellent_rate),
+                    # frameinfo_add=frameinfo_add.split('\n')[12].split("output\\")[1],
+                    missvsync=v_missvsync,
+                    janky=v_janky,
+                    inputlatency=v_inputlatency,
+                    slow_ui=v_slow_ui,
+                    slow_bitmap=v_slow_bitmap,
+                    slow_draw=v_slow_draw,
+                    chart_id=chart_id_data.decode("utf-8"),
+                    option_id=option_id.decode("utf_8")
+            )
+            rows.append(row)
         if not has_output:
             return
 
     def _generate_ending(self):
         return self.ENDING_TMPL
+
+    def _getframescore(self, count, time):
+        count_int = [float(i.strip('[').strip(']')) for i in count.split(',')]
+        time_int = [int(i.strip('[').strip(']')) for i in time.split(',')]
+        scorelist = []
+
+        avgescore = sum(count_int) / 100
+        good_percent = sum(count[:3])
+
+        for t in time_int:
+            if t < 100:
+                scorelist.append(t * count_int[time_int.index(t)])
+
+        b_avgescore = sum(scorelist)
+
+        '''
+        第一版打分方案：
+        if len(count_int) > 5:
+            level1 = sum(count_int[:5])
+        else:
+            level1 = 0
+        if len(count_int) > 10:
+            level2 = sum(count_int[6:10])
+        else:
+            level2 = 0
+        if len(count_int) > 36:
+            level3 = sum(count_int[11:36])
+        else:
+            level3 = 0
+        if len(count_int) > 37:
+            level4 = sum(count_int[37:])
+        else:
+            level4 = 0
+        framescore = level1 * 0.35 + level2 * 0.2 - level3*0.15 - level4*0.3
+        return framescore
+        '''
 
 
 ##############################################################################

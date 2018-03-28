@@ -20,6 +20,7 @@ class WeiboPage():
         # Element Info
         self.ViewpageID1 = 'com.sina.weibo:id/plus_icon'
         self.firstpage_xpath = '//android.view.View[@content-desc="微博"]'
+        self.btn_hotpage_xpath = '/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.TabHost/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.RelativeLayout/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.TextView'
 
     def setup(self):
         self.weibo_setup.setup(self.weibo_pkgname, self.weibo_mainActivity)
@@ -34,6 +35,10 @@ class WeiboPage():
                 time.sleep(2)
             else:
                 return True
+
+    def click_hotpage(self):
+        self.cm.driver.find_element_by_xpath(self.btn_hotpage_xpath).click()
+        time.sleep(0.5)
 
     def swipDown_first_page(self):
         try:
@@ -84,7 +89,7 @@ class WeiboPage():
             pass
 
     def _isPic(self):
-        pic = 'com.sina.weibo:id/blog_picture_view'
+        pic = 'com.sina.weibo:id/blog_picture_view'  # 8.0.1 com.sina.weibo:id/blog_picture_view
         try:
             self.cm.driver.find_element_by_id(pic)
             return True
@@ -95,10 +100,13 @@ class WeiboPage():
 
     def clickpic(self):
         while self._isMov():  # 判断是否有图片
+            time.sleep(0.3)
             self.cm.driver.find_element_by_xpath(self.firstpage_xpath).click()
             if self._isPic():
-                for i in range(0, 3):
+                for i in range(0, 8):
+                    time.sleep(0.8)
                     self.cm.driver.find_element_by_id('com.sina.weibo:id/blog_picture_view').click()
+                    time.sleep(0.8)
                     self.cm.back()
                 break
             else:
@@ -106,9 +114,11 @@ class WeiboPage():
                 pass
         else:
             if self._isPic():
-                for i in range(0, 10):
+                for i in range(0, 8):
                     self.cm.shortwaitElementById('com.sina.weibo:id/blog_picture_view').click()
+                    time.sleep(0.8)
                     self.cm.back()
+                    time.sleep(0.8)
 
     def teardown(self):
         self.weibo_setup.teardown()

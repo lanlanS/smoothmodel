@@ -66,10 +66,13 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 
-__author__ = "Wai Yip Tung"
+__author__ = "Sheng Xia"
 __version__ = "0.9.1"
 
 """
+Version 0.9.2
+* Add echart module
+
 Version 0.8.2
 * Show output inline instead of popup window (Viorel Lupu).
 
@@ -84,8 +87,8 @@ Version in 0.8.0
 Version in 0.7.1
 * Back port to Python 2.3 (Frank Horowitz).
 * Fix missing scroll bars in detail log (Podi).
-"""
 
+"""
 import StringIO
 import datetime
 import sys
@@ -303,12 +306,20 @@ class Template_mixin(object):
         return s;
     }
 
-    function compare_file(files) {   /* ----新增对比功能----- */
+     function compare_file(files) {   /* ----新增对比功能----- */
         if (files.length) {
             var file = files[0];
             var reader = new FileReader();
 
+
+
             reader.onload = function (e) {
+
+                var goodframe_flag = 0;  // flag标志
+                var jank_flag = 0;
+                var missvync_flag = 0;
+                var flag = 0;
+
                 var resulttable_1 = document.getElementById("result_table");  // 原始结果
                 console.log(resulttable_1)
 
@@ -318,7 +329,7 @@ class Template_mixin(object):
                 console.log(compare_table)
                 document.getElementById("filecontent").innerHTML = compare_table;
 
-                debugger;
+                // debugger;
                 var resulttable_2 = document.getElementById("compare_result_table"); // 对比结果
 
                 var Rows_1 = resulttable_1.rows.length;   // 原始表的行数
@@ -331,7 +342,7 @@ class Template_mixin(object):
                     if (resulttable_1.rows[i].cells.length > 2) {
                         console.log(resulttable_1.rows[i].cells.length)
                         for (var j = 1; j < Rows_2; j++) {    //遍历对比表格的的所有测试项
-                            debugger
+                            // debugger
 
                             var testcase_1 = resulttable_1.rows[i].cells[1].innerText;
                             var testcase_2 = resulttable_2.rows[j].cells[1].innerText;
@@ -339,8 +350,10 @@ class Template_mixin(object):
                             console.log('resulttable_2[j][1]:'+resulttable_2.rows[j].cells[1].innerText)
                             console.log(resulttable_1.rows[i].cells[2].innerText!='')
                             console.log(testcase_1.trim() == testcase_2.trim())
-                            debugger
+                            // debugger
                             if ((resulttable_1.rows[i].cells[2].innerText!='') && (testcase_1.trim() == testcase_2.trim())) {
+                                flag = flag +1;
+
                                 newtr = resulttable_1.insertRow(i+1);
                                 newtr.className= resulttable_1.rows[i].className;  // 写入 （对比数据）行的class 值 <tr class=>
                                 newtr.id = resulttable_1.rows[i].id;    // 写入 （对比数据）行的id 值 <tr id=>
@@ -350,13 +363,14 @@ class Template_mixin(object):
                                     temtd.innerHTML = '　';
                                     temtd.style.color='blue';
                                     temtd.align='center';
+
                                 }
                                 resulttable_1.rows[i].cells[0].rowSpan = '2';
                                 resulttable_1.rows[i].cells[1].rowSpan = '2';
                                 resulttable_1.rows[i].cells[11].rowSpan = '2';
                                 resulttable_1.rows[i].cells[12].rowSpan = '2';
 
-                                // debugger
+                                debugger
                                 for(ii=2;ii<11;ii++){
                                     if (ii == 11){
                                         ii = 2;
@@ -365,6 +379,28 @@ class Template_mixin(object):
                                     var value = resulttable_2.rows[j].cells[ii].innerText;
                                     console.log('写入值:'+resulttable_2.rows[j].cells[ii].innerText)
                                     resulttable_1.rows[i+1].cells[ii-2].innerText= value;
+                                    debugger
+                                    if(ii == 4){ /* 优秀率对比-结果统计 */
+                                        debugger
+                                        console.log(parseFloat(resulttable_1.rows[i].cells[4].innerText));
+                                        console.log(parseFloat(resulttable_2.rows[j].cells[4].innerText));
+                                        if(parseFloat(resulttable_1.rows[i].cells[4].innerText) > parseFloat(resulttable_2.rows[j].cells[4].innerText)){
+                                            goodframe_flag = goodframe_flag + 1;
+                                        };
+                                    };
+                                    debugger
+                                    if(ii == 5){ /* 掉帧率对比-结果统计 */
+                                        debugger
+                                        if(parseFloat(resulttable_1.rows[i].cells[5].innerText.split('%%')[0]) < parseFloat(resulttable_2.rows[j].cells[5].innerText.split('%%')[0])){
+                                            jank_flag = jank_flag + 1;
+                                        };
+                                    };
+                                    debugger
+                                    if(ii == 6){ /* 掉帧率对比-结果统计 */
+                                        if(parseFloat(resulttable_1.rows[i].cells[6].innerText.split('%%')[0]) < parseFloat(resulttable_2.rows[j].cells[6].innerText.split('%%')[0])){
+                                            missvync_flag = missvync_flag + 1;
+                                        };
+                                    };
                                 }
 
                                 // debugger;
@@ -381,13 +417,17 @@ class Template_mixin(object):
                                 }
                                 // console.log(frame_comparedata)
 
-                                debugger
+                                debugger;
                                 optionid = "option_" + resulttable_1.rows[i].id.replace('.','_');
-                                console.log(optionid)
                                 eval(optionid).legend.data.push('compare_version');
                                 eval(optionid).series.push({name:'compare_version',type:'bar',data:frame_comparedata});
-                                console.log(eval(optionid).series)
-                                console.log(eval(optionid).series[1])
+                                debugger;
+                                var sumamry_info = "版本间对比小结：\n" +
+                                                   "\t 1. 优秀帧率对比："+ "原始版本优于对比版本的场景个数："+goodframe_flag+"/"+ flag +"\n" +
+                                                   "\t 2. 掉帧率对比：" + "  原始版本优于对比版本的场景个数："+missvync_flag+"/"+ flag +"\n" +
+                                                   "\t 3. 劣帧率对比："+"  原始版本优于对比版本的场景个数："+jank_flag+"/"+ flag +"\n"+
+                                                   "\n"
+                                document.getElementById("compare_info").innerText = sumamry_info;
 
                             }
                         }
@@ -682,6 +722,7 @@ class Template_mixin(object):
     </div>
     <div style="float: left;width:50%%;"><p class='description'>%(description)s</p></div>
     <div id="chart" style="width:50%%;height:250px;float:left;"></div>
+    <div id="compare_info" style="float: left;width:100%% "><p class='description'> </p></div>
     """  # variables: (title, parameters, description)
 
     HEADING_ATTRIBUTE_TMPL = """<p class='attribute'><strong>%(name)s:</strong> %(value)s</p>
@@ -712,8 +753,8 @@ class Template_mixin(object):
         </colgroup>
         <tr id='header_row'>
             <td colspan='2'>测试套件/测试用例</td>
-            <td> 整体平均每帧耗时 </td>
-            <td> 修正平均每帧耗时 </td>
+            <td> 整体平均每帧耗时/ms </td>
+            <td> 修正平均每帧耗时/ms </td>
             <td> 优秀率（5-8ms帧数占比）</td>
             <td> 掉帧率（Miss Vsync） </td>
             <td> 劣帧率 （Janky Frame）</td>
@@ -725,20 +766,22 @@ class Template_mixin(object):
             <td> 查看 </td>
         </tr>
         %(test_list)s
-    <p></p>
+
         <tr id='total_row'>
             <td colspan='2'>总分</td>
-            <td align="center"> %(sscore)s</td>
-            <td align="center"> %(mscore)s</td>
-            <td align="center"> %(escore)s</td>
-            <td colspan='3'>Pass: %(Pass)s</td>
-            <td colspan='3'>Failed: %(fail)s</td>
-            <td colspan='2'>Error: %(error)s</td>
+            <td align="center"> %(sscore)s ms</td>
+            <td align="center"> %(mscore)s ms</td>
+            <td align="center"> %(escore)s %%</td>
+            <td align="center"> %(droprate)s %%</td>
+            <td align="center"> %(jankrate)s %%</td>
+            <td colspan='2'>Pass: %(Pass)s </td>
+            <td colspan='2'>Failed: %(fail)s </td>
+            <td colspan='2'>Error: %(error)s </td>
         </tr>
     </table>
+    <p></p>
 
-
-"""  # variables: (test_list, sscore, mscore, escore, Pass, fail, error)
+"""  # variables: (test_list, sscore, mscore, escore, droprate,jankrate,Pass, fail, error)
 
     REPORT_CLASS_TMPL = u"""
     <tr class='%(style)s'>
@@ -984,9 +1027,11 @@ class HTMLTestRunner(Template_mixin):
 
         self.startTime = datetime.datetime.now()
 
-        self.sscore = []
-        self.mscore = []
-        self.escore = []
+        self.sscore = []  # 平均每帧耗时
+        self.mscore = []  # 修正每帧耗时
+        self.escore = []  # 优秀帧率
+        self.droprate = []  # 掉帧率
+        self.jankrate = []  # 劣帧率
 
     def run(self, test):
         """Run the given test case or test suite."""
@@ -1110,6 +1155,8 @@ class HTMLTestRunner(Template_mixin):
                 sscore=str('%.2f' % (sum(self.sscore) / len(self.sscore))),
                 mscore=str('%.2f' % (sum(self.mscore) / len(self.mscore))),
                 escore=str('%.2f' % (sum(self.escore) / len(self.escore))),
+                droprate=str('%.2f' % (sum(self.droprate) / len(self.droprate))),
+                jankrate=str('%.2f' % (sum(self.jankrate) / len(self.jankrate))),
                 Pass=str(result.success_count),
                 fail=str(result.failure_count),
                 error=str(result.error_count),
@@ -1239,30 +1286,6 @@ class HTMLTestRunner(Template_mixin):
                 count = tmp.split(":")[-1]
                 continue
 
-                # if tmp.startswith('fps:'):  # fpslist = fps.split('\n')[16].split(':')[1].split(',')
-                #     fpslist = tmp.split(':')[1].split(',')
-                #     continue
-                # if tmp.startswith('jank count:'):
-                #     v_jank = tmp.split(':')[1]
-                #     continue
-                # if tmp.startswith('max frame delay:'):
-                #     v_max_drop = tmp.split(':')[1]
-                #     continue
-
-        # totalfps = 0
-        # fpslist_len = 0
-        # if fpslist:
-        #     for i in fpslist:
-        #         if i.strip(' [').strip(']') != 'None':
-        #             totalfps += int(i.strip(' [').strip(']'))
-        #             fpslist_len += 1
-        #     if fpslist_len != 0:
-        #         avgfps = int(totalfps / fpslist_len)
-        #     else:
-        #         avgfps = '0'
-        # else:
-        #     avgfps = '0'
-
         chart_id_data = 'framechart_' + tid
         option_id = 'option_' + tid.replace('.', '_')
         if time and count:
@@ -1289,9 +1312,15 @@ class HTMLTestRunner(Template_mixin):
             frame_chart = self._generate_framechart(chart_id_data, option_id, time, count)
             avgeScore = mavgeScore = excellent_rate = 0
 
+        # 计算平均值
         self.sscore.append(avgeScore)
         self.mscore.append(mavgeScore)
         self.escore.append(excellent_rate)
+
+        droprate_tmp = float(v_missvsync.split("%")[0])
+        jankrate_tmp = float(v_janky.split("%")[0])
+        self.droprate.append(droprate_tmp)
+        self.jankrate.append(jankrate_tmp)
 
         if v_case_id and v_inputlatency and avgeScore and mavgeScore and excellent_rate and v_janky and v_missvsync and v_slow_bitmap and \
                 v_slow_draw and v_slow_ui:
@@ -1339,7 +1368,7 @@ class HTMLTestRunner(Template_mixin):
         b_avgescore = sum(scorelist)
 
         '''
-        第一版打分方案：
+        第一版打分方案  ## 已取消
         if len(count_int) > 5:
             level1 = sum(count_int[:5])
         else:
